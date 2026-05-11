@@ -22,87 +22,183 @@
   --shadow-card: var(--shadow-card);
 }
 
+/*
+  Global Design System
+  All colors are HSL
+*/
+
 @layer base {
   :root {
     /* ===== Base ===== */
     --navbar-height: 112px;
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 28% 17%;
+    /* #1F2937 */
 
-    /* ===== Brand (Blue/Cyan/Green) ===== */
-    --primary: 221.2 83.2% 53.3%;
-    /* Blue */
-    --primary-foreground: 210 40% 98%;
-    --primary-light: 217.2 91.2% 59.8%;
-    --primary-soft: 210 40% 96.1%;
-    --primary-muted: 210 40% 92%;
+    /* ===== Brand ===== */
+    --primary: 25 95% 53%;
+    /* #EA580C */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 25 100% 65%;
+    --primary-soft: 27 100% 96%;
+    /* #FFF7ED */
+    --primary-muted: 27 100% 92%;
+    /* #FFEDD5 */
 
-    --secondary: 188.7 94.5% 35.9%;
-    /* Cyan */
-    --secondary-foreground: 210 40% 98%;
+    /* ===== Secondary ===== */
+    --secondary: 186 70% 42%;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 199 89% 48%;
-    --accent-foreground: 210 40% 98%;
+    /* ===== Accent ===== */
+    --accent: 14 85% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --success: 160.7 84.1% 39.4%;
-    /* Soft Green */
+    /* ===== Status ===== */
+    --success: 142 71% 45%;
+    /* #10B981 */
+    --warning: 38 92% 50%;
+    /* #F59E0B */
+    --error: 0 84% 60%;
+    /* #EF4444 */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     /* ===== Text ===== */
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215 16% 47%;
+    /* #6B7280 */
     --text-muted: 215 14% 65%;
+    /* #9CA3AF */
 
     /* ===== Surfaces ===== */
-    --muted: 210 40% 96.1%;
-    --border: 214.3 31.8% 91.4%;
-    --radius: 1rem;
+    --muted: 210 20% 98%;
+    /* #FAFAFA */
+    --cream: 37 100% 95%;
+    /* #FEF3E2 */
+    --border: 220 14% 96%;
+    /* #F3F4F6 */
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    /* ===== Radius ===== */
+    --radius: 0.75rem;
+
+    /* ===== Gradients ===== */
+    --gradient-primary: linear-gradient(135deg,
+        hsl(25 95% 53%) 0%,
+        hsl(35 90% 58%) 100%);
+
+    --gradient-bg: linear-gradient(135deg,
+        hsl(0 0% 100%) 0%,
+        hsl(25 100% 98%) 50%,
+        hsl(0 0% 98%) 100%);
 
     /* ===== Shadows ===== */
-    --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.04);
-    --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
-  }
+    --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
 
+    /* ===== Motion ===== */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
   * {
     @apply border-border;
   }
 
   html {
-    scroll-behavior: smooth;
-    font-family: var(--font-sans);
+    overflow-x: clip;
+    overflow-y: scroll; /* Always visible — never shifts when Radix locks body */
+    scrollbar-gutter: stable;
+    height: 100%;
+    scroll-padding-top: var(--navbar-height);
+  }
+
+  /* ===== Radix UI Scroll Lock Fix =====
+     html overflow-y:scroll ensures the scrollbar is always present.
+     Body scroll lock (Radix) doesn't affect the html-level scrollbar.
+     --removed-body-scroll-bar-size:0px tells Radix not to add padding-right.
+  */
+  :root {
+    --removed-body-scroll-bar-size: 0px;
+  }
+
+  body[data-scroll-locked] {
+    /* Radix adds padding-right to compensate for scrollbar — not needed since
+       the scrollbar lives on html (not body) and is always visible */
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  @media (max-width: 767px) {
+    :root {
+      --navbar-height: 100px;
+    }
   }
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: clip;
   }
 }
+
+/* ===== Utilities ===== */
 
 @layer utilities {
   .glass {
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid hsl(var(--border));
     box-shadow: var(--shadow-glass);
   }
 
   .glass-strong {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-glass);
   }
 
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .modal-shadow {
+    box-shadow: var(--shadow-card);
   }
 
   .transition-smooth {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition-smooth);
+  }
+
+  /* Prevent page twitching when dropdowns open */
+  .dropdown-trigger {
+    will-change: transform;
+  }
+
+  /* Optimize backdrop blur performance */
+  .glass,
+  .glass-strong {
+    will-change: backdrop-filter;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
 }
 
-/* Animations */
-@keyframes fade-up {
+/* ===== Animations ===== */
+
+@keyframes slide-up-fade {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
   }
 
   to {
@@ -111,30 +207,154 @@
   }
 }
 
-.animate-fade-up {
-  animation: fade-up 0.5s ease forwards;
+.animate-slide-up {
+  animation: slide-up-fade 0.7s ease-out forwards;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  .scrollbar-gutter-auto {
+    scrollbar-gutter: auto !important;
+  }
+}
+
+/* ===== Custom Landing Page Styles ===== */
+.font-display {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+@keyframes float-up {
+  0% {
+    transform: rotate(var(--r, 0deg)) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(calc(var(--r, 0deg) * -0.5)) translate(var(--x, 0px), var(--y, -16px));
+  }
+
+  100% {
+    transform: rotate(var(--r, 0deg)) translate(0, 0);
+  }
+}
+
+.pill-float {
+  animation: float-up var(--d, 3.5s) ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-64px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(64px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .hero-line-1 {
-  animation: fade-up 0.7s 0.1s ease both;
+  animation: slide-in-left 0.7s ease both;
 }
 
 .hero-line-2 {
-  animation: fade-up 0.7s 0.2s ease both;
+  animation: slide-in-left 0.7s 0.18s ease both;
 }
 
 .hero-line-3 {
-  animation: fade-up 0.7s 0.3s ease both;
+  animation: slide-in-right 0.7s 0.36s ease both;
 }
 
 .hero-sub {
-  animation: fade-up 0.7s 0.4s ease both;
+  animation: fade-up 0.65s 0.5s ease both;
 }
 
 .hero-search {
-  animation: fade-up 0.7s 0.5s ease both;
+  animation: fade-up 0.65s 0.65s ease both;
 }
 
 .hero-trust {
-  animation: fade-up 0.7s 0.6s ease both;
+  animation: fade-up 0.65s 0.8s ease both;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #334155;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+select.clean {
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 14px;
 }

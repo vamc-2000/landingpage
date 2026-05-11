@@ -6,13 +6,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Home", href: "/" },
     { name: "For Job Seekers", href: "#job-seekers" },
     { name: "For Recruiters", href: "#recruiters" },
     { name: "Mobile App", href: "#mobile-app" },
     { name: "Specialties", href: "#specialties" },
     { name: "How It Works", href: "#how-it-works" },
-    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -24,22 +22,22 @@ export default function Navbar() {
               RBC24
             </Link>
           </div>
-
+          
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
+              <Link 
+                key={item.name} 
+                href={item.href} 
                 className="text-sm font-bold text-foreground/70 hover:text-primary transition-smooth"
               >
                 {item.name}
               </Link>
             ))}
-            <div className="flex items-center space-x-4 pl-4 border-l border-border">
-              <Link href="#" className="text-sm font-bold text-foreground hover:text-primary transition-smooth">
+            <div className="flex items-center space-x-4 ml-4">
+              <Link href="#" className="text-sm font-bold text-foreground hover:text-primary">
                 Login
               </Link>
-              <Link href="#" className="px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm hover:shadow-lg hover:shadow-primary/20 transition-smooth">
+              <Link href="#" className="px-8 py-3 rounded-xl bg-primary text-primary-foreground font-black text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-smooth">
                 Get Started
               </Link>
             </div>
@@ -62,21 +60,22 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="lg:hidden bg-white border-b border-border animate-fade-up">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-6 pt-4 pb-6 space-y-2">
             {menuItems.map((item) => (
-              <Link
+              <Link 
                 key={item.name}
-                href={item.href}
-                className="block px-3 py-2 text-base font-bold text-foreground/70 hover:bg-primary/5 hover:text-primary rounded-xl"
+                href={item.href} 
+                className="block py-3 text-base font-bold text-foreground/70 hover:text-primary rounded-xl"
+                onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 pb-2 border-t border-border mt-4 flex flex-col gap-2">
-              <Link href="#" className="block px-3 py-2 text-center font-bold text-foreground">
+            <div className="pt-4 flex flex-col gap-3">
+              <Link href="#" className="w-full py-3 text-center font-bold text-foreground bg-muted/50 rounded-xl">
                 Login
               </Link>
-              <Link href="#" className="block px-3 py-3 text-center font-bold bg-primary text-white rounded-xl">
+              <Link href="#" className="w-full py-3 text-center font-bold bg-primary text-primary-foreground rounded-xl">
                 Get Started
               </Link>
             </div>

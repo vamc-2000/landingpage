@@ -8,9 +8,9 @@ const roles = [
     icon: <User className="w-8 h-8 text-primary" />,
     link: "https://jobs.rbc24.com",
     buttonText: "Explore Jobs",
-    features: ["Verified healthcare jobs", "Specialty-based search", "Private professional profile", "Job alerts", "Easy applications"],
-    bgColor: "bg-primary/5",
-    accent: "bg-primary",
+    features: ["Verified healthcare jobs", "Specialty-based search", "Job alerts"],
+    bgColor: "bg-primary-soft",
+    borderColor: "border-primary-muted",
   },
   {
     title: "For Recruiters",
@@ -18,57 +18,54 @@ const roles = [
     icon: <Building2 className="w-8 h-8 text-secondary" />,
     link: "https://recruiter.rbc24.com",
     buttonText: "Start Hiring",
-    features: ["Post healthcare jobs", "Search verified candidates", "Applicant tracking", "Hiring analytics", "Team collaboration"],
-    bgColor: "bg-secondary/5",
-    accent: "bg-secondary",
+    features: ["Post healthcare jobs", "Search candidates", "Hiring analytics"],
+    bgColor: "bg-muted",
+    borderColor: "border-border",
   },
   {
     title: "Mobile App",
-    description: "Access RBC24 anytime from the mobile app. Search jobs, apply, receive alerts, manage profiles, and track hiring updates on the go.",
-    icon: <Smartphone className="w-8 h-8 text-success" />,
+    description: "Access RBC24 anytime from the mobile app. Search jobs, apply, receive alerts, and track hiring updates on the go.",
+    icon: <Smartphone className="w-8 h-8 text-accent" />,
     link: "#mobile-app",
     buttonText: "Download App",
-    features: ["Job alerts on mobile", "Apply from phone", "Recruiter notifications", "Profile management", "Real-time updates"],
-    bgColor: "bg-success/5",
-    accent: "bg-success",
+    features: ["App alerts on mobile", "Apply from phone", "Real-time updates"],
+    bgColor: "bg-accent/5",
+    borderColor: "border-accent/10",
   },
 ];
 
 export default function RoleCards() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-10">
           {roles.map((role, idx) => (
-            <div
-              key={idx}
-              className={`relative flex flex-col p-8 rounded-[2rem] border border-border ${role.bgColor} hover:shadow-2xl transition-smooth group animate-fade-up`}
+            <div 
+              key={idx} 
+              className={`p-12 rounded-[3rem] border-2 ${role.borderColor} ${role.bgColor} hover:shadow-2xl transition-smooth group animate-slide-up`}
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
-              <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-smooth">
+              <div className="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mb-10 shadow-sm group-hover:scale-110 transition-smooth">
                 {role.icon}
               </div>
-
-              <h3 className="text-2xl font-display font-black text-foreground mb-4">{role.title}</h3>
-              <p className="text-muted-foreground mb-8 flex-grow leading-relaxed">
+              <h3 className="text-3xl font-display font-black text-foreground mb-6">{role.title}</h3>
+              <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
                 {role.description}
               </p>
-
-              <ul className="space-y-4 mb-10">
+              <ul className="space-y-4 mb-12">
                 {role.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm font-bold text-foreground/80">
-                    <CheckCircle2 className={`w-5 h-5 ${role.title === "For Job Seekers" ? "text-primary" : role.title === "For Recruiters" ? "text-secondary" : "text-success"}`} />
+                  <li key={feature} className="flex items-center gap-3 font-bold text-foreground/80">
+                    <CheckCircle2 className="w-6 h-6 text-primary" />
                     {feature}
                   </li>
                 ))}
               </ul>
-
-              <Link
+              <Link 
                 href={role.link}
-                className={`flex items-center justify-center gap-2 w-full py-4 rounded-xl font-black text-white transition-smooth ${role.accent} hover:shadow-lg shadow-sm`}
+                className="inline-flex items-center justify-center w-full py-5 rounded-2xl bg-foreground text-white font-black text-xl hover:bg-primary transition-smooth shadow-lg"
               >
                 {role.buttonText}
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="ml-2 w-6 h-6" />
               </Link>
             </div>
           ))}
