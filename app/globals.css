@@ -1,13 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;0,9..40,900&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&display=swap');
+
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-border: hsl(var(--border));
+  --color-success: hsl(var(--success));
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans: 'DM Sans', Inter, system-ui, sans-serif;
+  --radius-lg: var(--radius);
+  --shadow-glass: var(--shadow-glass);
+  --shadow-card: var(--shadow-card);
 }
 
-body {
-  background: #0b0f19;
-  color: white;
-  font-family: sans-serif;
+@layer base {
+  :root {
+    /* ===== Base ===== */
+    --navbar-height: 112px;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* ===== Brand (Blue/Cyan/Green) ===== */
+    --primary: 221.2 83.2% 53.3%; /* Blue */
+    --primary-foreground: 210 40% 98%;
+    --primary-light: 217.2 91.2% 59.8%;
+    --primary-soft: 210 40% 96.1%;
+    --primary-muted: 210 40% 92%;
+
+    --secondary: 188.7 94.5% 35.9%; /* Cyan */
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 40% 98%;
+
+    --success: 160.7 84.1% 39.4%; /* Soft Green */
+
+    /* ===== Text ===== */
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --text-muted: 215 14% 65%;
+
+    /* ===== Surfaces ===== */
+    --muted: 210 40% 96.1%;
+    --border: 214.3 31.8% 91.4%;
+    --radius: 1rem;
+
+    /* ===== Shadows ===== */
+    --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
 }
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Animations */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease forwards;
+}
+
+.hero-line-1 { animation: fade-up 0.7s 0.1s ease both; }
+.hero-line-2 { animation: fade-up 0.7s 0.2s ease both; }
+.hero-line-3 { animation: fade-up 0.7s 0.3s ease both; }
+.hero-sub { animation: fade-up 0.7s 0.4s ease both; }
+.hero-search { animation: fade-up 0.7s 0.5s ease both; }
+.hero-trust { animation: fade-up 0.7s 0.6s ease both; }
