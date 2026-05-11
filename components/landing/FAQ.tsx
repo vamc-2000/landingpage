@@ -45,7 +45,7 @@ export default function FAQ() {
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
             <div key={idx} className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm transition-smooth">
-              <button 
+              <button
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 className="w-full flex items-center justify-between p-6 text-left hover:bg-muted/50 transition-colors"
               >
@@ -56,7 +56,7 @@ export default function FAQ() {
                   <Plus className="w-5 h-5 text-muted-foreground" />
                 )}
               </button>
-              
+
               {openIndex === idx && (
                 <div className="px-6 pb-6 text-muted-foreground leading-relaxed animate-fade-up">
                   {faq.answer}

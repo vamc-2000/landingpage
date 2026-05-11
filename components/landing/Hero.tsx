@@ -17,32 +17,32 @@ export default function Hero() {
             <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
             India's Healthcare Hiring Ecosystem
           </div>
-          
+
           <h1 className="text-5xl lg:text-7xl font-display font-black text-foreground tracking-tight mb-8 leading-[1.1]">
             <span className="hero-line-1 block">RBC24 – India’s</span>
             <span className="hero-line-2 block text-primary">Healthcare Hiring</span>
             <span className="hero-line-3 block text-secondary">Ecosystem</span>
           </h1>
-          
+
           <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed hero-sub">
             Find verified medical jobs, hire trusted healthcare professionals, and manage your career or recruitment journey from web and mobile.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 hero-search">
-            <Link 
-              href="https://jobs.rbc24.com" 
+            <Link
+              href="https://jobs.rbc24.com"
               className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary text-white font-bold text-lg hover:shadow-2xl hover:shadow-primary/30 transition-smooth"
             >
               Find Medical Jobs
             </Link>
-            <Link 
-              href="https://recruiter.rbc24.com" 
+            <Link
+              href="https://recruiter.rbc24.com"
               className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-foreground border-2 border-border font-bold text-lg hover:border-primary hover:text-primary transition-smooth"
             >
               Hire Medical Talent
             </Link>
-            <Link 
-              href="#mobile-app" 
+            <Link
+              href="#mobile-app"
               className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-white font-bold text-lg flex items-center justify-center gap-2 hover:bg-foreground/90 transition-smooth"
             >
               <Download className="w-5 h-5" />
@@ -55,15 +55,15 @@ export default function Hero() {
         <div className="relative mx-auto max-w-5xl hero-trust">
           <div className="relative aspect-[16/9] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/10" />
-            <Image 
-              src="/images/dashboard-preview.png" 
-              alt="Healthcare Ecosystem Dashboard" 
+            <Image
+              src="/images/dashboard-preview.png"
+              alt="Healthcare Ecosystem Dashboard"
               fill
               className="object-cover"
             />
             {/* Overlay Mockups could be added here as absolute elements */}
           </div>
-          
+
           {/* Floating elements */}
           <div className="absolute -top-10 -left-10 glass p-4 rounded-2xl shadow-xl hidden lg:block animate-float">
             <div className="flex items-center gap-3">

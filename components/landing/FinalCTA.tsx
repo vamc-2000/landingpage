@@ -13,22 +13,22 @@ export default function FinalCTA() {
           <h2 className="text-4xl lg:text-6xl font-display font-black mb-8 relative z-10">
             Start Your Healthcare Career or Hiring Journey Today
           </h2>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 relative z-10">
-            <Link 
-              href="https://jobs.rbc24.com" 
+            <Link
+              href="https://jobs.rbc24.com"
               className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-white text-primary font-black text-xl hover:shadow-2xl transition-smooth"
             >
               Find Jobs
             </Link>
-            <Link 
-              href="https://recruiter.rbc24.com" 
+            <Link
+              href="https://recruiter.rbc24.com"
               className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-primary-foreground/10 text-white border-2 border-white/20 font-black text-xl hover:bg-white/10 transition-smooth"
             >
               Start Hiring
             </Link>
-            <Link 
-              href="#mobile-app" 
+            <Link
+              href="#mobile-app"
               className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-foreground text-white font-black text-xl flex items-center justify-center gap-3 hover:bg-foreground/90 transition-smooth"
             >
               <Download className="w-6 h-6" />

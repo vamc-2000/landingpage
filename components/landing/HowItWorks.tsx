@@ -61,7 +61,7 @@ export default function HowItWorks() {
                       </span>
                     </div>
                     <p className="font-bold text-foreground">{step.text}</p>
-                    
+
                     {/* Connecting arrows (desktop) */}
                     {sIdx < 3 && (
                       <div className="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-border border-t border-dashed border-border" />

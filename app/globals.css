@@ -30,19 +30,22 @@
     --foreground: 222.2 84% 4.9%;
 
     /* ===== Brand (Blue/Cyan/Green) ===== */
-    --primary: 221.2 83.2% 53.3%; /* Blue */
+    --primary: 221.2 83.2% 53.3%;
+    /* Blue */
     --primary-foreground: 210 40% 98%;
     --primary-light: 217.2 91.2% 59.8%;
     --primary-soft: 210 40% 96.1%;
     --primary-muted: 210 40% 92%;
 
-    --secondary: 188.7 94.5% 35.9%; /* Cyan */
+    --secondary: 188.7 94.5% 35.9%;
+    /* Cyan */
     --secondary-foreground: 210 40% 98%;
 
     --accent: 199 89% 48%;
     --accent-foreground: 210 40% 98%;
 
-    --success: 160.7 84.1% 39.4%; /* Soft Green */
+    --success: 160.7 84.1% 39.4%;
+    /* Soft Green */
 
     /* ===== Text ===== */
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -97,17 +100,41 @@
 
 /* Animations */
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-up {
   animation: fade-up 0.5s ease forwards;
 }
 
-.hero-line-1 { animation: fade-up 0.7s 0.1s ease both; }
-.hero-line-2 { animation: fade-up 0.7s 0.2s ease both; }
-.hero-line-3 { animation: fade-up 0.7s 0.3s ease both; }
-.hero-sub { animation: fade-up 0.7s 0.4s ease both; }
-.hero-search { animation: fade-up 0.7s 0.5s ease both; }
-.hero-trust { animation: fade-up 0.7s 0.6s ease both; }
+.hero-line-1 {
+  animation: fade-up 0.7s 0.1s ease both;
+}
+
+.hero-line-2 {
+  animation: fade-up 0.7s 0.2s ease both;
+}
+
+.hero-line-3 {
+  animation: fade-up 0.7s 0.3s ease both;
+}
+
+.hero-sub {
+  animation: fade-up 0.7s 0.4s ease both;
+}
+
+.hero-search {
+  animation: fade-up 0.7s 0.5s ease both;
+}
+
+.hero-trust {
+  animation: fade-up 0.7s 0.6s ease both;
+}

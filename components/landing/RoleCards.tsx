@@ -40,20 +40,20 @@ export default function RoleCards() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-8">
           {roles.map((role, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`relative flex flex-col p-8 rounded-[2rem] border border-border ${role.bgColor} hover:shadow-2xl transition-smooth group animate-fade-up`}
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-smooth">
                 {role.icon}
               </div>
-              
+
               <h3 className="text-2xl font-display font-black text-foreground mb-4">{role.title}</h3>
               <p className="text-muted-foreground mb-8 flex-grow leading-relaxed">
                 {role.description}
               </p>
-              
+
               <ul className="space-y-4 mb-10">
                 {role.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3 text-sm font-bold text-foreground/80">
@@ -62,8 +62,8 @@ export default function RoleCards() {
                   </li>
                 ))}
               </ul>
-              
-              <Link 
+
+              <Link
                 href={role.link}
                 className={`flex items-center justify-center gap-2 w-full py-4 rounded-xl font-black text-white transition-smooth ${role.accent} hover:shadow-lg shadow-sm`}
               >

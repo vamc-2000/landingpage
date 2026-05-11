@@ -24,12 +24,12 @@ export default function Navbar() {
               RBC24
             </Link>
           </div>
-          
+
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <Link 
-                key={item.name} 
-                href={item.href} 
+              <Link
+                key={item.name}
+                href={item.href}
                 className="text-sm font-bold text-foreground/70 hover:text-primary transition-smooth"
               >
                 {item.name}
@@ -64,9 +64,9 @@ export default function Navbar() {
         <div className="lg:hidden bg-white border-b border-border animate-fade-up">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {menuItems.map((item) => (
-              <Link 
+              <Link
                 key={item.name}
-                href={item.href} 
+                href={item.href}
                 className="block px-3 py-2 text-base font-bold text-foreground/70 hover:bg-primary/5 hover:text-primary rounded-xl"
               >
                 {item.name}

@@ -19,21 +19,21 @@ export default function MobileAppSection() {
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
               The mobile app gives job seekers and recruiters quick access to job updates, applications, candidate alerts, and hiring notifications.
             </p>
-            
+
             <div className="grid sm:grid-cols-2 gap-6 mb-12">
-               {[
-                 "Job search screen",
-                 "Profile screen",
-                 "Recruiter notification screen",
-                 "Application status screen"
-               ].map((item) => (
-                 <div key={item} className="flex items-center gap-3">
-                   <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
-                     <div className="w-2.5 h-2.5 rounded-full bg-success" />
-                   </div>
-                   <span className="font-bold text-white/90">{item}</span>
-                 </div>
-               ))}
+              {[
+                "Job search screen",
+                "Profile screen",
+                "Recruiter notification screen",
+                "Application status screen"
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
+                    <div className="w-2.5 h-2.5 rounded-full bg-success" />
+                  </div>
+                  <span className="font-bold text-white/90">{item}</span>
+                </div>
+              ))}
             </div>
 
             <div className="flex flex-wrap gap-4">
@@ -50,25 +50,25 @@ export default function MobileAppSection() {
 
           <div className="lg:w-1/2 relative z-10">
             <div className="relative mx-auto w-full max-w-[320px]">
-               {/* Phone Mockup Placeholder */}
-               <div className="aspect-[9/19] bg-white/10 rounded-[3rem] border-8 border-white/10 p-4 shadow-2xl relative overflow-hidden backdrop-blur-3xl">
-                  <div className="w-1/3 h-6 bg-white/10 rounded-full mx-auto mb-10" />
-                  <div className="space-y-6">
-                    <div className="h-12 w-full bg-white/20 rounded-2xl" />
-                    <div className="h-40 w-full bg-white/20 rounded-2xl" />
-                    <div className="space-y-3">
-                      <div className="h-4 w-3/4 bg-white/20 rounded-full" />
-                      <div className="h-4 w-1/2 bg-white/20 rounded-full" />
-                    </div>
-                    <div className="h-32 w-full bg-white/20 rounded-2xl" />
+              {/* Phone Mockup Placeholder */}
+              <div className="aspect-[9/19] bg-white/10 rounded-[3rem] border-8 border-white/10 p-4 shadow-2xl relative overflow-hidden backdrop-blur-3xl">
+                <div className="w-1/3 h-6 bg-white/10 rounded-full mx-auto mb-10" />
+                <div className="space-y-6">
+                  <div className="h-12 w-full bg-white/20 rounded-2xl" />
+                  <div className="h-40 w-full bg-white/20 rounded-2xl" />
+                  <div className="space-y-3">
+                    <div className="h-4 w-3/4 bg-white/20 rounded-full" />
+                    <div className="h-4 w-1/2 bg-white/20 rounded-full" />
                   </div>
-                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-success shadow-lg shadow-success/40" />
-               </div>
-               
-               {/* Floating cards */}
-               <div className="absolute top-20 -left-20 glass p-4 rounded-2xl shadow-2xl animate-float">
-                  <Icons.Bell className="w-8 h-8 text-success" />
-               </div>
+                  <div className="h-32 w-full bg-white/20 rounded-2xl" />
+                </div>
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-success shadow-lg shadow-success/40" />
+              </div>
+
+              {/* Floating cards */}
+              <div className="absolute top-20 -left-20 glass p-4 rounded-2xl shadow-2xl animate-float">
+                <Icons.Bell className="w-8 h-8 text-success" />
+              </div>
             </div>
           </div>
         </div>

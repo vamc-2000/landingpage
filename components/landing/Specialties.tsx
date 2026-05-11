@@ -1,5 +1,5 @@
 const specialties = [
-  "Cardiology", "Neurology", "Orthopedics", "Pediatrics", 
+  "Cardiology", "Neurology", "Orthopedics", "Pediatrics",
   "Gynecology", "Dermatology", "Radiology", "General Physician",
   "Nursing", "Lab Technician", "Hospital Administration", "Emergency Medicine"
 ];
@@ -17,8 +17,8 @@ export default function Specialties() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {specialties.map((item) => (
-            <div 
-              key={item} 
+            <div
+              key={item}
               className="p-6 rounded-2xl bg-muted/50 border border-border text-center hover:bg-primary/5 hover:border-primary/20 transition-smooth group cursor-pointer"
             >
               <h3 className="text-lg font-bold text-foreground/80 group-hover:text-primary transition-colors">
