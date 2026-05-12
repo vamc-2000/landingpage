@@ -18,8 +18,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-3xl font-display font-black text-primary tracking-tight">
+            <Link href="/" className="text-3xl sm:text-4xl font-display font-black text-primary tracking-tighter flex items-center gap-2">
               RBC24
+              <span className="text-foreground/20 font-light ml-1 hidden sm:block">|</span>
             </Link>
           </div>
           
