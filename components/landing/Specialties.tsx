@@ -6,10 +6,10 @@ const specialties = [
 
 export default function Specialties() {
   return (
-    <section id="specialties" className="py-32 bg-white">
+    <section id="specialties" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-7xl font-display font-black text-foreground mb-8">Browse by Specialties</h2>
+          <h2 className="text-fluid-h2 font-display font-black text-foreground mb-8">Browse by Specialties</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Find the right match across specialized healthcare domains and clinical roles.
           </p>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-56 lg:pb-40 overflow-hidden bg-white">
+    <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 animate-pulse" />
@@ -18,7 +18,7 @@ export default function Hero() {
               RBC24 – India’s Healthcare Hiring Ecosystem
             </div>
             
-            <h1 className="text-6xl lg:text-8xl font-display font-black text-foreground tracking-tight mb-8 leading-[1.1]">
+            <h1 className="text-fluid-h1 font-display font-black text-foreground tracking-tighter mb-8 leading-[1.05]">
               <span className="hero-line-1 block">RBC24 – India’s</span>
               <span className="hero-line-2 block text-primary">Healthcare</span>
               <span className="hero-line-3 block">Hiring Platform</span>
@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
 
           <div className="lg:w-1/2 relative hero-sub">
-            <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-muted animate-float">
+            <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border-8 border-white bg-muted animate-float">
                 <Image 
                   src="/images/dashboard-preview.png" 
                   alt="RBC24 Dashboard" 
