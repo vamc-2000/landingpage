@@ -34,21 +34,21 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-[#0b0f19] text-white py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-white py-20 relative border-t border-orange-50">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 w-full">
 
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4 tracking-tight text-gray-900">
             Powerful Features
           </h2>
 
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
             Everything you need to simplify hiring and accelerate careers
             on one modern platform.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
 
           {features.map((feature, index) => {
             const Icon = feature.icon;
@@ -56,17 +56,17 @@ export default function Features() {
             return (
               <div
                 key={index}
-                className="bg-[#111827] border border-gray-800 rounded-3xl p-8 hover:border-blue-500 transition duration-300"
+                className="bg-white border border-gray-100/50 shadow-sm rounded-3xl p-8 hover:border-[#ff6b00] hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
               >
-                <div className="bg-blue-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
-                  <Icon size={28} />
+                <div className="bg-[#fff3eb] text-[#ff6b00] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                  <Icon size={24} />
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4">
+                <h3 className="text-xl font-bold mb-3 text-gray-900 tracking-tight">
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-500 leading-relaxed text-base flex-grow">
                   {feature.description}
                 </p>
               </div>

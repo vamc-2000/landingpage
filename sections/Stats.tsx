@@ -20,7 +20,7 @@
 export default function Stats() {
   return (
     <section className="bg-[#111827] text-white py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-screen-xl mx-auto">
 
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
