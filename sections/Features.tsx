@@ -3,6 +3,8 @@
   Users,
   ShieldCheck,
   BarChart3,
+  FileText,
+  Sparkles,
 } from "lucide-react";
 
 const features = [
@@ -19,36 +21,48 @@ const features = [
       "Recruiters can manage applicants, interviews, and hiring pipelines efficiently.",
   },
   {
+    icon: FileText,
+    title: "Resume Tracking",
+    description:
+      "Seamlessly parse, track, and manage candidate resumes in one place.",
+  },
+  {
+    icon: BarChart3,
+    title: "Hiring Analytics",
+    description:
+      "Track hiring performance and application insights with detailed analytics.",
+  },
+  {
+    icon: Sparkles,
+    title: "AI Recommendations",
+    description:
+      "Leverage machine learning to find the best candidate fit instantly.",
+  },
+  {
     icon: ShieldCheck,
     title: "Secure Platform",
     description:
       "Protected profiles, secure authentication, and reliable data privacy.",
   },
-  {
-    icon: BarChart3,
-    title: "Advanced Analytics",
-    description:
-      "Track hiring performance and application insights with detailed analytics.",
-  },
 ];
 
 export default function Features() {
   return (
-    <section className="bg-white py-20 relative border-t border-orange-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 w-full">
+    <section id="features" className="bg-white section-spacing relative border-t border-orange-50">
+      <div className="section-container">
 
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 tracking-tight text-gray-900">
+          <h2 className="heading-lg mb-4">
             Powerful Features
           </h2>
 
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="body-muted max-w-2xl mx-auto">
             Everything you need to simplify hiring and accelerate careers
             on one modern platform.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
 
           {features.map((feature, index) => {
             const Icon = feature.icon;

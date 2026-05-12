@@ -1,17 +1,67 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@theme {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-fraunces: var(--font-fraunces), ui-serif, Georgia, serif;
 }
 
-body {
-  background: #ffffff;
-  color: #111827;
-  font-family: sans-serif;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #ffffff;
+    color: #111827; /* gray-900 */
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
-html {
-  font-size: 16px;
+@layer components {
+  /* Layout Utilities */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 lg:px-8 w-full;
+  }
+
+  .section-spacing {
+    @apply py-20 md:py-24 lg:py-32;
+  }
+
+  .content-spacing {
+    @apply space-y-6;
+  }
+
+  /* Typography Utilities */
+  .heading-xl {
+    @apply font-fraunces font-semibold tracking-tight text-gray-900 leading-[1.1] text-5xl md:text-6xl lg:text-7xl;
+  }
+
+  .heading-lg {
+    @apply font-bold tracking-tight text-gray-900 leading-tight text-3xl md:text-4xl;
+  }
+
+  .body-muted {
+    @apply text-lg text-gray-500 leading-relaxed;
+  }
+
+
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 px-6 py-3 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-[#ff6b00] text-white hover:bg-[#e66000] border border-transparent;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 px-6 py-3 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-white text-gray-900 border-2 border-gray-100 hover:border-[#ff6b00] hover:text-[#ff6b00] hover:bg-orange-50/50;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  }
 }
