@@ -56,43 +56,45 @@ export default function MobileAppSection() {
           </div>
 
           <div className="lg:w-1/2 relative z-10 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[400px]">
+            <div className="relative w-full max-w-[280px] sm:max-w-[400px]">
               {/* Premium Phone Mockup */}
-              <div className="relative aspect-[9/18.5] bg-slate-900 rounded-[3.5rem] border-[12px] border-slate-800 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden ring-1 ring-white/10 animate-float">
+              <div className="relative aspect-[9/19] bg-slate-900 rounded-[3.5rem] border-[12px] border-slate-800 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden ring-1 ring-white/10 animate-float">
                 <img 
-                  src="/mobile-mockup.png" 
+                  src="/images/app-interface.png" 
                   alt="RBC24 App Interface" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-0 inset-x-0 h-10 bg-gradient-to-b from-black/60 to-transparent flex items-center justify-center">
-                  <div className="w-24 h-6 bg-slate-900 rounded-b-3xl border-x border-b border-white/5" />
-                </div>
+                {/* Clean top edge */}
+                <div className="absolute top-0 inset-x-0 h-6 bg-gradient-to-b from-black/20 to-transparent z-20" />
               </div>
 
               {/* Ultra-Sleek Floating Notification */}
-              <div className="absolute top-10 -right-4 sm:-right-12 glass-strong p-1 rounded-[2rem] shadow-2xl animate-float z-30 border-white/10 overflow-hidden" style={{ animationDelay: '1.5s' }}>
-                <div className="bg-slate-900/40 backdrop-blur-xl p-4 sm:p-6 flex items-center gap-5">
+              <div className="absolute top-12 right-0 sm:-right-12 glass-strong p-1 rounded-[1.5rem] sm:rounded-[2rem] shadow-2xl animate-float z-30 border-white/10 overflow-hidden scale-[0.8] sm:scale-100 origin-right" style={{ animationDelay: '1.5s' }}>
+                <div className="bg-slate-900/40 backdrop-blur-xl p-3 sm:p-6 flex items-center gap-4">
                   <div className="relative">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-orange-600 flex items-center justify-center text-white shadow-lg shadow-primary/40">
-                      <Icons.Bell className="w-7 h-7 animate-pulse" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white overflow-hidden flex items-center justify-center shadow-lg shadow-primary/20">
+                      <img src="/images/apollo-logo.png" alt="Apollo" className="w-full h-full object-cover" />
                     </div>
                     <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-slate-900" />
                   </div>
                   <div>
-                    <p className="text-xs text-primary font-black uppercase tracking-widest mb-1">Live Update</p>
-                    <p className="text-base font-bold text-white">New Job Match Found!</p>
-                    <p className="text-xs text-white/40">Apollo Hospitals • Just now</p>
+                    <p className="text-[10px] sm:text-xs text-primary font-black uppercase tracking-widest mb-1">Live Update</p>
+                    <p className="text-sm sm:text-base font-bold text-white whitespace-nowrap">New Job Match Found!</p>
+                    <p className="text-[10px] sm:text-xs text-white/40">Apollo Hospitals • Just now</p>
                   </div>
                 </div>
               </div>
 
               {/* Premium Verified Badge */}
-              <div className="absolute bottom-20 -left-6 sm:-left-12 glass p-1 rounded-full shadow-2xl animate-float z-30 border-white/10" style={{ animationDelay: '0.7s' }}>
-                <div className="bg-white/5 backdrop-blur-2xl px-6 py-3 rounded-full flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">
-                    <Icons.CheckCircle2 className="w-5 h-5" />
+              <div className="absolute bottom-20 left-0 sm:-left-12 glass p-1 rounded-full shadow-2xl animate-float z-30 border-white/10 scale-[0.85] sm:scale-100 origin-left" style={{ animationDelay: '0.7s' }}>
+                <div className="bg-white/5 backdrop-blur-2xl px-4 py-2 sm:px-6 sm:py-3 rounded-full flex items-center gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-emerald-500/50 overflow-hidden shadow-lg shadow-emerald-500/20">
+                    <img src="/images/doctor-avatar.png" alt="Trusted Doctor" className="w-full h-full object-cover" />
                   </div>
-                  <span className="font-black text-white text-sm tracking-wide">TRUSTED PROFILE</span>
+                  <div className="flex flex-col">
+                    <span className="font-black text-white text-[10px] sm:text-sm tracking-wide leading-none uppercase">TRUSTED PROFILE</span>
+                    <span className="text-[9px] sm:text-[10px] text-emerald-400 font-bold uppercase tracking-tight">Verified Provider</span>
+                  </div>
                 </div>
               </div>
               
