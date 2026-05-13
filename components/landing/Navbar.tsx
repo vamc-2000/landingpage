@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import LoginModal from "./LoginModal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   const menuItems = [
     { name: "For Job Seekers", href: "#job-seekers" },
@@ -14,12 +17,20 @@ export default function Navbar() {
   ];
 
   return (
+    <>
     <nav className="fixed w-full z-50 glass-strong border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+        <div className="flex justify-between h-24 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-3xl font-display font-black text-primary tracking-tight">
-              RBC24
+            <Link href="/" className="relative h-20 w-64">
+              <Image 
+                src="/logo.jpeg" 
+                alt="RBC24 Logo" 
+                fill 
+                className="object-contain object-left"
+                sizes="(max-width: 768px) 256px, 256px"
+                priority
+              />
             </Link>
           </div>
           
@@ -34,9 +45,12 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex items-center space-x-4 ml-4">
-              <Link href="#" className="text-sm font-bold text-foreground hover:text-primary">
+              <button 
+                onClick={() => setIsLoginModalOpen(true)}
+                className="text-sm font-bold text-foreground hover:text-primary cursor-pointer transition-smooth"
+              >
                 Login
-              </Link>
+              </button>
               <Link href="#" className="px-8 py-3 rounded-xl bg-primary text-primary-foreground font-black text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-smooth">
                 Get Started
               </Link>
@@ -44,7 +58,7 @@ export default function Navbar() {
           </div>
 
           <div className="lg:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground p-2">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -72,10 +86,16 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-4 flex flex-col gap-3">
-              <Link href="#" className="w-full py-3 text-center font-bold text-foreground bg-muted/50 rounded-xl">
+              <button 
+                onClick={() => {
+                  setIsOpen(false);
+                  setIsLoginModalOpen(true);
+                }}
+                className="w-full py-4 text-center font-bold text-foreground bg-slate-50 rounded-xl hover:bg-slate-100 transition-smooth"
+              >
                 Login
-              </Link>
-              <Link href="#" className="w-full py-3 text-center font-bold bg-primary text-primary-foreground rounded-xl">
+              </button>
+              <Link href="#" className="w-full py-4 text-center font-bold bg-primary text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
                 Get Started
               </Link>
             </div>
@@ -83,5 +103,12 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+
+    {/* Login Modal - Moved outside nav to avoid transform/z-index issues */}
+    <LoginModal 
+      isOpen={isLoginModalOpen} 
+      onClose={() => setIsLoginModalOpen(false)} 
+    />
+    </>
   );
 }

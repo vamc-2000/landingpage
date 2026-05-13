@@ -6,7 +6,7 @@ const roles = [
     title: "For Job Seekers",
     description: "Doctors and healthcare professionals can discover verified jobs, create private profiles, apply easily, and get job alerts.",
     icon: <User className="w-8 h-8 text-primary" />,
-    link: "https://jobs.rbc24.com",
+    link: "https://jobs.rbc24.com/jobs",
     buttonText: "Explore Jobs",
     features: ["Verified healthcare jobs", "Specialty-based search", "Job alerts"],
     bgColor: "bg-primary-soft",
@@ -36,36 +36,36 @@ const roles = [
 
 export default function RoleCards() {
   return (
-    <section className="py-32 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-3 gap-8">
           {roles.map((role, idx) => (
             <div 
               key={idx} 
-              className={`p-12 rounded-[3rem] border-2 ${role.borderColor} ${role.bgColor} hover:shadow-2xl transition-smooth group animate-slide-up`}
+              className={`p-10 rounded-[2.5rem] border-2 ${role.borderColor} ${role.bgColor} hover:shadow-2xl transition-smooth group animate-slide-up`}
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
-              <div className="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mb-10 shadow-sm group-hover:scale-110 transition-smooth">
+              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-smooth">
                 {role.icon}
               </div>
-              <h3 className="text-3xl font-display font-black text-foreground mb-6">{role.title}</h3>
-              <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+              <h3 className="text-2xl font-display font-black text-foreground mb-4">{role.title}</h3>
+              <p className="text-muted-foreground text-base mb-6 leading-relaxed">
                 {role.description}
               </p>
-              <ul className="space-y-4 mb-12">
+              <ul className="space-y-3 mb-8">
                 {role.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 font-bold text-foreground/80">
-                    <CheckCircle2 className="w-6 h-6 text-primary" />
-                    {feature}
+                   <li key={feature} className="flex items-center gap-3 font-bold text-foreground/80">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                    <span className="text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
               <Link 
                 href={role.link}
-                className="inline-flex items-center justify-center w-full py-5 rounded-2xl bg-foreground text-white font-black text-xl hover:bg-primary transition-smooth shadow-lg"
+                className="inline-flex items-center justify-center w-full py-4 rounded-2xl bg-foreground text-white font-black text-lg hover:bg-primary transition-smooth shadow-lg"
               >
                 {role.buttonText}
-                <ChevronRight className="ml-2 w-6 h-6" />
+                <ChevronRight className="ml-2 w-5 h-5" />
               </Link>
             </div>
           ))}

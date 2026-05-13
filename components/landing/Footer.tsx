@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const FacebookIcon = ({ className }: { className?: string }) => (
@@ -31,27 +32,33 @@ const InstagramIcon = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-muted-foreground py-24">
+    <footer className="bg-foreground text-muted-foreground py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="text-4xl font-display font-black text-white mb-8 block tracking-tight">
-              RBC24
+            <Link href="/" className="relative h-28 w-64 mb-6 block">
+              <Image
+                src="/logo.jpeg"
+                alt="RBC24 Logo"
+                fill
+                className="object-contain object-left"
+                sizes="(max-width: 768px) 256px, 256px"
+              />
             </Link>
-            <p className="text-lg leading-relaxed mb-10 max-w-xs text-white/60">
+            <p className="text-base leading-relaxed mb-8 max-w-xs text-white/60">
               India's healthcare hiring ecosystem connecting medical professionals with trusted organizations.
             </p>
-            <div className="flex gap-5">
-              <a href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><FacebookIcon className="w-6 h-6" /></a>
-              <a href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><TwitterIcon className="w-6 h-6" /></a>
-              <a href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><LinkedinIcon className="w-6 h-6" /></a>
-              <a href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><InstagramIcon className="w-6 h-6" /></a>
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><FacebookIcon className="w-5 h-5" /></a>
+              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><TwitterIcon className="w-5 h-5" /></a>
+              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><LinkedinIcon className="w-5 h-5" /></a>
+              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><InstagramIcon className="w-5 h-5" /></a>
             </div>
           </div>
 
           <div>
-            <h4 className="text-white font-display font-black mb-8 uppercase tracking-widest text-sm">Platform</h4>
-            <ul className="space-y-5 text-lg">
+            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Platform</h4>
+            <ul className="space-y-3 text-base">
               <li><Link href="#job-seekers" className="hover:text-primary transition-smooth">For Job Seekers</Link></li>
               <li><Link href="#recruiters" className="hover:text-primary transition-smooth">For Recruiters</Link></li>
               <li><Link href="#mobile-app" className="hover:text-primary transition-smooth">Mobile App</Link></li>
@@ -60,8 +67,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-display font-black mb-8 uppercase tracking-widest text-sm">Support</h4>
-            <ul className="space-y-5 text-lg">
+            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Support</h4>
+            <ul className="space-y-3 text-base">
               <li><a href="#" className="hover:text-primary transition-smooth">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-primary transition-smooth">Terms of Service</a></li>
               <li><a href="#" className="hover:text-primary transition-smooth">Help Center</a></li>
@@ -70,19 +77,19 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-display font-black mb-8 uppercase tracking-widest text-sm">Contact Us</h4>
-            <ul className="space-y-6 text-lg">
-              <li className="flex gap-4">
-                <Mail className="w-6 h-6 text-primary flex-shrink-0" />
-                <span>support@rbc24.com</span>
+            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
+            <ul className="space-y-4 text-base">
+              <li className="flex gap-3">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <span>cv.rbc24@gmail.com</span>
               </li>
-              <li className="flex gap-4">
-                <Phone className="w-6 h-6 text-primary flex-shrink-0" />
+              {/* <li className="flex gap-3">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>+91 (800) 123-4567</span>
-              </li>
-              <li className="flex gap-4">
-                <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
-                <span>HSR Layout, Bangalore, India</span>
+              </li> */}
+              <li className="flex gap-3">
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+                <span>HSR Layout, Hyderabad, India</span>
               </li>
             </ul>
           </div>
