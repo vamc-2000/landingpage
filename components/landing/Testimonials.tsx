@@ -23,11 +23,11 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-white">
+    <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-display font-black text-foreground mb-4 tracking-tightest text-balance">Voices of Trust</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        <div className="text-center mb-24">
+          <h2 className="text-fluid-h2 font-display font-black text-foreground mb-8">Voices of Trust</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Trusted by medical professionals and organizations across the nation.
           </p>
         </div>

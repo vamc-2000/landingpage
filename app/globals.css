@@ -30,7 +30,7 @@
 @layer base {
   :root {
     /* ===== Base ===== */
-    --navbar-height: 112px;
+    --navbar-height: 80px;
     --background: 0 0% 100%;
     --foreground: 215 28% 17%;
     /* #1F2937 */
@@ -134,7 +134,7 @@
 
   @media (max-width: 767px) {
     :root {
-      --navbar-height: 100px;
+      --navbar-height: 80px;
     }
   }
 
@@ -416,4 +416,144 @@ select.clean {
   -webkit-appearance: none;
   appearance: none;
   font-size: 14px;
+}
+
+/* ===== Media Queries & Responsive Refinements ===== */
+
+/* 
+  Mobile-first approach is already handled by Tailwind.
+  These queries are for specific refinements and fluid scales.
+*/
+
+@layer base {
+  :root {
+    --container-px: 1rem;
+    --section-py: 5rem;
+  }
+
+  @media (min-width: 640px) {
+    :root {
+      --container-px: 1.5rem;
+      --section-py: 6rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --container-px: 2rem;
+      --section-py: 8rem;
+    }
+  }
+}
+
+/* Fluid Typography */
+@layer utilities {
+  .text-fluid-h1 {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1.1;
+  }
+  
+  .text-fluid-h2 {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    line-height: 1.2;
+  }
+
+  .text-fluid-p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+}
+
+/* Mobile Specific Fixes */
+@media (max-width: 639px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .mobile-rounded-xl {
+    border-radius: 1.5rem !important;
+  }
+
+  .mobile-no-px {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+}
+
+/* Tablet Refinements */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .tablet-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Animation performance on mobile */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* ===== Interaction Responses ===== */
+
+/* Tactile button feedback */
+button:active, 
+a:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
+/* Premium Button Glows */
+.btn-primary-glow:hover {
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+}
+
+.btn-secondary-glow:hover {
+  box-shadow: 0 0 20px hsl(var(--secondary) / 0.4);
+}
+
+/* Link underline animations */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: hsl(var(--primary));
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Glass card hover effect */
+.glass-card-hover {
+  transition: var(--transition-smooth);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }

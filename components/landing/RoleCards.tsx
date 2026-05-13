@@ -36,13 +36,13 @@ const roles = [
 
 export default function RoleCards() {
   return (
-    <section className="py-20 bg-white">
+    <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-8">
           {roles.map((role, idx) => (
             <div 
               key={idx} 
-              className={`p-10 rounded-[2.5rem] border-2 ${role.borderColor} ${role.bgColor} hover:shadow-2xl transition-smooth group animate-slide-up`}
+              className={`p-10 lg:p-12 rounded-[3rem] mobile-rounded-xl border-2 ${role.borderColor} ${role.bgColor} hover:shadow-2xl transition-smooth group animate-slide-up`}
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-smooth">
