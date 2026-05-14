@@ -8,12 +8,12 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-12 bg-white border-y border-border">
+    <section className="py-6 bg-white border-y border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center animate-slide-up" style={{ animationDelay: `${idx * 0.1}s` }}>
-              <div className="text-3xl lg:text-4xl font-display font-black text-primary mb-2 tracking-tightest">
+              <div className="text-sm lg:text-base font-display font-black text-primary mb-2 tracking-tightest">
                 {stat.value}
               </div>
               <p className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] leading-tight px-2">

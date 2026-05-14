@@ -23,18 +23,18 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-24">
-          <h2 className="text-fluid-h2 font-display font-black text-foreground mb-8">Voices of Trust</h2>
+        <div className="text-center mb-28">
+          <h2 className="text-fluid-h2 font-display font-black text-foreground mb-12 tracking-tightest leading-[1.05]">Voices of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Trust</span></h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Trusted by medical professionals and organizations across the nation.
+            Trusted by medical professionals and organizations across the nation for delivering excellence in healthcare recruitment.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, idx) => (
-            <div key={idx} className="p-10 rounded-[2.5rem] bg-muted/40 border border-border relative group hover:bg-white hover:shadow-2xl transition-smooth">
+            <div key={idx} className="p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm shadow-slate-200/50 relative group hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 ease-out">
               <Quote className="absolute top-8 right-10 w-10 h-10 text-primary/10 group-hover:text-primary/20 transition-smooth" />
               <div className="flex gap-1.5 mb-6">
                 {[...Array(t.rating)].map((_, i) => (

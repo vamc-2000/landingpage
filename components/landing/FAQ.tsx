@@ -28,7 +28,7 @@ export default function FAQ() {
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-display font-black text-foreground mb-4 tracking-tightest text-balance">Frequently Asked Questions</h2>
+          <h2 className="text-xl lg:text-2xl font-display font-black text-foreground mb-4 tracking-tightest text-balance">Frequently Asked Questions</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Everything you need to know about the RBC24 ecosystem.
           </p>
@@ -41,7 +41,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 className="w-full flex items-center justify-between p-6 lg:p-8 text-left hover:bg-muted/50 transition-colors"
               >
-                <span className="text-lg lg:text-xl font-display font-black text-foreground pr-8 leading-tight">{faq.question}</span>
+                <span className="text-sm lg:text-base font-display font-black text-foreground pr-8 leading-tight">{faq.question}</span>
                 {openIndex === idx ? (
                   <Minus className="w-5 h-5 text-primary" />
                 ) : (

@@ -23,11 +23,11 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-16 bg-white">
+    <section id="how-it-works" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-display font-black text-foreground mb-4 tracking-tightest text-balance">Simple and Fast</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-fluid-h2 font-display font-black text-foreground mb-8 tracking-tightest text-balance leading-[1.15]">Simple and Fast</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-16">
             RBC24 streamlines the healthcare hiring journey for everyone involved in just a few steps.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function HowItWorks() {
         <div className="grid lg:grid-cols-3 gap-8">
           {flows.map((flow, idx) => (
             <div key={idx} className="p-10 rounded-[2.5rem] bg-muted border border-border hover:shadow-2xl transition-smooth group">
-              <h3 className={`text-2xl font-display font-black mb-8 ${flow.color}`}>{flow.title}</h3>
+              <h3 className={`text-base font-display font-black mb-8 ${flow.color}`}>{flow.title}</h3>
               <div className="space-y-8 relative">
                 {flow.steps.map((step, sIdx) => (
                   <div key={sIdx} className="flex items-center gap-4 relative z-10">

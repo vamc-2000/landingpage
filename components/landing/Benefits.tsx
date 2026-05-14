@@ -13,12 +13,12 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-[3rem] p-10 lg:p-16 shadow-xl border border-border">
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-display font-black text-foreground mb-4 tracking-tightest text-balance">Why Choose RBC24?</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-fluid-h2 font-display font-black text-foreground mb-8 tracking-tightest text-balance leading-[1.15]">Why Choose RBC24?</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-16">
               The ecosystem built specifically for the unique needs of healthcare hiring in India.
             </p>
           </div>

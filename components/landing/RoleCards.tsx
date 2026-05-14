@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { User, Building2, Smartphone, CheckCircle2, ChevronRight } from "lucide-react";
 
 const roles = [
@@ -16,7 +15,7 @@ const roles = [
     title: "For Recruiters",
     description: "Hospitals, clinics, and healthcare organizations can post jobs, search candidates, manage applications, and hire faster.",
     icon: <Building2 className="w-8 h-8 text-secondary" />,
-    link: "https://recruiter.rbc24.com",
+    link: "https://recruiter.rbc24.com/",
     buttonText: "Start Hiring",
     features: ["Post healthcare jobs", "Search candidates", "Hiring analytics"],
     bgColor: "bg-muted",
@@ -48,7 +47,7 @@ export default function RoleCards() {
               <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-smooth">
                 {role.icon}
               </div>
-              <h3 className="text-2xl font-display font-black text-foreground mb-4">{role.title}</h3>
+              <h3 className="text-base font-display font-black text-foreground mb-6">{role.title}</h3>
               <p className="text-muted-foreground text-base mb-6 leading-relaxed">
                 {role.description}
               </p>
@@ -60,13 +59,13 @@ export default function RoleCards() {
                   </li>
                 ))}
               </ul>
-              <Link 
+              <a 
                 href={role.link}
-                className="inline-flex items-center justify-center w-full py-4 rounded-2xl bg-foreground text-white font-black text-lg hover:bg-primary transition-smooth shadow-lg"
+                className="inline-flex items-center justify-center w-full py-4 rounded-2xl bg-foreground text-white font-black text-lg hover:bg-primary transition-smooth shadow-lg no-underline"
               >
                 {role.buttonText}
                 <ChevronRight className="ml-2 w-5 h-5" />
-              </Link>
+              </a>
             </div>
           ))}
         </div>

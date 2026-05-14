@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 
@@ -36,7 +35,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="relative h-28 w-64 mb-6 block">
+            <a href="/" className="relative h-28 w-64 mb-6 block">
               <Image
                 src="/logo.jpeg"
                 alt="RBC24 Logo"
@@ -44,7 +43,7 @@ export default function Footer() {
                 className="object-contain object-left"
                 sizes="(max-width: 768px) 256px, 256px"
               />
-            </Link>
+            </a>
             <p className="text-base leading-relaxed mb-8 max-w-xs text-white/60">
               India's healthcare hiring ecosystem connecting medical professionals with trusted organizations.
             </p>
@@ -59,10 +58,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Platform</h4>
             <ul className="space-y-3 text-base">
-              <li><Link href="#job-seekers" className="hover:text-primary transition-smooth">For Job Seekers</Link></li>
-              <li><Link href="#recruiters" className="hover:text-primary transition-smooth">For Recruiters</Link></li>
-              <li><Link href="#mobile-app" className="hover:text-primary transition-smooth">Mobile App</Link></li>
-              <li><Link href="#specialties" className="hover:text-primary transition-smooth">Specialties</Link></li>
+              <li><a href="#job-seekers" className="hover:text-primary transition-smooth">For Job Seekers</a></li>
+              <li><a href="#recruiters" className="hover:text-primary transition-smooth">For Recruiters</a></li>
+              <li><a href="#mobile-app" className="hover:text-primary transition-smooth">Mobile App</a></li>
+              <li><a href="#specialties" className="hover:text-primary transition-smooth">Specialties</a></li>
             </ul>
           </div>
 

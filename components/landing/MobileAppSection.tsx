@@ -5,13 +5,13 @@ export default function MobileAppSection() {
 
 
   return (
-    <section id="mobile-app" className="py-16 bg-white overflow-hidden">
+    <section id="mobile-app" className="section-padding bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-4">
-          <h2 className="text-4xl lg:text-5xl font-display font-black text-slate-900 mb-4 leading-tight tracking-tightest text-balance">
+          <h2 className="text-fluid-h2 font-display font-black text-slate-900 mb-8 leading-[1.15] tracking-tightest text-balance">
             Personalized Jobs
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-xl text-slate-600 leading-relaxed mb-16">
             A dynamic job discovery interface that showcases relevant opportunities based on user preferences.
           </p>
         </div>
