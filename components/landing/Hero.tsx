@@ -30,13 +30,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 hero-search">
               <a 
                 href="https://jobs.rbc24.com/jobs" 
-                className="w-full sm:w-auto px-10 py-4.5 rounded-2xl bg-primary text-primary-foreground font-black text-lg hover:shadow-2xl hover:shadow-primary/30 transition-smooth hover:-translate-y-1 text-center"
+                className="w-full sm:w-auto px-10 py-4.5 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg hover:shadow-2xl hover:shadow-primary/30 transition-smooth hover:-translate-y-1 text-center"
               >
                 Find Medical Jobs
               </a>
               <a 
                 href="https://recruiter.rbc24.com/" 
-                className="w-full sm:w-auto px-10 py-4.5 rounded-2xl bg-white text-foreground border-2 border-border font-black text-lg hover:border-primary hover:text-primary transition-smooth text-center"
+                className="w-full sm:w-auto px-10 py-4.5 rounded-2xl bg-white text-foreground border-2 border-border font-normal text-lg hover:border-primary hover:text-primary transition-smooth text-center"
               >
                 Hire Medical Talent
               </a>
