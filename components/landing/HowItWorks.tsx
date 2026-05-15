@@ -95,7 +95,7 @@ export default function HowItWorks() {
                 <p className={`text-[11px] font-black tracking-widest uppercase mb-3 ${flow.colorClass}`}>
                   {flow.subtitle}
                 </p>
-                <h3 className="text-3xl lg:text-4xl font-display font-black text-foreground tracking-tight flex items-center gap-4">
+                <h3 className="text-3xl lg:text-4xl font-black text-foreground tracking-tight flex items-center gap-4">
                   {flow.title}
                 </h3>
               </div>

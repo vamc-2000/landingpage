@@ -84,7 +84,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-8">
           {/* 1. Platform */}
           <div>
-            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Platform</h4>
+            <h4 className="text-white font-black mb-6 uppercase tracking-widest text-[10px]">Platform</h4>
             <ul className="space-y-3 text-base">
               <li><a href="#job-seekers" className="hover:text-primary transition-smooth">For Job Seekers</a></li>
               <li><a href="#recruiters" className="hover:text-primary transition-smooth">For Recruiters</a></li>
@@ -95,7 +95,7 @@ export default function Footer() {
 
           {/* 2. Support */}
           <div>
-            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Support</h4>
+            <h4 className="text-white font-black mb-6 uppercase tracking-widest text-[10px]">Support</h4>
             <ul className="space-y-3 text-base">
               <li><a href="#" className="hover:text-primary transition-smooth">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-primary transition-smooth">Terms of Service</a></li>
@@ -106,7 +106,7 @@ export default function Footer() {
 
           {/* 3. Contact Us */}
           <div>
-            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
+            <h4 className="text-white font-black mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
             <ul className="space-y-4 text-base">
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
@@ -124,20 +124,20 @@ export default function Footer() {
           </div>
 
           {/* 4. Logo & Matter */}
-          <div className="flex flex-col lg:items-end lg:text-right">
-            <a href="/" className="relative h-28 w-64 mb-6 block">
+          <div className="flex flex-col items-start text-left lg:col-span-1">
+            <a href="/" className="relative h-24 w-64 mb-6 block -ml-4">
               <Image
-                src="/logo.jpeg"
+                src="/images/RBC24 Horizontal Logo Transparent.png"
                 alt="RBC24 Logo"
                 fill
-                className="object-contain object-left lg:object-right"
+                className="object-contain object-left"
                 sizes="(max-width: 768px) 256px, 256px"
               />
             </a>
             <p className="text-base leading-relaxed mb-8 max-w-xs text-white/60">
               India's healthcare hiring ecosystem connecting medical professionals with trusted organizations.
             </p>
-            <div className="flex gap-4 justify-start lg:justify-end">
+            <div className="flex gap-4 justify-start">
               <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><FacebookIcon className="w-5 h-5" /></a>
               <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><TwitterIcon className="w-5 h-5" /></a>
               <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><LinkedinIcon className="w-5 h-5" /></a>

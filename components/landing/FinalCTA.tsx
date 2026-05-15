@@ -9,7 +9,7 @@ export default function FinalCTA() {
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
-          <h2 className="text-fluid-h2 font-display font-black mb-8 relative z-10 leading-[1.15] tracking-tightest text-balance">
+          <h2 className="text-fluid-h2 font-black mb-8 relative z-10 leading-[1.15] tracking-tightest text-balance">
             Start Your Healthcare <br /> Journey Today
           </h2>
           <p className="text-lg lg:text-xl text-white/80 mb-10 max-w-3xl mx-auto relative z-10">

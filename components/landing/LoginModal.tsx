@@ -83,7 +83,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 <div className="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-200 mb-6">
                   <ShieldCheck className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-display font-black text-slate-900 mb-2">Welcome Back</h3>
+                <h3 className="text-xl font-black text-slate-900 mb-2">Welcome Back</h3>
                 <p className="text-sm text-slate-500 leading-relaxed">
                   Join thousands of healthcare professionals and recruiters on RBC24.
                 </p>
@@ -96,7 +96,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             {/* Right Side: Selection Cards */}
             <div className="flex-1 p-8 sm:p-10">
               <div className="mb-8">
-                <h2 className="text-3xl font-display font-black text-slate-900 mb-2 tracking-tight text-balance">
+                <h2 className="text-3xl font-black text-slate-900 mb-2 tracking-tight text-balance">
                   Choose Account Type
                 </h2>
                 <p className="text-slate-500 text-sm">
@@ -124,7 +124,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
 
                     <div className="relative flex-1">
                       <div className="flex items-center justify-between mb-1">
-                        <h4 className="font-display font-bold text-slate-900 text-lg group-hover:text-orange-600 transition-colors">
+                        <h4 className="font-bold text-slate-900 text-lg group-hover:text-orange-600 transition-colors">
                           {type.title}
                         </h4>
                         <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-orange-500 transform group-hover:translate-x-1 transition-all" />
