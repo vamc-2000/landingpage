@@ -29,7 +29,10 @@ const specialties = [
 
 export default function Specialties() {
   return (
-    <section id="specialties" className="section-padding bg-white overflow-hidden">
+    <section
+      id="specialties"
+      className="section-padding bg-white overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-section mb-6">Browse by <span className="text-gradient">Specialties</span></h2>
@@ -38,6 +41,7 @@ export default function Specialties() {
           </p>
         </div>
 
+        {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
           {specialties.map((item) => (
             <div 
