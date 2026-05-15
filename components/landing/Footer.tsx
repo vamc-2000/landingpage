@@ -75,12 +75,8 @@ const InstagramIcon = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   return (
-    <footer 
-      className="relative text-muted-foreground pt-16 pb-8 overflow-hidden border-t border-black/5"
-      style={{ background: 'linear-gradient(180deg, #111827 0%, #0F172A 100%)' }}
-    >
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <footer className="bg-foreground text-muted-foreground pt-10 pb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-8">
           {/* 1. Platform */}
           <div>
