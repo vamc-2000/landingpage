@@ -17,17 +17,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-border">
+      <nav className="fixed w-full z-50 glass-navbar">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex-shrink-0 flex items-center">
-              <a href="/" className="relative h-16 w-48">
+              <a href="/" className="relative h-24 w-80 -ml-4">
                 <Image
-                  src="/logo.jpeg"
+                  src="/images/RBC24 Horizontal Logo Transparent.png"
                   alt="RBC24 Logo"
                   fill
                   className="object-contain object-left"
-                  sizes="(max-width: 768px) 192px, 192px"
+                  sizes="(max-width: 768px) 320px, 320px"
                   priority
                 />
               </a>
