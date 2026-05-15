@@ -15,22 +15,22 @@ export default function FinalCTA() {
           <p className="text-lg lg:text-xl text-white/80 mb-10 max-w-3xl mx-auto relative z-10">
             Join thousands of medical professionals and hospitals already using RBC24 to transform healthcare recruitment.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
-            <a 
-              href="https://jobs.rbc24.com/jobs" 
+            <a
+              href="https://jobs.rbc24.com/jobs"
               className="w-full sm:w-auto px-10 py-4 rounded-2xl bg-white text-primary font-black text-lg hover:shadow-2xl transition-smooth text-center"
             >
               Find Jobs
             </a>
-            <a 
-              href="https://recruiter.rbc24.com/" 
+            <a
+              href="https://recruiter.rbc24.com/"
               className="w-full sm:w-auto px-10 py-4 rounded-2xl bg-primary-foreground/10 text-white border-2 border-white/20 font-black text-lg hover:bg-white/10 transition-smooth text-center"
             >
               Start Hiring
             </a>
-            <a 
-              href="#mobile-app" 
+            <a
+              href="#mobile-app"
               className="w-full sm:w-auto px-10 py-4 rounded-2xl bg-foreground text-white font-black text-lg flex items-center justify-center gap-3 hover:bg-foreground/90 transition-smooth shadow-lg no-underline"
             >
               <Download className="w-5 h-5" />

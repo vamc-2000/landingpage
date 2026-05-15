@@ -5,19 +5,19 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     question: "What is RBC24?",
-    answer: "RBC24 is India's leading healthcare hiring ecosystem, connecting medical professionals with verified hospitals, clinics, and organizations through web and mobile platforms.",
+    answer: "RBC24 is India's leading healthcare hiring ecosystem, connecting medical professionals with verified hospitals and clinics through specialized web and mobile platforms.",
   },
   {
-    question: "Is RBC24 only for healthcare jobs?",
-    answer: "Yes, we are a specialized platform dedicated exclusively to the healthcare sector, ensuring that both candidates and recruiters find perfectly matched opportunities.",
+    question: "How do I verify my profile?",
+    answer: "Verification is simple. Once you upload your medical credentials and certifications, our team reviews them within 24-48 hours to grant you the 'Verified' status.",
   },
   {
-    question: "Can hospitals post jobs?",
-    answer: "Absolutely. Hospitals and clinics can register as recruiters to post jobs, search candidate databases, and manage their entire hiring pipeline.",
+    question: "How do hospitals post jobs?",
+    answer: "Hospitals can register on the Recruiter portal, choose a plan, and start posting clinical roles immediately. You can also search our verified candidate database.",
   },
   {
-    question: "Is there a mobile app?",
-    answer: "Yes, RBC24 offers a comprehensive mobile app for both Android and iOS, allowing you to manage your job search or hiring process on the go.",
+    question: "Is there a mobile app available?",
+    answer: "Yes, RBC24 is available on both Google Play and the App Store, offering real-time alerts and easy application management on the go.",
   },
 ];
 
@@ -25,11 +25,11 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-16 bg-white">
+    <section id="faq" className="section-padding bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-xl lg:text-2xl font-display font-black text-foreground mb-4 tracking-tightest text-balance">Frequently Asked Questions</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-section mb-6">Frequently Asked Questions</h2>
+          <p className="text-body max-w-3xl mx-auto">
             Everything you need to know about the RBC24 ecosystem.
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 className="w-full flex items-center justify-between p-6 lg:p-8 text-left hover:bg-muted/50 transition-colors"
               >
-                <span className="text-sm lg:text-base font-display font-black text-foreground pr-8 leading-tight">{faq.question}</span>
+                <span className="text-card pr-8">{faq.question}</span>
                 {openIndex === idx ? (
                   <Minus className="w-5 h-5 text-primary" />
                 ) : (
@@ -50,7 +50,7 @@ export default function FAQ() {
               </button>
               
               {openIndex === idx && (
-                <div className="px-6 lg:px-8 pb-6 lg:pb-8 text-muted-foreground text-base lg:text-lg leading-relaxed animate-fade-up">
+                <div className="px-6 lg:px-8 pb-6 lg:pb-8 text-body animate-fade-up">
                   {faq.answer}
                 </div>
               )}
