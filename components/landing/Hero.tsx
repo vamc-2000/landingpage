@@ -16,47 +16,47 @@ export default function Hero() {
               <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-ping"></span>
               RBC24 – India’s Healthcare Hiring Ecosystem
             </div>
-            
-            <h1 className="text-fluid-h1 font-display font-black text-foreground tracking-tighter mb-10 leading-[1.1]">
+
+            <h1 className="text-hero mb-10">
               <span className="hero-line-1 block">RBC24 – India’s</span>
               <span className="hero-line-2 block text-gradient">Healthcare</span>
               <span className="hero-line-3 block">Hiring Platform</span>
             </h1>
-            
-            <p className="text-lg lg:text-xl text-muted-foreground mb-10 leading-relaxed hero-sub max-w-xl">
+
+            <p className="text-body mb-10 max-w-xl">
               Find verified medical jobs, hire trusted healthcare professionals, and manage your recruitment journey from web and mobile.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 hero-search">
-              <a 
-                href="https://jobs.rbc24.com/jobs" 
-                className="w-full sm:w-auto px-10 py-4.5 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg hover:shadow-2xl hover:shadow-primary/30 transition-smooth hover:-translate-y-1 text-center"
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a
+                href="https://jobs.rbc24.com/jobs"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary text-primary-foreground text-button hover:shadow-2xl hover:shadow-primary/30 transition-smooth hover:-translate-y-1 text-center"
               >
                 Find Medical Jobs
               </a>
-              <a 
-                href="https://recruiter.rbc24.com/" 
-                className="w-full sm:w-auto px-10 py-4.5 rounded-2xl bg-white text-foreground border-2 border-border font-normal text-lg hover:border-primary hover:text-primary transition-smooth text-center"
+              <a
+                href="https://recruiter.rbc24.com/"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-foreground border-2 border-border text-button hover:border-primary hover:text-primary transition-smooth text-center"
               >
                 Hire Medical Talent
               </a>
             </div>
 
             <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 hero-trust opacity-60">
-                <p className="text-sm font-bold text-muted-foreground uppercase tracking-[0.2em]">Trusted by 500+ Institutions</p>
+              <p className="text-sm font-bold text-muted-foreground uppercase tracking-[0.2em]">Trusted by 500+ Institutions</p>
             </div>
           </div>
 
           <div className="lg:w-1/2 relative hero-sub">
             <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border-8 border-white bg-muted animate-float">
-                <Image 
-                  src="/images/dashboard-preview-new.png" 
-                  alt="RBC24 Dashboard Preview" 
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                  className="object-contain"
-                />
+              <Image
+                src="/images/dashboard-preview-new.png"
+                alt="RBC24 Dashboard Preview"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+                className="object-contain"
+              />
             </div>
           </div>
         </div>

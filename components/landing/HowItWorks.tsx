@@ -1,4 +1,4 @@
-import { UserPlus, Search, FileText, CheckCircle, Hospital, ClipboardList, UserCheck, Smartphone, Bell } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function HowItWorks() {
   const flows = [
@@ -13,40 +13,44 @@ export default function HowItWorks() {
       steps: ["Register organization", "Post job", "Review candidates", "Hire talent"],
       color: "text-secondary",
       bg: "bg-secondary/10",
-    },
-    {
-      title: "For Mobile Users",
-      steps: ["Install app", "Login", "Receive updates", "Manage hiring"],
-      color: "text-accent",
-      bg: "bg-accent/10",
-    },
+    }
   ];
 
   return (
-    <section id="how-it-works" className="section-padding bg-white">
+    <section id="how-it-works" className="section-padding bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-fluid-h2 font-display font-black text-foreground mb-8 tracking-tightest text-balance leading-[1.15]">Simple and Fast</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-16">
+          <h2 className="text-section mb-6">Simple and Fast Healthcare Hiring</h2>
+          <p className="text-body max-w-3xl mx-auto">
             RBC24 streamlines the healthcare hiring journey for everyone involved in just a few steps.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="space-y-16">
           {flows.map((flow, idx) => (
-            <div key={idx} className="p-10 rounded-[2.5rem] bg-muted border border-border hover:shadow-2xl transition-smooth group">
-              <h3 className={`text-base font-display font-black mb-8 ${flow.color}`}>{flow.title}</h3>
-              <div className="space-y-8 relative">
+            <div key={idx} className="relative">
+              <h3 className={`text-card mb-8 ${flow.color} flex items-center gap-3`}>
+                <div className={`w-2 h-8 rounded-full ${flow.bg.replace('/10', '')} bg-primary`} />
+                {flow.title}
+              </h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
                 {flow.steps.map((step, sIdx) => (
-                  <div key={sIdx} className="flex items-center gap-4 relative z-10">
-                    <div className={`w-12 h-12 rounded-xl ${flow.bg} ${flow.color} flex items-center justify-center font-black text-lg shadow-sm group-hover:scale-110 transition-smooth`}>
-                      {sIdx + 1}
+                  <div key={sIdx} className="relative flex flex-col items-center lg:items-start group">
+                    <div className="bg-slate-50 p-8 rounded-3xl border border-border w-full hover:bg-white hover:shadow-xl transition-smooth relative z-10">
+                      <div className={`w-12 h-12 rounded-xl ${flow.bg} ${flow.color} flex items-center justify-center font-bold text-xl mb-6 group-hover:scale-110 transition-smooth`}>
+                        {sIdx + 1}
+                      </div>
+                      <p className="font-semibold text-foreground text-base leading-tight">{step}</p>
                     </div>
-                    <p className="font-bold text-foreground/80 text-base leading-snug">{step}</p>
+                    
+                    {sIdx < 3 && (
+                      <div className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 z-20">
+                        <ArrowRight className="w-6 h-6 text-border" />
+                      </div>
+                    )}
                   </div>
                 ))}
-                {/* Vertical line connecting steps */}
-                <div className="absolute top-8 left-6 w-0.5 h-[calc(100%-60px)] bg-border -z-0" />
               </div>
             </div>
           ))}

@@ -50,7 +50,7 @@ export default function JobSeekerSection() {
               <p className="text-muted-foreground text-lg mb-12 leading-relaxed max-w-sm mx-auto">
                 Access thousands of verified openings across India's top hospitals.
               </p>
-              <a 
+              <a
                 href="https://jobs.rbc24.com/jobs"
                 className="px-10 py-5 rounded-2xl bg-primary text-white font-black text-xl hover:shadow-[0_20px_40px_-10px_rgba(234,88,12,0.4)] transition-all duration-300 hover:-translate-y-1 active:scale-95 inline-block"
               >
