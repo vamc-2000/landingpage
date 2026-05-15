@@ -44,7 +44,7 @@ export default function Footer() {
                 sizes="(max-width: 768px) 256px, 256px"
               />
             </a>
-            <p className="text-base leading-relaxed mb-8 max-w-xs text-white/60">
+            <p className="text-small text-white/60 mb-8 max-w-xs">
               India's healthcare hiring ecosystem connecting medical professionals with trusted organizations.
             </p>
             <div className="flex gap-4">
@@ -56,36 +56,32 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Platform</h4>
+            <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-[10px]">Links</h4>
             <ul className="space-y-3 text-base">
               <li><a href="#job-seekers" className="hover:text-primary transition-smooth">For Job Seekers</a></li>
               <li><a href="#recruiters" className="hover:text-primary transition-smooth">For Recruiters</a></li>
-              <li><a href="#mobile-app" className="hover:text-primary transition-smooth">Mobile App</a></li>
-              <li><a href="#specialties" className="hover:text-primary transition-smooth">Specialties</a></li>
+              <li><a href="#" className="hover:text-primary transition-smooth">About Us</a></li>
+              <li><a href="#" className="hover:text-primary transition-smooth">Contact</a></li>
+              <li><a href="#faq" className="hover:text-primary transition-smooth">FAQ</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Support</h4>
+            <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-[10px]">Support</h4>
             <ul className="space-y-3 text-base">
               <li><a href="#" className="hover:text-primary transition-smooth">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-primary transition-smooth">Terms of Service</a></li>
               <li><a href="#" className="hover:text-primary transition-smooth">Help Center</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Contact</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-display font-black mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
+            <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
             <ul className="space-y-4 text-base">
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>cv.rbc24@gmail.com</span>
               </li>
-              {/* <li className="flex gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>+91 (800) 123-4567</span>
-              </li> */}
               <li className="flex gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>HSR Layout, Hyderabad, India</span>
@@ -95,7 +91,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-12 border-t border-white/10 text-center text-sm text-white/40">
-
+           <p>© {new Date().getFullYear()} RBC24. All rights reserved.</p>
         </div>
       </div>
     </footer>

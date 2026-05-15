@@ -51,7 +51,7 @@ export default function RecruiterSection() {
               <p className="text-muted-foreground text-lg mb-12 leading-relaxed max-w-sm mx-auto">
                 Access our database of verified healthcare professionals ready to join.
               </p>
-              <a 
+              <a
                 href="https://recruiter.rbc24.com/"
                 className="px-10 py-5 rounded-2xl bg-secondary text-white font-black text-xl hover:shadow-[0_20px_40px_-10px_rgba(14,165,233,0.4)] transition-all duration-300 hover:-translate-y-1 active:scale-95 inline-block"
               >
