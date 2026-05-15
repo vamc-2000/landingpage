@@ -205,7 +205,7 @@ export default function Footer() {
               />
             </a>
 
-            <p className="text-[12px] leading-8 mb-2 max-w-xs text-white/80">
+            <p className="text-[12px] leading-8 mb-6 max-w-xs text-white/60">
               India's healthcare hiring ecosystem connecting medical professionals with trusted organizations.
             </p>
 
