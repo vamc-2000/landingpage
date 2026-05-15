@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { 
   Heart, 
   Brain, 
@@ -13,25 +16,25 @@ import {
 } from "lucide-react";
 
 const specialties = [
-  { name: "Cardiology", icon: <Heart className="w-6 h-6" /> },
-  { name: "Neurology", icon: <Brain className="w-6 h-6" /> },
-  { name: "Orthopedics", icon: <Activity className="w-6 h-6" /> },
-  { name: "Pediatrics", icon: <Baby className="w-6 h-6" /> },
-  { name: "Gynecology", icon: <UserCircle className="w-6 h-6" /> },
-  { name: "Dermatology", icon: <Zap className="w-6 h-6" /> },
-  { name: "Radiology", icon: <Flame className="w-6 h-6" /> },
-  { name: "General Physician", icon: <Stethoscope className="w-6 h-6" /> },
-  { name: "Nursing", icon: <UserCircle className="w-6 h-6" /> },
-  { name: "Lab Technician", icon: <Microscope className="w-6 h-6" /> },
-  { name: "Hospital Admin", icon: <Building2 className="w-6 h-6" /> },
-  { name: "Emergency", icon: <ShieldAlert className="w-6 h-6" /> },
+  { name: "Cardiology", Icon: Heart, animation: "hover-animate-heart" },
+  { name: "Neurology", Icon: Brain, animation: "hover-animate-brain" },
+  { name: "Orthopedics", Icon: Activity, animation: "hover-animate-activity" },
+  { name: "Pediatrics", Icon: Baby, animation: "hover-animate-baby" },
+  { name: "Gynecology", Icon: UserCircle, animation: "hover-animate-user" },
+  { name: "Dermatology", Icon: Zap, animation: "hover-animate-zap" },
+  { name: "Radiology", Icon: Flame, animation: "hover-animate-flame" },
+  { name: "General Physician", Icon: Stethoscope, animation: "hover-animate-stethoscope" },
+  { name: "Nursing", Icon: UserCircle, animation: "hover-animate-user" },
+  { name: "Lab Technician", Icon: Microscope, animation: "hover-animate-microscope" },
+  { name: "Hospital Admin", Icon: Building2, animation: "hover-animate-building" },
+  { name: "Emergency", Icon: ShieldAlert, animation: "hover-animate-shield" },
 ];
 
 export default function Specialties() {
   return (
     <section
       id="specialties"
-      className="section-padding bg-white overflow-hidden"
+      className="py-24 bg-surface-cream overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -41,21 +44,23 @@ export default function Specialties() {
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-          {specialties.map((item) => (
-            <div 
-              key={item.name} 
-              className="p-6 rounded-2xl bg-slate-50/50 border border-border/50 flex flex-col items-center gap-4 hover:border-primary/40 hover:bg-white hover:shadow-xl transition-smooth group cursor-pointer"
-            >
-              <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-smooth">
-                {item.icon}
+        {/* Infinite Marquee */}
+        <div className="relative flex overflow-hidden">
+          <div className="flex space-x-4 lg:space-x-6 animate-marquee py-8 hover:[animation-play-state:paused] w-max">
+            {[...specialties, ...specialties].map((item, index) => (
+              <div 
+                key={`${item.name}-${index}`} 
+                className="premium-card w-[240px] lg:w-[280px] shrink-0 p-6 flex flex-col items-center gap-4 cursor-pointer transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:scale-105 hover:border-primary/30 z-10 group"
+              >
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-sm transition-smooth bg-white text-primary group-hover:scale-125 group-hover:bg-primary group-hover:text-white">
+                  <item.Icon className={`w-6 h-6 ${item.animation}`} />
+                </div>
+                <h3 className="text-base font-semibold transition-colors text-center mt-2 text-foreground group-hover:text-primary">
+                  {item.name}
+                </h3>
               </div>
-              <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors text-center">
-                {item.name}
-              </h3>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

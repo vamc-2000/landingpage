@@ -97,6 +97,8 @@
     /* ===== Shadows ===== */
     --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.06);
     --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --shadow-premium: 0 1px 2px rgba(0,0,0,0.04), 0 10px 30px rgba(0,0,0,0.05);
+    --shadow-hover: 0 4px 6px rgba(0,0,0,0.04), 0 15px 40px rgba(0,0,0,0.08);
 
     /* ===== Motion ===== */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -187,8 +189,41 @@
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid rgba(0,0,0,0.03);
     box-shadow: var(--shadow-glass);
+  }
+
+  .glass-navbar {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+  }
+
+  .premium-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: var(--shadow-premium);
+    border-radius: 28px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, box-shadow;
+  }
+  
+  .premium-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .bg-surface-light {
+    background-color: #FCFCFB;
+  }
+
+  .bg-surface-cream {
+    background-color: #FAFAF8;
+  }
+
+  .bg-ambient-glow {
+    background-image: radial-gradient(circle at top right, rgba(255,180,0,0.06), transparent 35%);
   }
 
   .gradient-primary {
@@ -387,3 +422,90 @@ select.clean {
   appearance: none;
   font-size: 14px;
 }
+
+/* ===== Specialty Icon Animations ===== */
+
+@keyframes pulse-heart {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 8px currentColor); }
+}
+
+@keyframes wiggle-activity {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-10deg) scale(1.1); }
+  50% { transform: rotate(10deg) scale(1.1); }
+  75% { transform: rotate(-5deg) scale(1.1); }
+}
+
+@keyframes rock-baby {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+@keyframes swing-stethoscope {
+  0% { transform: rotate(0deg); transform-origin: top center; }
+  20% { transform: rotate(15deg); transform-origin: top center; }
+  40% { transform: rotate(-10deg); transform-origin: top center; }
+  60% { transform: rotate(5deg); transform-origin: top center; }
+  80% { transform: rotate(-5deg); transform-origin: top center; }
+  100% { transform: rotate(0deg); transform-origin: top center; }
+}
+
+@keyframes zoom-microscope {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.15) translateY(-2px); }
+}
+
+@keyframes bounce-building {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes ring-shield {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: rotate(-10deg); }
+  20%, 40%, 60%, 80% { transform: rotate(10deg); }
+}
+
+@keyframes flash-zap {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.5; filter: brightness(1.5); }
+}
+
+@keyframes flicker-flame {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  25% { transform: scale(1.1) rotate(-5deg); opacity: 0.8; }
+  50% { transform: scale(0.95) rotate(5deg); opacity: 0.9; }
+  75% { transform: scale(1.05) rotate(-2deg); opacity: 0.85; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.hover-animate-heart { animation: pulse-heart 1.5s ease-in-out infinite; }
+.hover-animate-brain { animation: pulse-glow 2.5s ease-in-out infinite; }
+.hover-animate-activity { animation: wiggle-activity 1.2s ease-in-out infinite; }
+.hover-animate-baby { animation: rock-baby 2s ease-in-out infinite; }
+.hover-animate-stethoscope { animation: swing-stethoscope 1.8s ease-in-out infinite; }
+.hover-animate-microscope { animation: zoom-microscope 2s ease-in-out infinite; }
+.hover-animate-building { animation: bounce-building 1.5s ease-in-out infinite; }
+.hover-animate-shield { animation: ring-shield 1.5s ease-in-out infinite; }
+.hover-animate-zap { animation: flash-zap 1.5s ease-in-out infinite; }
+.hover-animate-flame { animation: flicker-flame 1s ease-in-out infinite; }
+.hover-animate-user { animation: pulse-glow 2.5s ease-in-out infinite; }
