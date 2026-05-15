@@ -25,7 +25,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="section-padding bg-white">
+    <section id="faq" className="py-24 bg-surface-cream">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-section mb-6">Frequently Asked Questions</h2>
@@ -36,7 +36,7 @@ export default function FAQ() {
 
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="bg-white rounded-[1.5rem] border border-border overflow-hidden shadow-sm hover:shadow-xl transition-smooth">
+            <div key={idx} className="premium-card overflow-hidden">
               <button 
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 className="w-full flex items-center justify-between p-6 lg:p-8 text-left hover:bg-muted/50 transition-colors"

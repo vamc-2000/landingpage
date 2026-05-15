@@ -47,7 +47,7 @@ export default function RoleCards() {
               <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-smooth">
                 {role.icon}
               </div>
-              <h3 className="text-base font-display font-black text-foreground mb-6">{role.title}</h3>
+              <h3 className="text-base font-black text-foreground mb-6">{role.title}</h3>
               <p className="text-muted-foreground text-base mb-6 leading-relaxed">
                 {role.description}
               </p>
