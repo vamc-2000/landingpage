@@ -46,6 +46,8 @@ export default function Hero() {
               {/* Primary CTA - High Priority */}
               <a 
                 href="https://jobs.rbc24.com/jobs" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-b from-primary to-[#D04E0A] text-white font-black text-base shadow-[0_8px_20px_rgba(234,88,12,0.25)] hover:shadow-[0_15px_30px_rgba(234,88,12,0.35)] hover:-translate-y-0.5 transition-all duration-300 text-center"
               >
                 Find Medical Jobs
@@ -53,6 +55,8 @@ export default function Hero() {
               {/* Secondary CTA - Calm/Soft */}
               <a 
                 href="https://recruiter.rbc24.com/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/50 backdrop-blur-sm text-slate-600 border border-slate-200/60 font-semibold text-base hover:bg-white hover:border-slate-300 transition-all duration-300 text-center shadow-sm"
               >
                 Hire Top Talent
