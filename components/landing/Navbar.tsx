@@ -17,56 +17,61 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed w-full z-50 glass-navbar">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20 items-center">
-            <div className="flex-shrink-0 flex items-center">
-              <a href="/" className="relative h-24 w-80 -ml-4">
-                <Image
-                  src="/images/RBC24 Horizontal Logo Transparent.png"
-                  alt="RBC24 Logo"
-                  fill
-                  className="object-contain object-left"
-                  sizes="(max-width: 768px) 320px, 320px"
-                  priority
-                />
+      <nav className="
+      fixed top-0 w-full z-50
+      bg-white/95
+      backdrop-blur-xl
+      border-b border-slate-200/60
+      shadow-sm
+      transition-all duration-300
+      ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-1 lg:py-1">
+          <div className="flex-shrink-0 flex items-center">
+            <a
+              href="/"
+              className="relative w-[170px] lg:w-[230px] h-16 lg:h-20 -ml-2 block"
+            >
+              <Image
+                src="/images/RBC24 Horizontal Logo Transparent.png"
+                alt="RBC24 Logo"
+                fill
+                className="object-contain object-left scale-[1.95] origin-left"
+                sizes="(max-width: 768px) 260px, 380px"
+                priority
+              />
+            </a>
+          </div>
+
+          <div className="hidden lg:flex items-center space-x-8">
+            {menuItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-bold text-foreground/70 hover:text-primary transition-smooth"
+              >
+                {item.name}
               </a>
-            </div>
-
-            <div className="hidden lg:flex items-center space-x-8">
-              {menuItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm font-bold text-foreground/70 hover:text-primary transition-smooth"
-                >
-                  {item.name}
-                </a>
-              ))}
-              <div className="flex items-center space-x-4 ml-4">
-                <button
-                  onClick={() => setIsLoginModalOpen(true)}
-                  className="text-sm font-bold text-foreground hover:text-primary cursor-pointer transition-smooth"
-                >
-                  Login
-                </button>
-                <a href="#" className="px-8 py-3 rounded-xl bg-primary text-primary-foreground text-button shadow-lg shadow-primary/20 hover:scale-105 transition-smooth">
-                  Get Started
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:hidden flex items-center">
-              <button onClick={() => setIsOpen(!isOpen)} className="text-foreground p-2">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  {isOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </svg>
+            ))}
+            <div className="flex items-center ml-4">
+              <button
+                onClick={() => setIsLoginModalOpen(true)}
+                className="px-8 py-3 rounded-xl bg-primary text-primary-foreground text-sm font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-smooth cursor-pointer"
+              >
+                Login
               </button>
             </div>
+          </div>
+
+          <div className="lg:hidden flex items-center">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground p-2">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -84,19 +89,16 @@ export default function Navbar() {
                   {item.name}
                 </a>
               ))}
-              <div className="pt-4 flex flex-col gap-3">
+              <div className="pt-4 flex flex-col">
                 <button
                   onClick={() => {
                     setIsOpen(false);
                     setIsLoginModalOpen(true);
                   }}
-                  className="w-full py-4 text-center font-bold text-foreground bg-slate-50 rounded-xl hover:bg-slate-100 transition-smooth"
+                  className="w-full py-4 text-center font-bold bg-primary text-primary-foreground rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/95 transition-smooth"
                 >
                   Login
                 </button>
-                <a href="#" className="w-full py-4 text-center font-bold bg-primary text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
-                  Get Started
-                </a>
               </div>
             </div>
           </div>

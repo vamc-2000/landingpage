@@ -121,16 +121,17 @@ export default function Footer() {
 
           {/* 4. Logo & Matter */}
           <div className="flex flex-col items-start text-left lg:col-span-1">
-            <a href="/" className="relative h-24 w-64 mb-6 block -ml-4">
+            <a href="/" className="relative h-20 w-60 block -ml-5 -mt-2">
               <Image
                 src="/images/RBC24 Horizontal Logo Transparent.png"
                 alt="RBC24 Logo"
                 fill
-                className="object-contain object-left"
-                sizes="(max-width: 768px) 256px, 256px"
+                className="object-contain object-left scale-[1.8] origin-left"
+                sizes="(max-width: 768px) 320px, 320px"
+                priority
               />
             </a>
-            <p className="text-base leading-relaxed mb-8 max-w-xs text-white/60">
+            <p className="text-base leading-relaxed mb-8 max-w-xs text-muted-foreground">
               India's healthcare hiring ecosystem connecting medical professionals with trusted organizations.
             </p>
             <div className="flex gap-4 justify-start">
