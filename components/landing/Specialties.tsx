@@ -34,7 +34,7 @@ export default function Specialties() {
   return (
     <section
       id="specialties"
-      className="py-24 bg-surface-cream overflow-hidden"
+      className="pb-24 pt-0 bg-surface-cream overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">

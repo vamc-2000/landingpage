@@ -109,6 +109,8 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
                   <motion.a
                     key={type.title}
                     href={type.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="group relative flex items-center gap-4 p-5 rounded-2xl border border-slate-100 bg-white login-card-shadow hover:login-card-hover shine-effect transition-all duration-300"

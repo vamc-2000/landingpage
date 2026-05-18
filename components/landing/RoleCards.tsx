@@ -61,6 +61,8 @@ export default function RoleCards() {
               </ul>
               <a 
                 href={role.link}
+                target={role.link.startsWith('http') ? '_blank' : undefined}
+                rel={role.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="inline-flex items-center justify-center w-full py-4 rounded-2xl bg-foreground text-white font-black text-lg hover:bg-primary transition-smooth shadow-lg no-underline"
               >
                 {role.buttonText}
