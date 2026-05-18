@@ -18,11 +18,11 @@ export default function ValueSection() {
   ];
 
   return (
-    <section id="value-proposition" className="section-padding bg-white">
+    <section id="value-proposition" className="py-24 bg-surface-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* Job Seekers */}
-          <div className="bg-slate-50/50 p-8 lg:p-12 rounded-[2.5rem] border border-border/50 hover:bg-white hover:shadow-xl transition-smooth">
+          <div className="premium-card p-8 lg:p-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 uppercase tracking-wider">
               For Job Seekers
             </div>
@@ -32,8 +32,8 @@ export default function ValueSection() {
             </p>
             <div className="space-y-4">
               {seekerFeatures.map((f, i) => (
-                <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-border/40 group hover:border-primary/30 transition-smooth">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-smooth">
+                <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-black/5 shadow-sm group hover:border-primary/30 transition-smooth">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(234,88,12,0.2)] transition-smooth">
                     {f.icon}
                   </div>
                   <span className="font-bold text-foreground/80">{f.title}</span>
@@ -43,7 +43,7 @@ export default function ValueSection() {
           </div>
 
           {/* Recruiters */}
-          <div className="bg-slate-50/50 p-8 lg:p-12 rounded-[2.5rem] border border-border/50 hover:bg-white hover:shadow-xl transition-smooth">
+          <div className="premium-card p-8 lg:p-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/10 text-secondary text-xs font-bold mb-6 uppercase tracking-wider">
               For Recruiters
             </div>
@@ -53,8 +53,8 @@ export default function ValueSection() {
             </p>
             <div className="space-y-4">
               {recruiterFeatures.map((f, i) => (
-                <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-border/40 group hover:border-secondary/30 transition-smooth">
-                  <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-smooth">
+                <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-black/5 shadow-sm group hover:border-secondary/30 transition-smooth">
+                  <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(14,116,144,0.2)] transition-smooth">
                     {f.icon}
                   </div>
                   <span className="font-bold text-foreground/80">{f.title}</span>
