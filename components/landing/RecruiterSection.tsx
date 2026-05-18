@@ -20,7 +20,7 @@ export default function RecruiterSection() {
               <span className="w-1.5 h-1.5 rounded-full bg-secondary mr-2 animate-pulse" />
               For Recruiters
             </div>
-            <h2 className="text-fluid-h2 font-display font-black text-foreground mb-10 leading-[1.15] tracking-tightest text-balance">
+            <h2 className="text-fluid-h2 font-black text-foreground mb-10 leading-[1.15] tracking-tightest text-balance">
               Hire Medical Talent <span className="text-gradient">Faster</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
@@ -47,7 +47,7 @@ export default function RecruiterSection() {
               <div className="w-28 h-28 rounded-[2.5rem] bg-secondary/10 flex items-center justify-center mx-auto mb-10 text-secondary shadow-lg shadow-secondary/5">
                 <Users className="w-14 h-14" />
               </div>
-              <h3 className="text-lg font-display font-black mb-6 tracking-tightest">Expert Talent</h3>
+              <h3 className="text-lg font-black mb-6 tracking-tightest">Expert Talent</h3>
               <p className="text-muted-foreground text-lg mb-12 leading-relaxed max-w-sm mx-auto">
                 Access our database of verified healthcare professionals ready to join.
               </p>

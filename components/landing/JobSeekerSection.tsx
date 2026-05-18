@@ -19,7 +19,7 @@ export default function JobSeekerSection() {
               <span className="w-1.5 h-1.5 rounded-full bg-primary mr-2 animate-pulse" />
               For Job Seekers
             </div>
-            <h2 className="text-fluid-h2 font-display font-black text-foreground mb-10 leading-[1.15] tracking-tightest text-balance">
+            <h2 className="text-fluid-h2 font-black text-foreground mb-10 leading-[1.15] tracking-tightest text-balance">
               Find the Right Medical Job <span className="text-gradient">Faster</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
@@ -46,7 +46,7 @@ export default function JobSeekerSection() {
               <div className="w-28 h-28 rounded-[2.5rem] bg-primary/10 flex items-center justify-center mx-auto mb-10 text-primary shadow-lg shadow-primary/5">
                 <Search className="w-14 h-14" />
               </div>
-              <h3 className="text-lg font-display font-black mb-6 tracking-tightest">Discover Jobs</h3>
+              <h3 className="text-lg font-black mb-6 tracking-tightest">Discover Jobs</h3>
               <p className="text-muted-foreground text-lg mb-12 leading-relaxed max-w-sm mx-auto">
                 Access thousands of verified openings across India's top hospitals.
               </p>

@@ -13,9 +13,9 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="py-24 bg-surface-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-50/50 rounded-[3rem] p-10 lg:p-16 border border-border">
+        <div className="premium-card p-10 lg:p-16">
           <div className="text-center mb-12">
             <h2 className="text-section mb-6">Why Choose RBC24?</h2>
             <p className="text-body max-w-3xl mx-auto">
