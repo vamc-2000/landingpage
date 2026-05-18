@@ -25,6 +25,8 @@ export default function FinalCTA() {
             </a>
             <a
               href="https://recruiter.rbc24.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-10 py-4 rounded-2xl bg-primary-foreground/10 text-white border-2 border-white/20 font-black text-lg hover:bg-white/10 transition-smooth text-center"
             >
               Start Hiring

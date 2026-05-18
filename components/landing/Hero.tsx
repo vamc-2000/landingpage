@@ -65,9 +65,22 @@ export default function Hero() {
 
             {/* Trust Section - Tightly Integrated */}
             <div className="mt-8 pt-6 border-t border-slate-200/60 flex items-center justify-center lg:justify-start gap-3 w-full max-w-md opacity-80 hero-trust">
-                <div className="flex -space-x-2">
-                  {[1,2,3,4].map(i => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-slate-200 border-2 border-white" />
+                <div className="flex -space-x-2.5">
+                  {[
+                    { x: "0%", y: "0%" },
+                    { x: "100%", y: "0%" },
+                    { x: "0%", y: "100%" },
+                    { x: "100%", y: "100%" }
+                  ].map((pos, idx) => (
+                    <div 
+                      key={idx} 
+                      className="w-9 h-9 rounded-full border-2 border-white shadow-sm bg-no-repeat"
+                      style={{ 
+                        backgroundImage: "url('/images/healthcare-avatars.png')", 
+                        backgroundSize: "200% 200%", 
+                        backgroundPosition: `${pos.x} ${pos.y}` 
+                      }} 
+                    />
                   ))}
                 </div>
                 <p className="text-[13px] font-bold text-slate-500">Trusted by <span className="text-slate-800">500+</span> Institutions</p>
@@ -80,18 +93,18 @@ export default function Hero() {
             {/* Main Image Container - Tighter Crop, Larger Aspect Ratio, Gentle Float */}
             <div className="relative aspect-[4/3] lg:aspect-[16/10] w-full h-full rounded-[3rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 z-20 [animation:float_8s_ease-in-out_infinite]">
                 <Image 
-                  src="/images/Herotag.png" 
+                  src="/images/premium-healthcare-team.png" 
                   alt="RBC24 Premium Healthcare Team" 
                   fill
                   sizes="(max-width: 768px) 100vw, 60vw"
                   priority
-                  className="object-cover object-[center_top] w-full h-full scale-[0.9] -translate-y-8 contrast-[1.02] saturate-[1.05]"
+                  className="object-cover object-center w-full h-full"
                 />
             </div>
 
             {/* ONLY ONE Supporting Floating Card */}
             <div 
-              className="absolute -right-4 lg:-right-8 top-1/4 bg-white/95 backdrop-blur-xl px-5 py-4 rounded-2xl flex items-center gap-4 animate-float border border-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] z-30" 
+              className="absolute -right-4 lg:-right-8 top-[45%] bg-white/95 backdrop-blur-xl px-5 py-4 rounded-2xl flex items-center gap-4 animate-float border border-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] z-30" 
               style={{ animationDuration: '4.2s' }}
             >
               <div className="bg-blue-50/80 text-blue-600 p-3 rounded-xl shadow-inner">
