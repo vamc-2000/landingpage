@@ -144,7 +144,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-sm text-white/40">
-           <p>© {new Date().getFullYear()} RBC24. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} RBC24. All rights reserved.</p>
         </div>
       </div>
     </footer>
