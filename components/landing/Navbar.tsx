@@ -8,8 +8,8 @@ export default function Navbar() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   const menuItems = [
-    { name: "For Job Seekers", href: "#job-seekers" },
-    { name: "For Recruiters", href: "#recruiters" },
+    { name: "For Job Seekers", href: "https://jobs.rbc24.com/", target: "_blank", rel: "noopener noreferrer" },
+    { name: "For Recruiters", href: "https://recruiter.rbc24.com/", target: "_blank", rel: "noopener noreferrer" },
     { name: "Mobile App", href: "#mobile-app" },
     { name: "Specialties", href: "#specialties" },
     { name: "How It Works", href: "#how-it-works" },
@@ -25,7 +25,7 @@ export default function Navbar() {
       shadow-sm
       transition-all duration-300
       ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-1 lg:py-1">
+        <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between py-1 lg:py-1">
           <div className="flex-shrink-0 flex items-center">
             <a
               href="/"
@@ -47,6 +47,8 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
+                target={item.target}
+                rel={item.rel}
                 className="text-sm font-bold text-foreground/70 hover:text-primary transition-smooth"
               >
                 {item.name}
@@ -55,7 +57,7 @@ export default function Navbar() {
             <div className="flex items-center ml-4">
               <button
                 onClick={() => setIsLoginModalOpen(true)}
-                className="px-8 py-3 rounded-xl bg-primary text-primary-foreground text-sm font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-smooth cursor-pointer"
+                className="px-8 py-3 rounded-xl bg-slate-100 text-slate-800 text-sm font-bold border border-slate-200/60 hover:bg-slate-200 hover:scale-105 transition-smooth cursor-pointer"
               >
                 Login
               </button>
@@ -83,6 +85,8 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
+                  target={item.target}
+                  rel={item.rel}
                   className="block py-3 text-base font-bold text-foreground/70 hover:text-primary rounded-xl"
                   onClick={() => setIsOpen(false)}
                 >
@@ -95,7 +99,7 @@ export default function Navbar() {
                     setIsOpen(false);
                     setIsLoginModalOpen(true);
                   }}
-                  className="w-full py-4 text-center font-bold bg-primary text-primary-foreground rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/95 transition-smooth"
+                  className="w-full py-4 text-center font-semibold bg-slate-100 text-slate-800 rounded-xl border border-slate-200/60 hover:bg-slate-200 transition-smooth"
                 >
                   Login
                 </button>

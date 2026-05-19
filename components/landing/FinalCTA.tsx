@@ -19,6 +19,8 @@ export default function FinalCTA() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
             <a
               href="https://jobs.rbc24.com/jobs"
+              target="_blank"
+              rel="noopener noreferrer" 
               className="w-full sm:w-auto px-10 py-4 rounded-2xl bg-white text-primary font-black text-lg hover:shadow-2xl transition-smooth text-center"
             >
               Find Jobs
