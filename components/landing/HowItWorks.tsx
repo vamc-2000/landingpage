@@ -70,7 +70,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="relative py-24 lg:py-32 bg-[#FAFAF8] overflow-hidden">
+    <section id="how-it-works" className="relative pb-24 pt-0 lg:pb-32 lg:pt-0 bg-[#FAFAF8] overflow-hidden">
       {/* Background Ambient Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,88,12,0.06),transparent_40%)] pointer-events-none" />
       <div 
