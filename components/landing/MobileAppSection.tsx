@@ -92,7 +92,7 @@ export default function MobileAppSection() {
             </div>
 
             {/* Subtle glow behind image */}
-            <div className="absolute inset-0 bg-orange-400/20 blur-[120px] -z-10 rounded-[3rem]" />
+            <div className="absolute inset-0 bg-orange-400/8 blur-[80px] -z-10 rounded-[3rem]" />
           </div>
         </div>
       </div>

@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   description: "Unified hiring platform for medical professionals and recruiters.",
 };
 
+import ScrollReveal from "@/components/landing/ScrollReveal";
+
 export default function RootLayout({
   children,
 }: {
@@ -22,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable}`}>
       <body className="font-sans antialiased bg-white text-gray-900 flex flex-col min-h-screen">
+        <ScrollReveal />
         {children}
       </body>
     </html>
