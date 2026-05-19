@@ -46,27 +46,12 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-16 bg-gradient-to-b from-white via-orange-50/5 to-white relative overflow-hidden">
-      
-      {/* Drifting Background Slow Motion Glows */}
-      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div className="absolute top-[30%] right-[-10%] w-[550px] h-[550px] bg-orange-100/5 rounded-full blur-[90px] animate-ambient pointer-events-none" />
-        <div className="absolute bottom-[20%] left-[-10%] w-[550px] h-[550px] bg-teal-50/10 rounded-full blur-[90px] animate-ambient [animation-delay:9s] pointer-events-none" />
-      </div>
-
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        
-        {/* Editorial Section Header */}
-        <div className={`text-center max-w-3xl mx-auto mb-20 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-black mb-6 uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
-            HELP CENTER
-          </div>
-          <h2 className="text-4xl md:text-5xl font-black text-slate-800 tracking-tight leading-tight mb-6">
-            Answers for healthcare <br className="hidden sm:inline" /> professionals and recruiters.
-          </h2>
-          <p className="text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about hiring, verification, applications, and the RBC24 ecosystem.
+    <section id="faq" className="pb-24 pt-0 bg-surface-cream">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-section mb-6">Frequently Asked Questions</h2>
+          <p className="text-body max-w-3xl mx-auto">
+            Everything you need to know about the RBC24 ecosystem.
           </p>
         </div>
 
