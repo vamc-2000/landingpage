@@ -35,24 +35,6 @@ const TwitterIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const LinkedinIcon = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect width="4" height="12" x="2" y="9" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
 
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg
@@ -80,7 +62,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-8">
           {/* 1. Platform */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase tracking-widest text-[10px]">Platform</h4>
+            <h4 className="text-white/60 hover:text-primary transition-smooth cursor-pointer font-black mb-6 uppercase tracking-widest text-[10px]">Platform</h4>
             <ul className="space-y-3 text-base">
               <li><a href="#job-seekers" className="hover:text-primary transition-smooth">For Job Seekers</a></li>
               <li><a href="#recruiters" className="hover:text-primary transition-smooth">For Recruiters</a></li>
@@ -91,7 +73,7 @@ export default function Footer() {
 
           {/* 2. Support */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase tracking-widest text-[10px]">Support</h4>
+            <h4 className="text-white/60 hover:text-primary transition-smooth cursor-pointer font-black mb-6 uppercase tracking-widest text-[10px]">Support</h4>
             <ul className="space-y-3 text-base">
               <li><a href="#" className="hover:text-primary transition-smooth">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-primary transition-smooth">Terms of Service</a></li>
@@ -102,7 +84,7 @@ export default function Footer() {
 
           {/* 3. Contact Us */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
+            <h4 className="text-white/60 hover:text-primary transition-smooth cursor-pointer font-black mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
             <ul className="space-y-4 text-base">
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
@@ -120,14 +102,14 @@ export default function Footer() {
           </div>
 
           {/* 4. Logo & Matter */}
-          <div className="flex flex-col items-start text-left lg:col-span-1">
-            <a href="/" className="relative h-20 w-60 block -ml-5 -mt-2">
+          <div className="flex flex-col items-center text-left lg:col-span-1">
+            <a href="/" className="relative h-25 w-60 block mb-4">
               <Image
-                src="/images/RBC24 Horizontal Logo Transparent.png"
+                src="/logo.jpeg"
                 alt="RBC24 Logo"
                 fill
-                className="object-contain object-left scale-[1.8] origin-left"
-                sizes="(max-width: 768px) 320px, 320px"
+                className="object-contain object-center"
+                sizes="(max-width: 768px) 192px, 192px"
                 priority
               />
             </a>
@@ -137,7 +119,6 @@ export default function Footer() {
             <div className="flex gap-4 justify-start">
               <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><FacebookIcon className="w-5 h-5" /></a>
               <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><TwitterIcon className="w-5 h-5" /></a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><LinkedinIcon className="w-5 h-5" /></a>
               <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><InstagramIcon className="w-5 h-5" /></a>
             </div>
           </div>
