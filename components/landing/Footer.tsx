@@ -57,75 +57,81 @@ const InstagramIcon = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-muted-foreground pt-10 pb-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-8">
+    <footer className="bg-[#0B0F19] text-slate-300 pt-16 pb-8 border-t border-slate-900 relative overflow-hidden">
+      {/* Soft Ambient Background Highlight */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* 1. Platform */}
           <div>
-            <h4 className="text-white/60 hover:text-primary transition-smooth cursor-pointer font-black mb-6 uppercase tracking-widest text-[10px]">Platform</h4>
-            <ul className="space-y-3 text-base">
-              <li><a href="#job-seekers" className="hover:text-primary transition-smooth">For Job Seekers</a></li>
-              <li><a href="#recruiters" className="hover:text-primary transition-smooth">For Recruiters</a></li>
-              <li><a href="#mobile-app" className="hover:text-primary transition-smooth">Mobile App</a></li>
-              <li><a href="#specialties" className="hover:text-primary transition-smooth">Specialties</a></li>
+            <h4 className="text-slate-100 font-black mb-6 uppercase tracking-widest text-[11px] hover:text-primary transition-colors duration-200 cursor-pointer">
+              Platform
+            </h4>
+            <ul className="space-y-3.5 text-sm">
+              <li><a href="#job-seekers" className="text-slate-300 hover:text-primary transition-colors duration-200">For Job Seekers</a></li>
+              <li><a href="#recruiters" className="text-slate-300 hover:text-primary transition-colors duration-200">For Recruiters</a></li>
+              <li><a href="#mobile-app" className="text-slate-300 hover:text-primary transition-colors duration-200">Mobile App</a></li>
+              <li><a href="#specialties" className="text-slate-300 hover:text-primary transition-colors duration-200">Specialties</a></li>
             </ul>
           </div>
 
           {/* 2. Support */}
           <div>
-            <h4 className="text-white/60 hover:text-primary transition-smooth cursor-pointer font-black mb-6 uppercase tracking-widest text-[10px]">Support</h4>
-            <ul className="space-y-3 text-base">
-              <li><a href="#" className="hover:text-primary transition-smooth">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Help Center</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Contact</a></li>
+            <h4 className="text-slate-100 font-black mb-6 uppercase tracking-widest text-[11px] hover:text-primary transition-colors duration-200 cursor-pointer">
+              Support
+            </h4>
+            <ul className="space-y-3.5 text-sm">
+              <li><a href="#" className="text-slate-300 hover:text-primary transition-colors duration-200">Privacy Policy</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-primary transition-colors duration-200">Terms of Service</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-primary transition-colors duration-200">Help Center</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-primary transition-colors duration-200">Contact</a></li>
             </ul>
           </div>
 
           {/* 3. Contact Us */}
           <div>
-            <h4 className="text-white/60 hover:text-primary transition-smooth cursor-pointer font-black mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
-            <ul className="space-y-4 text-base">
-              <li className="flex gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>cv.rbc24@gmail.com</span>
+            <h4 className="text-slate-100 font-black mb-6 uppercase tracking-widest text-[11px] hover:text-primary transition-colors duration-200 cursor-pointer">
+              Contact Us
+            </h4>
+            <ul className="space-y-4 text-sm">
+              <li className="flex gap-3 items-center">
+                <Mail className="w-4.5 h-4.5 text-primary flex-shrink-0" />
+                <span className="text-slate-300">cv.rbc24@gmail.com</span>
               </li>
-              {/* <li className="flex gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>+91 (800) 123-4567</span>
-              </li> */}
-              <li className="flex gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>HSR Layout, Hyderabad, India</span>
+              <li className="flex gap-3 items-center">
+                <MapPin className="w-4.5 h-4.5 text-primary flex-shrink-0" />
+                <span className="text-slate-300">HSR Layout, Bengaluru, India</span>
               </li>
             </ul>
           </div>
 
           {/* 4. Logo & Matter */}
-          <div className="flex flex-col items-center text-left lg:col-span-1">
-            <a href="/" className="relative h-25 w-60 block mb-4">
+          <div className="flex flex-col items-start text-left lg:col-span-1">
+            <a href="/" className="relative h-16 w-44 block mb-4">
               <Image
                 src="/logo.jpeg"
                 alt="RBC24 Logo"
                 fill
-                className="object-contain object-center"
-                sizes="(max-width: 768px) 192px, 192px"
+                className="object-contain object-left rounded-lg"
+                sizes="176px"
                 priority
               />
             </a>
-            <p className="text-base leading-relaxed mb-8 max-w-xs text-muted-foreground">
+            <p className="text-sm leading-relaxed mb-6 max-w-xs text-slate-400">
               India's healthcare hiring ecosystem connecting medical professionals with trusted organizations.
             </p>
-            <div className="flex gap-4 justify-start">
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><FacebookIcon className="w-5 h-5" /></a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><TwitterIcon className="w-5 h-5" /></a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-smooth hover:text-white"><InstagramIcon className="w-5 h-5" /></a>
+            <div className="flex gap-3 justify-start">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary transition-colors duration-200 text-slate-300 hover:text-white"><FacebookIcon className="w-4 h-4" /></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary transition-colors duration-200 text-slate-300 hover:text-white"><TwitterIcon className="w-4 h-4" /></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary transition-colors duration-200 text-slate-300 hover:text-white"><InstagramIcon className="w-4 h-4" /></a>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 text-center text-sm text-white/40">
+        <div className="pt-8 border-t border-slate-900 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} RBC24. All rights reserved.</p>
+          <p className="text-slate-600 font-medium">Empowering India's clinical workforce</p>
         </div>
       </div>
     </footer>
