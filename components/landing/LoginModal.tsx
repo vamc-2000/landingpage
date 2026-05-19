@@ -36,14 +36,14 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
       title: "Recruiter",
       description: "Manage hiring, applicants, and recruitment workflows.",
       icon: Briefcase,
-      href: "https://recruiter.rbc24.com/login",
+      href: "https://recruiter.rbc24.com/",
       color: "orange",
     },
     {
       title: "Job Seeker",
       description: "Find verified healthcare jobs and manage applications.",
       icon: Stethoscope,
-      href: "https://jobs.rbc24.com/auth/login",
+      href: "https://jobs.rbc24.com/",
       color: "blue",
     },
   ];
