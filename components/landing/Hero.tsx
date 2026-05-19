@@ -27,10 +27,10 @@ export default function Hero() {
           
           {/* Left Side: Copy & CTA - Narrower for editorial focus */}
           <div className="lg:w-[45%] z-30 relative flex flex-col items-center lg:items-start">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-[13px] font-bold mb-8 hero-sub shadow-sm">
+            {/* <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-[13px] font-bold mb-8 hero-sub shadow-sm">
               <span className="flex h-1.5 w-1.5 rounded-full bg-primary mr-2 animate-ping"></span>
               India’s Premium Healthcare Ecosystem
-            </div>
+            </div> */}
             
             <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-black text-slate-900 tracking-tighter mb-6 leading-[1.05]">
               <span className="hero-line-1 block mb-1">The Modern</span>
