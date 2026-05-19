@@ -1,7 +1,8 @@
+"use client";
 import * as Icons from "lucide-react";
 import Image from "next/image";
-
 export default function MobileAppSection() {
+
   return (
     <section
       id="mobile-app"
@@ -25,24 +26,27 @@ export default function MobileAppSection() {
         </div>
 
         <div className="relative flex justify-center py-10 w-full max-w-4xl mx-auto">
-          {/* Main App Image */}
-          <div className="relative z-10 w-full animate-float-slow flex justify-center">
-            <Image
-              src="/RBCC.png"
-              alt="RBC24 App Interface"
-              width={1672}
-              height={941}
-              className="w-full h-auto object-contain drop-shadow-2xl"
-              priority
-              quality={100}
-            />
+          {/* Main App Image Slider */}
+          <div
+            className="relative z-10 w-full animate-float-slow flex justify-center drop-shadow-2xl"
+            style={{ aspectRatio: '1672 / 941' }}
+          >
+            <div className="absolute inset-0 z-10">
+              <Image
+                src="/images/rbc.png"
+                alt="RBC24 Platform Interface"
+                fill
+                sizes="100vw"
+                quality={100}
+                unoptimized={true}
+                className="object-contain rounded-2xl md:rounded-3xl lg:rounded-[2.5rem]"
+                priority={true}
+              />
+            </div>
 
             {/* Action Buttons mapped below RBC logo */}
-            <div className="absolute bottom-[2%] right-[2%] sm:bottom-[4%] sm:right-[3%] md:bottom-[6%] md:right-[5%] flex flex-col items-center justify-center gap-2 sm:gap-6 z-30 scale-[0.2] sm:scale-[0.2] md:scale-[0.25] lg:scale-[0.32] origin-bottom-right">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1e3a8a] tracking-tight">
-                Available on
-              </h3>
-              <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
+            <div className="absolute bottom-[7%] right-[7%] sm:bottom-[9%] sm:right-[3%] md:bottom-[11%] md:right-[5%] flex flex-row items-center justify-center gap-2 sm:gap-6 z-30 scale-[0.16] sm:scale-[0.3] md:scale-[0.35] lg:scale-[0.4] origin-bottom-right">
+              <div className="flex flex-row justify-center gap-2 sm:gap-4">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.rbc24.rbc24"
                   target="_blank"

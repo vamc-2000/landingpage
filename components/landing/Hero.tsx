@@ -3,7 +3,7 @@ import { Building2 } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-[#FAFAF9]"> 
+    <section className="relative pt-20 pb-12 lg:pt-28 lg:pb-20 overflow-hidden bg-[#FAFAF9]"> 
       {/* Foreground & Background Atmosphere */}
       <div className="absolute inset-0 -z-10">
         {/* Layer 1: Massive ultra-soft warm ambient glow */}
@@ -103,32 +103,6 @@ export default function Hero() {
                 />
             </div>
 
-            {/* ONLY ONE Supporting Floating Card */}
-            <div 
-              className="hidden sm:flex absolute -right-4 lg:-right-8 top-[45%] bg-white/95 backdrop-blur-xl px-5 py-4 rounded-2xl items-center gap-4 animate-float border border-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] z-30" 
-              style={{ animationDuration: '4.2s' }}
-            >
-              <div className="bg-blue-50/80 text-blue-600 p-3 rounded-xl shadow-inner">
-                <Building2 className="w-6 h-6" />
-              </div>
-              <div className="text-left">
-                <p className="text-base font-black text-slate-800 tracking-tight leading-tight">Apollo & Max</p>
-                <p className="text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">Top Hospitals</p>
-              </div>
-            </div>
-
-            {/* Live Openings Pill at the bottom */}
-            <div 
-              className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl px-6 py-3 rounded-full flex items-center gap-3 z-30 shadow-[0_10px_30px_rgb(0,0,0,0.06)] border border-slate-100 animate-float" 
-              style={{ animationDuration: '3.8s', animationDelay: '500ms' }}
-            >
-              <div className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-              </div>
-              <p className="text-sm font-bold text-slate-800">1,200+ <span className="font-medium text-slate-500 ml-1">Live Roles</span></p>
-            </div>
-            
           </div>
 
         </div>
