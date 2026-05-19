@@ -98,13 +98,14 @@ export default function Hero() {
                   fill
                   sizes="(max-width: 768px) 100vw, 60vw"
                   priority
+                  quality={100}
                   className="object-cover object-center w-full h-full"
                 />
             </div>
 
             {/* ONLY ONE Supporting Floating Card */}
             <div 
-              className="absolute -right-4 lg:-right-8 top-[45%] bg-white/95 backdrop-blur-xl px-5 py-4 rounded-2xl flex items-center gap-4 animate-float border border-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] z-30" 
+              className="hidden sm:flex absolute -right-4 lg:-right-8 top-[45%] bg-white/95 backdrop-blur-xl px-5 py-4 rounded-2xl items-center gap-4 animate-float border border-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] z-30" 
               style={{ animationDuration: '4.2s' }}
             >
               <div className="bg-blue-50/80 text-blue-600 p-3 rounded-xl shadow-inner">

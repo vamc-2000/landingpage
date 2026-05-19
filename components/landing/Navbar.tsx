@@ -19,8 +19,8 @@ export default function Navbar() {
     <>
       <nav className="
       fixed top-0 w-full z-50
-      bg-white/95
-      backdrop-blur-xl
+      bg-white/90
+      backdrop-blur-md
       border-b border-slate-200/60
       shadow-sm
       transition-all duration-300
@@ -57,7 +57,7 @@ export default function Navbar() {
             <div className="flex items-center ml-4">
               <button
                 onClick={() => setIsLoginModalOpen(true)}
-                className="px-8 py-3 rounded-xl bg-slate-100 text-slate-800 text-sm font-bold border border-slate-200/60 hover:bg-slate-200 hover:scale-105 transition-smooth cursor-pointer"
+                className="px-8 py-3 rounded-xl bg-primary text-white text-sm font-bold hover:bg-primary/90 hover:scale-105 transition-smooth shadow-[0_4px_12px_rgba(234,88,12,0.15)] hover:shadow-[0_6px_18px_rgba(234,88,12,0.25)] cursor-pointer"
               >
                 Login
               </button>
@@ -99,7 +99,7 @@ export default function Navbar() {
                     setIsOpen(false);
                     setIsLoginModalOpen(true);
                   }}
-                  className="w-full py-4 text-center font-semibold bg-slate-100 text-slate-800 rounded-xl border border-slate-200/60 hover:bg-slate-200 transition-smooth"
+                  className="w-full py-4 text-center font-bold bg-primary text-white rounded-xl hover:bg-primary/90 transition-smooth shadow-[0_4px_12px_rgba(234,88,12,0.15)]"
                 >
                   Login
                 </button>

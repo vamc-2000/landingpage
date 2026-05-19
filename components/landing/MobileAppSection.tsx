@@ -34,6 +34,7 @@ export default function MobileAppSection() {
               height={941}
               className="w-full h-auto object-contain drop-shadow-2xl"
               priority
+              quality={100}
             />
 
             {/* Action Buttons mapped below RBC logo */}
@@ -87,7 +88,7 @@ export default function MobileAppSection() {
             </div>
 
             {/* Subtle glow behind image */}
-            <div className="absolute inset-0 bg-orange-400/20 blur-[120px] -z-10 rounded-[3rem]" />
+            <div className="absolute inset-0 bg-orange-400/8 blur-[80px] -z-10 rounded-[3rem]" />
           </div>
         </div>
       </div>
