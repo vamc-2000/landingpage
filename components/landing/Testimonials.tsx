@@ -50,7 +50,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-32 bg-gradient-to-b from-white via-orange-50/5 to-white relative overflow-hidden">
+    <section id="testimonials" className="py-16 md:py-20 bg-gradient-to-b from-white via-orange-50/5 to-white relative overflow-hidden">
 
       {/* Ambient background glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
@@ -61,7 +61,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
         {/* Editorial Section Header */}
-        <div className={`text-center max-w-3xl mx-auto mb-24 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
+        <div className={`text-center max-w-3xl mx-auto mb-10 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-black mb-6 uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
             TRUSTED BY INDIA’S HEALTHCARE COMMUNITY
@@ -111,11 +111,11 @@ export default function Testimonials() {
           </div>
 
           {/* Testimonial Cards Grid */}
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-10 items-stretch relative z-10 py-10">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative z-10 py-6">
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`p-8 lg:p-10 rounded-[32px] bg-white/95 border border-white/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.025)] hover:border-black/[0.05] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu flex flex-col justify-between h-full relative overflow-hidden group/card reveal-on-scroll delay-${i + 1} ${isRevealed ? "revealed" : ""} ${i === 0 ? "lg:translate-y-8 lg:rotate-[-0.3deg]" : i === 1 ? "lg:-translate-y-6 lg:rotate-[0.3deg]" : "lg:translate-y-2 lg:rotate-[-0.2deg]"
+                className={`p-6 lg:p-8 rounded-[32px] bg-white/95 border border-white/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.025)] hover:border-black/[0.05] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu flex flex-col justify-between h-full relative overflow-hidden group/card reveal-on-scroll delay-${i + 1} ${isRevealed ? "revealed" : ""} ${i === 0 ? "lg:translate-y-4 lg:rotate-[-0.3deg]" : i === 1 ? "lg:-translate-y-3 lg:rotate-[0.3deg]" : "lg:translate-y-1 lg:rotate-[-0.2deg]"
                   }`}
                 onMouseMove={handleMouseMove}
               >

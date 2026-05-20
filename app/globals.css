@@ -249,8 +249,7 @@
   }
 
   .section-padding {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    @apply py-12 md:py-16;
   }
 }
 

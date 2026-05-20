@@ -108,13 +108,13 @@ export default function Footer() {
 
           {/* 4. Logo & Matter */}
           <div className="flex flex-col items-start text-left lg:col-span-1">
-            <a href="/" className="relative h-16 w-44 block mb-4">
+            <a href="/" className="relative h-20 w-20 block mb-6 rounded-full overflow-hidden border border-slate-800 bg-white hover:scale-105 transition-transform duration-200">
               <Image
                 src="/logo.jpeg"
                 alt="RBC24 Logo"
                 fill
-                className="object-contain object-left rounded-lg"
-                sizes="176px"
+                className="object-cover"
+                sizes="64px"
                 priority
               />
             </a>

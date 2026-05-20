@@ -2,17 +2,17 @@ import { Download } from "lucide-react";
 
 export default function FinalCTA() {
   return (
-    <section className="py-24 bg-white bg-ambient-glow">
+    <section className="py-16 md:py-20 bg-white bg-ambient-glow">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-primary rounded-[3rem] p-10 lg:p-16 text-center text-white relative overflow-hidden shadow-2xl shadow-primary/20">
+        <div className="bg-primary rounded-[3rem] p-8 lg:p-12 text-center text-white relative overflow-hidden shadow-2xl shadow-primary/20">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
-          <h2 className="text-fluid-h2 font-black mb-8 relative z-10 leading-[1.15] tracking-tightest text-balance">
+          <h2 className="text-fluid-h2 font-black mb-4 relative z-10 leading-[1.15] tracking-tightest text-balance">
             Start Your Healthcare <br /> Journey Today
           </h2>
-          <p className="text-lg lg:text-xl text-white/80 mb-10 max-w-3xl mx-auto relative z-10">
+          <p className="text-lg lg:text-xl text-white/80 mb-6 max-w-3xl mx-auto relative z-10">
             Join thousands of medical professionals and hospitals already using RBC24 to transform healthcare recruitment.
           </p>
 
