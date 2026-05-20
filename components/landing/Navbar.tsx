@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import LoginModal from "./LoginModal";
@@ -28,32 +29,25 @@ export default function Navbar() {
       pointer-events-none
       ">
         <div className="flex items-center justify-between w-full h-20 md:h-22 lg:h-24 px-4 sm:px-6 lg:px-8 gap-4 pointer-events-auto">
-          <a
+          <Link
             href={isAuthenticated ? "/jobs" : "/"}
-            className="flex items-center shrink-0 cursor-pointer select-none"
+            className="flex items-center cursor-pointer w-20 lg:w-24"
             onClick={(e) => {
               e.stopPropagation();
             }}
           >
-            <div className="relative w-[150px] h-12 min-[375px]:w-[170px] min-[375px]:h-14 min-[425px]:w-[180px] min-[425px]:h-14 md:w-[220px] md:h-16 lg:w-[300px] lg:h-20 flex-shrink-0 overflow-hidden -ml-1 md:-ml-2">
-              <Image
-                src="/images/RBC24 Horizontal Logo Transparent.png"
-                alt="RBC24"
-                fill
-                priority
-                className="object-contain object-left"
-                sizes="
-                  (max-width: 768px) 180px,
-                  (max-width: 1024px) 240px,
-                  300px
-                "
-              />
-            </div>
-          </a>
+            <Image
+              src="/images/RBC24 Horizontal Logo Transparent.png"
+              alt="RBC24"
+              className="object-contain "
+              width={250}
+              height={250}
+            />
+          </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 target={item.target}
@@ -61,7 +55,7 @@ export default function Navbar() {
                 className="text-sm font-bold text-foreground/70 hover:text-primary transition-smooth"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="flex items-center ml-4">
               <button
@@ -98,7 +92,7 @@ export default function Navbar() {
           <div className="lg:hidden bg-white border-b border-border animate-fade-up pointer-events-auto">
             <div className="px-6 pt-4 pb-6 space-y-2">
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   target={item.target}
@@ -107,7 +101,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="pt-4 flex flex-col">
                 <button

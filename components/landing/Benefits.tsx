@@ -9,8 +9,7 @@ import {
   Users,
   Grid,
   Heart,
-  Bell,
-  ArrowRight
+  Bell
 } from "lucide-react";
 
 export default function Benefits() {
@@ -206,14 +205,11 @@ export default function Benefits() {
                   </p>
                 </div>
 
-                {/* Card Status & Accent Arrow */}
-                <div className="pt-4 border-t border-slate-100/60 flex items-center justify-between relative">
+                {/* Card Status & Bottom Border */}
+                <div className="pt-4 border-t border-slate-100/60 flex items-center relative">
                   <span className="text-[9px] font-black tracking-widest text-slate-400 uppercase leading-none">
                     {benefit.status}
                   </span>
-
-                  {/* Micro Directional Arrow */}
-                  <ArrowRight className={`w-3.5 h-3.5 ${benefit.textClass} opacity-40 group-hover/card:opacity-100 group-hover/card:translate-x-0.5 transition-all duration-300`} strokeWidth={2.5} />
 
                   {/* Bottom Glowing Accent Bar on Card Hover */}
                   <div className={`absolute bottom-[-28px] inset-x-8 h-[2px] bg-gradient-to-r from-transparent ${benefit.bottomBarClass} to-transparent scale-x-0 group-hover/card:scale-x-100 transition-transform duration-300 origin-center`} />

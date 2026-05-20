@@ -77,39 +77,6 @@ export default function Testimonials() {
         {/* Testimonials Grid Container with Floating Trust Elements */}
         <div className="relative">
 
-          {/* Floating Trust Pill Widgets */}
-          {/* Widget 1 - Top Left */}
-          <div className="absolute top-[8%] left-[-5%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-1 pointer-events-none z-20">
-            <div className="w-7 h-7 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 shrink-0">
-              <Heart className="w-4 h-4 fill-orange-500/20" />
-            </div>
-            <span className="text-[10px] font-black text-slate-600 tracking-wider">10K+ MEDICAL PROFESSIONALS</span>
-          </div>
-
-          {/* Widget 2 - Top Right */}
-          <div className="absolute top-[2%] right-[-4%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-2 pointer-events-none z-20">
-            <div className="w-7 h-7 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-600 shrink-0">
-              <Award className="w-4 h-4 text-teal-600" />
-            </div>
-            <span className="text-[10px] font-black text-slate-600 tracking-wider">500+ PARTNER HOSPITALS</span>
-          </div>
-
-          {/* Widget 3 - Bottom Left */}
-          <div className="absolute bottom-[10%] left-[-4%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-3 pointer-events-none z-20">
-            <div className="w-7 h-7 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-500 shrink-0">
-              <ShieldCheck className="w-4 h-4 text-indigo-500" />
-            </div>
-            <span className="text-[10px] font-black text-slate-600 tracking-wider">VERIFIED RECRUITERS</span>
-          </div>
-
-          {/* Widget 4 - Bottom Right */}
-          <div className="absolute bottom-[5%] right-[-5%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-1 pointer-events-none z-20">
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981] relative shrink-0">
-              <div className="absolute inset-0 rounded-full bg-emerald-400 animate-pulse-indicator" />
-            </div>
-            <span className="text-[10px] font-black text-slate-600 tracking-wider">98.4% RETENTION SATISFACTION</span>
-          </div>
-
           {/* Testimonial Cards Grid */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative z-10 py-6">
             {testimonials.map((t, i) => (
@@ -189,6 +156,41 @@ export default function Testimonials() {
 
               </div>
             ))}
+          </div>
+
+          {/* Trust Credibility Badges Row (positioned below the testimonial cards) */}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4 lg:gap-6 relative z-20 max-w-5xl mx-auto px-4">
+            {/* Badge 1 */}
+            <div className="flex items-center gap-2.5 px-4.5 py-2.5 rounded-2xl bg-white/70 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-black/[0.04] transition-all duration-300 pointer-events-auto">
+              <div className="w-7 h-7 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 shrink-0">
+                <Heart className="w-4 h-4 fill-orange-500/20" />
+              </div>
+              <span className="text-[9.5px] font-black text-slate-600 tracking-wider">10K+ MEDICAL PROFESSIONALS</span>
+            </div>
+
+            {/* Badge 2 */}
+            <div className="flex items-center gap-2.5 px-4.5 py-2.5 rounded-2xl bg-white/70 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-black/[0.04] transition-all duration-300 pointer-events-auto">
+              <div className="w-7 h-7 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-600 shrink-0">
+                <Award className="w-4 h-4 text-teal-600" />
+              </div>
+              <span className="text-[9.5px] font-black text-slate-600 tracking-wider">500+ PARTNER HOSPITALS</span>
+            </div>
+
+            {/* Badge 3 */}
+            <div className="flex items-center gap-2.5 px-4.5 py-2.5 rounded-2xl bg-white/70 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-black/[0.04] transition-all duration-300 pointer-events-auto">
+              <div className="w-7 h-7 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-500 shrink-0">
+                <ShieldCheck className="w-4 h-4 text-indigo-500" />
+              </div>
+              <span className="text-[9.5px] font-black text-slate-600 tracking-wider">VERIFIED RECRUITERS</span>
+            </div>
+
+            {/* Badge 4 */}
+            <div className="flex items-center gap-2.5 px-4.5 py-2.5 rounded-2xl bg-white/70 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-black/[0.04] transition-all duration-300 pointer-events-auto">
+              <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981] relative shrink-0">
+                <div className="absolute inset-0 rounded-full bg-emerald-400 animate-pulse-indicator" />
+              </div>
+              <span className="text-[9.5px] font-black text-slate-600 tracking-wider">98.4% RETENTION SATISFACTION</span>
+            </div>
           </div>
 
         </div>
