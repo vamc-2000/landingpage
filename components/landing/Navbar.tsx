@@ -64,8 +64,13 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="lg:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground p-2">
+          <div className="lg:hidden flex items-center flex-shrink-0 relative z-50">
+            <button
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground p-3 hover:text-primary transition-smooth focus:outline-none relative z-50 cursor-pointer pointer-events-auto"
+              aria-label="Toggle menu"
+            >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
