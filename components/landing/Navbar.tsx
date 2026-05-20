@@ -25,31 +25,17 @@ export default function Navbar() {
       border-b border-slate-200/60
       shadow-sm
       transition-all duration-300
+      pointer-events-none
       ">
-        <div className="flex items-center justify-between w-full h-16 lg:h-20 px-4 sm:px-6 lg:px-8 gap-4">
+        <div className="flex items-center justify-between w-full h-20 md:h-22 lg:h-24 px-4 sm:px-6 lg:px-8 gap-4 pointer-events-auto">
           <a
             href={isAuthenticated ? "/jobs" : "/"}
-            className="flex items-center shrink-0"
+            className="flex items-center shrink-0 cursor-pointer select-none"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
           >
-            <div
-              className="
-                relative
-                w-[125px]
-                h-[42px]
-
-                sm:w-[145px]
-                sm:h-[46px]
-
-                md:w-[220px]
-                md:h-[72px]
-
-                lg:w-[260px]
-                lg:h-[84px]
-
-                -ml-1
-                md:-ml-3
-              "
-            >
+            <div className="relative w-[150px] h-12 min-[375px]:w-[170px] min-[375px]:h-14 min-[425px]:w-[180px] min-[425px]:h-14 md:w-[220px] md:h-16 lg:w-[300px] lg:h-20 flex-shrink-0 overflow-hidden -ml-1 md:-ml-2">
               <Image
                 src="/images/RBC24 Horizontal Logo Transparent.png"
                 alt="RBC24"
@@ -57,10 +43,9 @@ export default function Navbar() {
                 priority
                 className="object-contain object-left"
                 sizes="
-                  (max-width: 640px) 125px,
-                  (max-width: 768px) 145px,
-                  (max-width: 1024px) 220px,
-                  260px
+                  (max-width: 768px) 180px,
+                  (max-width: 1024px) 240px,
+                  300px
                 "
               />
             </div>
@@ -89,7 +74,14 @@ export default function Navbar() {
           </div>
 
           <div className="lg:hidden flex items-center relative z-50 shrink-0">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground p-2 hover:bg-slate-100/50 rounded-xl transition-colors cursor-pointer" aria-label="Toggle Menu">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsOpen(!isOpen);
+              }}
+              className="text-foreground p-2 hover:bg-slate-100/50 rounded-xl transition-colors cursor-pointer"
+              aria-label="Toggle Menu"
+            >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -103,7 +95,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden bg-white border-b border-border animate-fade-up">
+          <div className="lg:hidden bg-white border-b border-border animate-fade-up pointer-events-auto">
             <div className="px-6 pt-4 pb-6 space-y-2">
               {menuItems.map((item) => (
                 <a

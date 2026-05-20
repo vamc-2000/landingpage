@@ -5,7 +5,7 @@ import {
   Sparkles,
   MapPin,
   Search,
-  Building,
+  Building2,
   TrendingUp,
   Users,
   Calendar,
@@ -55,7 +55,7 @@ export default function ValueSection() {
   ];
 
   return (
-    <section id="value-proposition" className="py-28 bg-[#FCFCFB] relative overflow-hidden">
+    <section id="value-proposition" className="py-16 md:py-20 bg-[#FCFCFB] relative overflow-hidden">
       {/* Cinematic Ambient Glow Background Blobs with Slow Motion Drift */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute -top-[10%] left-[-5%] w-[600px] h-[600px] bg-orange-100/10 rounded-full blur-[90px] animate-drift-slow-1 pointer-events-none" />
@@ -65,12 +65,12 @@ export default function ValueSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className={`text-center max-w-3xl mx-auto mb-20 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 uppercase tracking-widest">
+        <div className={`text-center max-w-3xl mx-auto mb-10 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold mb-3 uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
             Product Ecosystem
           </div>
-          <h2 className="text-section mb-6 leading-tight tracking-tight text-foreground font-black text-slate-800">
+          <h2 className="text-section mb-3 leading-tight tracking-tight text-foreground font-black text-slate-800">
             Built for Every Healthcare <br className="hidden sm:inline" /> Career Journey
           </h2>
           <p className="text-body max-w-2xl mx-auto leading-relaxed text-muted-foreground">
@@ -79,7 +79,7 @@ export default function ValueSection() {
         </div>
 
         {/* Dual Cards Grid Showcase */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-stretch">
 
           {/* ========================================================= */}
           {/* LEFT PANEL — JOB SEEKERS EXPERIENCE (Warm White + Orange)  */}
@@ -100,18 +100,18 @@ export default function ValueSection() {
             <div className="absolute -top-40 -left-40 w-96 h-96 bg-orange-500/[0.015] rounded-full blur-3xl pointer-events-none" />
 
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-[10px] font-black text-primary uppercase tracking-widest mb-6">
-                <Sparkles className="w-3 h-3 text-primary animate-pulse" /> FOR JOB SEEKERS
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-[10px] font-black text-primary uppercase tracking-widest mb-3">
+                <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" /> FOR JOB SEEKERS
               </span>
-              <h3 className="text-3xl lg:text-4xl font-black text-foreground mb-4 tracking-tight leading-tight text-slate-800">
+              <h3 className="text-3xl lg:text-4xl font-black text-foreground mb-2.5 tracking-tight leading-tight text-slate-800">
                 Discover clinical <br /> careers, instantly.
               </h3>
-              <p className="text-sm text-slate-500 mb-8 max-w-md leading-relaxed">
+              <p className="text-sm text-slate-500 mb-4 max-w-md leading-relaxed">
                 Search verified hospital opportunities, apply instantly, and track your medical career growth from one modern dashboard.
               </p>
 
               {/* UI Mockup Inside Card */}
-              <div className="relative w-full overflow-visible my-8 rounded-3xl border border-black/5 bg-[#FFFDFB]/80 p-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.01)] backdrop-blur-md">
+              <div className="relative w-full overflow-visible my-4 rounded-3xl border border-black/5 bg-[#FFFDFB]/80 p-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.01)] backdrop-blur-md">
 
                 {/* Main Browser Mockup Preview */}
                 <div className="relative rounded-2xl border border-black/[0.06] bg-white shadow-2xl transition-transform duration-300 hover:scale-[1.005] group-hover/panel:shadow-3xl transform-gpu overflow-hidden">
@@ -131,11 +131,11 @@ export default function ValueSection() {
                   </div>
 
                   {/* Browser Inner Workspace */}
-                  <div className="p-4 bg-[#FAF9F6] flex flex-col gap-4 min-h-[380px] select-none">
+                  <div className="p-4 bg-[#FAF9F6] flex flex-col gap-3 min-h-[330px] select-none">
 
                     {/* Simulated Job Search Bar */}
                     <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-xl border border-black/5 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
-                      <div className="flex items-center gap-2 bg-slate-50 border border-black/[0.04] rounded-lg px-2.5 py-1.5 w-full">
+                      <div className="flex items-center gap-2 bg-slate-50 border border-black/[0.04] rounded-lg px-2.5 py-1 w-full">
                         <Search className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                         <span className="text-[10px] text-slate-400 font-semibold truncate">Cardiologist Consultant, Max Healthcare...</span>
                       </div>
@@ -145,10 +145,10 @@ export default function ValueSection() {
                     </div>
 
                     {/* Simulation Grid Layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 h-full">
 
                       {/* Left Sidebar Filter Section */}
-                      <div className="hidden md:flex flex-col gap-3.5 bg-white p-3.5 rounded-xl border border-black/5 shadow-sm h-fit">
+                      <div className="hidden md:flex flex-col gap-2.5 bg-white p-3 rounded-xl border border-black/5 shadow-sm h-fit">
                         <span className="text-[8px] font-black uppercase text-slate-400 tracking-wider flex items-center gap-1">
                           <Filter className="w-3 h-3 text-primary" /> Specialities
                         </span>
@@ -168,12 +168,12 @@ export default function ValueSection() {
                       <div className="col-span-1 md:col-span-2 space-y-3">
 
                         {/* Job Card 1 */}
-                        <div className="bg-white p-3.5 rounded-xl border border-black/5 shadow-sm flex flex-col gap-2.5 transition-all duration-220 hover:border-primary/20 hover:shadow-md">
+                        <div className="bg-white p-2.5 rounded-xl border border-black/5 shadow-sm flex flex-col gap-1.5 transition-all duration-220 hover:border-primary/20 hover:shadow-md">
                           <div className="flex justify-between items-start">
                             <div>
                               <h4 className="font-extrabold text-[11px] text-slate-800 tracking-tight leading-tight">Consultant Cardiologist</h4>
                               <span className="text-[8px] text-slate-400 flex items-center gap-1 mt-1 font-bold">
-                                <Building className="w-2.5 h-2.5 text-primary" /> Apollo Hospitals • Mumbai
+                                <Building2 className="w-2.5 h-2.5 text-primary" /> Apollo Hospitals • Mumbai
                               </span>
                             </div>
                             <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-[8px] font-black text-emerald-600 uppercase tracking-wider">
@@ -191,12 +191,12 @@ export default function ValueSection() {
                         </div>
 
                         {/* Job Card 2 */}
-                        <div className="bg-white p-3.5 rounded-xl border border-black/5 shadow-sm flex flex-col gap-2.5 transition-all duration-220 hover:border-primary/20 hover:shadow-md">
+                        <div className="bg-white p-2.5 rounded-xl border border-black/5 shadow-sm flex flex-col gap-1.5 transition-all duration-220 hover:border-primary/20 hover:shadow-md">
                           <div className="flex justify-between items-start">
                             <div>
                               <h4 className="font-extrabold text-[11px] text-slate-800 tracking-tight leading-tight">Pediatric Consultant</h4>
                               <span className="text-[8px] text-slate-400 flex items-center gap-1 mt-1 font-bold">
-                                <Building className="w-2.5 h-2.5 text-primary" /> Fortis Hospital • Bengaluru
+                                <Building2 className="w-2.5 h-2.5 text-primary" /> Fortis Hospital • Bengaluru
                               </span>
                             </div>
                             <span className="px-2 py-0.5 rounded-full bg-slate-100 text-[8px] font-black text-slate-400 uppercase tracking-wider">
@@ -218,7 +218,7 @@ export default function ValueSection() {
 
                 {/* Floating Stat Widgets Ecosystem */}
                 {/* 1. 32 New Matches (Top Right) — widget-float-1 (4s) */}
-                <div className="absolute -top-3 -right-3 sm:-right-4 bg-gradient-to-br from-primary to-orange-600 text-white px-3 py-2 rounded-2xl shadow-xl flex items-center gap-2 animate-widget-float-1 border border-white/10 z-20">
+                <div className="hidden md:flex absolute -top-3 -right-3 sm:-right-4 bg-gradient-to-br from-primary to-orange-600 text-white px-3 py-2 rounded-2xl shadow-xl items-center gap-2 animate-widget-float-1 border border-white/10 z-20">
                   <Sparkles className="w-3.5 h-3.5 text-orange-200 animate-pulse" />
                   <div>
                     <span className="text-[8.5px] font-black uppercase tracking-wider leading-none block">32 New Matches</span>
@@ -227,7 +227,7 @@ export default function ValueSection() {
                 </div>
 
                 {/* 2. Live Jobs (Top Left) — widget-float-2 (5.5s) */}
-                <div className="absolute top-16 -left-3 bg-white px-3.5 py-2 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-2 z-20">
+                <div className="hidden md:flex absolute top-16 -left-3 bg-white px-3.5 py-2 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-2 z-20">
                   <div className="w-6 h-6 rounded-lg bg-orange-500/10 flex items-center justify-center text-primary shrink-0 shadow-inner">
                     <Briefcase className="w-3.5 h-3.5" />
                   </div>
@@ -238,7 +238,7 @@ export default function ValueSection() {
                 </div>
 
                 {/* 3. AI Recommendations (Bottom Left) — widget-float-3 (6.5s) */}
-                <div className="absolute bottom-16 -left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-3 z-20">
+                <div className="hidden md:flex absolute bottom-16 -left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-3 z-20">
                   <div className="w-6.5 h-6.5 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 shadow-inner">
                     <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                   </div>
@@ -251,7 +251,7 @@ export default function ValueSection() {
                 </div>
 
                 {/* 4. 500+ Hospitals (Bottom Right) — widget-float-2 (5.5s) */}
-                <div className="absolute bottom-8 -right-3 sm:-right-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-2 z-20">
+                <div className="hidden md:flex absolute bottom-8 -right-3 sm:-right-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-2 z-20">
                   <div className="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 shadow-inner">
                     <ShieldCheck className="w-3.5 h-3.5 animate-bounce" />
                   </div>
@@ -304,18 +304,18 @@ export default function ValueSection() {
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-teal-500/[0.015] rounded-full blur-3xl pointer-events-none" />
 
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-[10px] font-black text-secondary uppercase tracking-widest mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-[10px] font-black text-secondary uppercase tracking-widest mb-3">
                 <Sparkles className="w-3 h-3 text-secondary animate-pulse" /> FOR RECRUITERS
               </span>
-              <h3 className="text-3xl lg:text-4xl font-black text-foreground mb-4 tracking-tight leading-tight text-slate-800">
+              <h3 className="text-3xl lg:text-4xl font-black text-foreground mb-2.5 tracking-tight leading-tight text-slate-800">
                 Hire clinical medical <br /> professionals, faster.
               </h3>
-              <p className="text-sm text-slate-500 mb-8 max-w-md leading-relaxed">
+              <p className="text-sm text-slate-500 mb-4 max-w-md leading-relaxed">
                 Manage your hiring pipeline, coordinate interviews, and filter candidates automatically using high-accuracy AI matching.
               </p>
 
               {/* UI Mockup Inside Card */}
-              <div className="relative w-full overflow-visible my-8 rounded-3xl border border-black/5 bg-[#FAFDFF]/80 p-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.01)] backdrop-blur-md">
+              <div className="relative w-full overflow-visible my-4 rounded-3xl border border-black/5 bg-[#FAFDFF]/80 p-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.01)] backdrop-blur-md">
 
                 {/* Main Browser Mockup Preview */}
                 <div className="relative rounded-2xl border border-black/[0.06] bg-white shadow-2xl transition-transform duration-300 hover:scale-[1.005] group-hover/panel:shadow-3xl transform-gpu overflow-hidden">
@@ -335,31 +335,31 @@ export default function ValueSection() {
                   </div>
 
                   {/* Browser Inner Workspace */}
-                  <div className="p-4 bg-[#FAFDFF] flex flex-col gap-4 min-h-[380px] select-none">
+                  <div className="p-4 bg-[#FAFDFF] flex flex-col gap-3 min-h-[330px] select-none">
 
                     {/* Recruiter Quick Statistics Strip */}
-                    <div className="grid grid-cols-3 gap-2.5">
-                      <div className="bg-white p-2.5 rounded-xl border border-black/5 shadow-sm">
-                        <span className="text-[7.5px] uppercase tracking-wider font-extrabold text-slate-400 block mb-0.5">Verified Pros</span>
-                        <span className="text-xs font-black text-slate-800">10,250+</span>
+                    <div className="grid grid-cols-3 gap-1.5 md:gap-2">
+                      <div className="bg-white p-1.5 md:p-2.5 rounded-xl border border-black/5 shadow-sm flex flex-col justify-center">
+                        <span className="text-[6.5px] min-[375px]:text-[7.5px] uppercase tracking-wider font-extrabold text-slate-400 block mb-0.5 truncate">Verified Pros</span>
+                        <span className="text-[10px] min-[375px]:text-xs font-black text-slate-800">10,250+</span>
                       </div>
-                      <div className="bg-white p-2.5 rounded-xl border border-black/5 shadow-sm">
-                        <span className="text-[7.5px] uppercase tracking-wider font-extrabold text-slate-400 block mb-0.5">Shortlisted</span>
-                        <span className="text-xs font-black text-secondary">68 Active</span>
+                      <div className="bg-white p-1.5 md:p-2.5 rounded-xl border border-black/5 shadow-sm flex flex-col justify-center">
+                        <span className="text-[6.5px] min-[375px]:text-[7.5px] uppercase tracking-wider font-extrabold text-slate-400 block mb-0.5 truncate">Shortlisted</span>
+                        <span className="text-[10px] min-[375px]:text-xs font-black text-secondary">68 Active</span>
                       </div>
-                      <div className="bg-gradient-to-br from-secondary to-teal-600 p-2.5 rounded-xl text-white shadow-sm flex flex-col justify-between">
-                        <span className="text-[7.5px] uppercase tracking-wider font-extrabold text-teal-100 block mb-0.5">AI Engine</span>
-                        <span className="text-[10px] font-black flex items-center gap-1 leading-none">
-                          <Sparkles className="w-3 h-3 text-teal-200 animate-pulse" /> Auto Active
+                      <div className="bg-gradient-to-br from-secondary to-teal-600 p-1.5 md:p-2.5 rounded-xl text-white shadow-sm flex flex-col justify-between min-h-[40px] md:min-h-0">
+                        <span className="text-[6.5px] min-[375px]:text-[7.5px] uppercase tracking-wider font-extrabold text-teal-100 block mb-0.5 truncate">AI Engine</span>
+                        <span className="text-[8.5px] min-[375px]:text-[10px] font-black flex items-center gap-0.5 leading-none mt-0.5">
+                          <Sparkles className="w-2.5 h-2.5 text-teal-200 animate-pulse shrink-0" /> Auto
                         </span>
                       </div>
                     </div>
 
                     {/* Simulation Grid Layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 h-full">
 
                       {/* Left Navigation Menu */}
-                      <div className="hidden md:flex flex-col gap-1.5 bg-white p-2.5 rounded-xl border border-black/5 shadow-sm h-fit">
+                      <div className="hidden md:flex flex-col gap-1.5 bg-white p-2 rounded-xl border border-black/5 shadow-sm h-fit">
                         {["Dashboard", "Candidates", "Schedules", "Analytics"].map((nav, nIdx) => (
                           <div key={nav} className={`flex items-center gap-2 px-2 py-1.5 rounded-lg border ${nIdx === 1 ? "bg-secondary/5 border-secondary/15 text-secondary" : "border-transparent text-slate-500 hover:text-slate-700"}`}>
                             <div className={`w-1.5 h-1.5 rounded-full ${nIdx === 1 ? "bg-secondary animate-pulse" : "bg-slate-300"}`} />
@@ -370,7 +370,7 @@ export default function ValueSection() {
 
                       {/* Recruitment pipeline column stages */}
                       <div className="col-span-1 md:col-span-2 space-y-3">
-                        <div className="bg-white p-3.5 rounded-xl border border-black/5 shadow-sm flex flex-col gap-2.5">
+                        <div className="bg-white p-2.5 rounded-xl border border-black/5 shadow-sm flex flex-col gap-1.5">
                           <div className="flex items-center justify-between border-b border-slate-100 pb-2">
                             <span className="text-[8.5px] uppercase tracking-widest font-black text-secondary">Recruitment Stages</span>
                             <div className="flex items-center gap-1.5">
@@ -379,7 +379,7 @@ export default function ValueSection() {
                             </div>
                           </div>
 
-                          <div className="grid grid-cols-3 gap-2 mt-1">
+                          <div className="grid grid-cols-3 gap-2 mt-0.5">
                             <div className="bg-slate-50 p-2 rounded-lg border border-black/[0.01] text-center">
                               <span className="text-[7px] text-slate-400 font-extrabold block uppercase tracking-wider mb-0.5">Shortlisted</span>
                               <span className="text-xs font-black text-slate-800">18 Profiles</span>
@@ -396,7 +396,7 @@ export default function ValueSection() {
                         </div>
 
                         {/* Quick interview scheduling */}
-                        <div className="bg-white p-3 rounded-xl border border-black/5 shadow-sm flex items-center justify-between transition-all duration-220 hover:border-secondary/20 hover:shadow-md">
+                        <div className="bg-white p-2.5 rounded-xl border border-black/5 shadow-sm flex items-center justify-between transition-all duration-220 hover:border-secondary/20 hover:shadow-md">
                           <div className="flex items-center gap-2.5">
                             <div className="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary shrink-0 shadow-inner">
                               <Calendar className="w-4 h-4" />
@@ -418,7 +418,7 @@ export default function ValueSection() {
 
                 {/* Floating Recruiter Overlays */}
                 {/* 1. 10K+ Professionals (Top Right) — widget-float-1 (4s) */}
-                <div className="absolute -top-3 -right-3 sm:-right-4 bg-gradient-to-br from-secondary to-teal-600 text-white px-3.5 py-2.5 rounded-2xl border border-white/10 shadow-xl flex items-center gap-2.5 animate-widget-float-1 z-20">
+                <div className="hidden md:flex absolute -top-3 -right-3 sm:-right-4 bg-gradient-to-br from-secondary to-teal-600 text-white px-3.5 py-2.5 rounded-2xl border border-white/10 shadow-xl items-center gap-2.5 animate-widget-float-1 z-20">
                   <div className="w-5.5 h-5.5 bg-white/10 rounded-lg flex items-center justify-center">
                     <Users className="w-3.5 h-3.5 text-white" />
                   </div>
@@ -429,7 +429,7 @@ export default function ValueSection() {
                 </div>
 
                 {/* 2. Smart Screening (Bottom Left) — widget-float-2 (5.5s) */}
-                <div className="absolute bottom-16 -left-3 sm:-left-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-2 z-20">
+                <div className="hidden md:flex absolute bottom-16 -left-3 sm:-left-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-2 z-20">
                   <div className="w-6 h-6 rounded-lg bg-orange-500/10 flex items-center justify-center text-primary shrink-0 shadow-inner">
                     <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                   </div>
@@ -440,7 +440,7 @@ export default function ValueSection() {
                 </div>
 
                 {/* 3. Interview Loop (Top Left) — widget-float-3 (6.5s) */}
-                <div className="absolute top-16 -left-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-3 z-20">
+                <div className="hidden md:flex absolute top-16 -left-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-3 z-20">
                   <div className="relative flex h-2 w-2 shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
@@ -452,7 +452,7 @@ export default function ValueSection() {
                 </div>
 
                 {/* 4. Verification Metrics (Bottom Right) — widget-float-1 (4s) */}
-                <div className="absolute bottom-8 -right-3 sm:-right-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-1 z-20">
+                <div className="hidden md:flex absolute bottom-8 -right-3 sm:-right-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-1 z-20">
                   <div className="w-6.5 h-6.5 rounded-lg bg-teal-500/10 flex items-center justify-center text-secondary shrink-0 shadow-inner">
                     <ShieldCheck className="w-4 h-4 animate-bounce" />
                   </div>

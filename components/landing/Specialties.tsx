@@ -106,10 +106,10 @@ export default function Specialties() {
   return (
     <section
       id="specialties"
-      className="pb-24 pt-0 bg-surface-cream overflow-hidden"
+      className="pb-16 pt-0 md:pb-20 bg-surface-cream overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-section mb-6">Browse by <span className="text-gradient">Specialties</span></h2>
           <p className="text-body max-w-3xl mx-auto">
             Find the right match across specialized healthcare domains and clinical roles with precision-matched hiring categories.

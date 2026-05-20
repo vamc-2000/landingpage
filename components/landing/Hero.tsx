@@ -3,7 +3,7 @@ import { Building2 } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-[#FAFAF9]">
+    <section className="relative pt-20 pb-8 md:pt-24 md:pb-10 lg:pt-32 lg:pb-14 overflow-hidden bg-[#FAFAF9]">
       {/* Foreground & Background Atmosphere */}
       <div className="absolute inset-0 -z-10">
         {/* Layer 1: Massive ultra-soft warm ambient glow */}
@@ -32,13 +32,13 @@ export default function Hero() {
               India’s Premium Healthcare Ecosystem
             </div> */}
 
-            <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-black text-slate-900 tracking-tighter mb-6 leading-[1.05]">
+            <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-black text-slate-900 tracking-tighter mb-4 leading-[1.05]">
               <span className="hero-line-1 block mb-1">The Modern</span>
               <span className="hero-line-2 block text-primary mb-1">Gateway to</span>
               <span className="hero-line-3 block text-slate-800">Healthcare.</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-slate-500 mb-10 leading-relaxed max-w-md text-balance hero-sub">
+            <p className="text-lg lg:text-xl text-slate-500 mb-6 leading-relaxed max-w-md text-balance hero-sub">
               Seamlessly connecting verified medical professionals with India's most trusted healthcare organizations.
             </p>
 
@@ -88,7 +88,7 @@ export default function Hero() {
           </div>
 
           {/* Right Side: Image Dominance - Wider */}
-          <div className="lg:w-[75%] relative w-full max-w-2xl mx-auto lg:max-w-none mt-12 lg:mt-0 lg:-mr-12">
+          <div className="lg:w-[75%] relative w-full max-w-2xl mx-auto lg:max-w-none mt-8 lg:mt-0 lg:-mr-12">
 
             {/* Main Image Container - Tighter Crop, Larger Aspect Ratio, Gentle Float */}
             <div className="relative aspect-[4/3] lg:aspect-[16/10] w-full h-full rounded-[3rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 z-20 [animation:float_8s_ease-in-out_infinite]">
@@ -105,7 +105,7 @@ export default function Hero() {
 
             {/* ONLY ONE Supporting Floating Card */}
             <div
-              className="absolute -right-4 lg:-right-8 top-[45%] bg-white/95 backdrop-blur-xl px-5 py-4 rounded-2xl flex items-center gap-4 animate-float border border-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] z-30"
+              className="hidden md:flex absolute -right-4 lg:-right-8 top-[45%] bg-white/95 backdrop-blur-xl px-5 py-4 rounded-2xl items-center gap-4 animate-float border border-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] z-30"
               style={{ animationDuration: '4.2s' }}
             >
               <div className="bg-blue-50/80 text-blue-600 p-3 rounded-xl shadow-inner">
@@ -119,7 +119,7 @@ export default function Hero() {
 
             {/* Live Openings Pill at the bottom */}
             <div
-              className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl px-6 py-3 rounded-full flex items-center gap-3 z-30 shadow-[0_10px_30px_rgb(0,0,0,0.06)] border border-slate-100 animate-float"
+              className="hidden md:flex absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl px-6 py-3 rounded-full items-center gap-3 z-30 shadow-[0_10px_30px_rgb(0,0,0,0.06)] border border-slate-100 animate-float"
               style={{ animationDuration: '3.8s', animationDelay: '500ms' }}
             >
               <div className="relative flex h-2.5 w-2.5">
