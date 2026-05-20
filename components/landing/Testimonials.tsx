@@ -50,18 +50,33 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="pb-24 pt-0 bg-ambient-glow">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-section mb-6">Voices of Trust</h2>
-          <p className="text-body max-w-3xl mx-auto">
-            Join thousands of satisfied medical professionals and healthcare organizations.
+    <section id="testimonials" className="py-32 bg-gradient-to-b from-white via-orange-50/5 to-white relative overflow-hidden">
+
+      {/* Ambient background glows */}
+      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+        <div className="absolute top-[20%] left-[-5%] w-[550px] h-[550px] bg-orange-100/5 rounded-full blur-[90px] animate-ambient pointer-events-none" />
+        <div className="absolute bottom-[20%] right-[-5%] w-[550px] h-[550px] bg-teal-50/10 rounded-full blur-[90px] animate-ambient [animation-delay:8s] pointer-events-none" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+        {/* Editorial Section Header */}
+        <div className={`text-center max-w-3xl mx-auto mb-24 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-black mb-6 uppercase tracking-widest">
+            <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
+            TRUSTED BY INDIA’S HEALTHCARE COMMUNITY
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-slate-800 tracking-tight leading-tight mb-6">
+            Voices behind India's <br className="hidden md:inline" /> fastest growing <span className="text-primary bg-gradient-to-r from-primary to-orange-600 bg-clip-text text-transparent">clinical network</span>
+          </h2>
+          <p className="text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            From hospital recruiters to specialist doctors, thousands rely on RBC24 to streamline clinical hiring and discover meaningful medical careers.
           </p>
         </div>
 
         {/* Testimonials Grid Container with Floating Trust Elements */}
         <div className="relative">
-          
+
           {/* Floating Trust Pill Widgets */}
           {/* Widget 1 - Top Left */}
           <div className="absolute top-[8%] left-[-5%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-1 pointer-events-none z-20">
@@ -98,20 +113,18 @@ export default function Testimonials() {
           {/* Testimonial Cards Grid */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-10 items-stretch relative z-10 py-10">
             {testimonials.map((t, i) => (
-              <div 
-                key={i} 
-                className={`p-8 lg:p-10 rounded-[32px] bg-white/95 border border-white/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.025)] hover:border-black/[0.05] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu flex flex-col justify-between h-full relative overflow-hidden group/card reveal-on-scroll delay-${i + 1} ${isRevealed ? "revealed" : ""} ${
-                  i === 0 ? "lg:translate-y-8 lg:rotate-[-0.3deg]" : i === 1 ? "lg:-translate-y-6 lg:rotate-[0.3deg]" : "lg:translate-y-2 lg:rotate-[-0.2deg]"
-                }`}
+              <div
+                key={i}
+                className={`p-8 lg:p-10 rounded-[32px] bg-white/95 border border-white/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.025)] hover:border-black/[0.05] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu flex flex-col justify-between h-full relative overflow-hidden group/card reveal-on-scroll delay-${i + 1} ${isRevealed ? "revealed" : ""} ${i === 0 ? "lg:translate-y-8 lg:rotate-[-0.3deg]" : i === 1 ? "lg:-translate-y-6 lg:rotate-[0.3deg]" : "lg:translate-y-2 lg:rotate-[-0.2deg]"
+                  }`}
                 onMouseMove={handleMouseMove}
               >
                 {/* Top Edge Gradient Lighting */}
-                <div className={`absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent ${
-                  i === 0 ? "via-orange-500/20" : i === 1 ? "via-teal-500/20" : "via-indigo-500/20"
-                } to-transparent`} />
+                <div className={`absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent ${i === 0 ? "via-orange-500/20" : i === 1 ? "via-teal-500/20" : "via-indigo-500/20"
+                  } to-transparent`} />
 
                 {/* Mouse spotlight reactive glow */}
-                <div 
+                <div
                   className="absolute inset-0 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     background: `radial-gradient(180px circle at var(--mouse-x) var(--mouse-y), ${t.glowColor}, transparent 80%)`
@@ -127,19 +140,18 @@ export default function Testimonials() {
                   <div className="flex items-center justify-between mb-8">
                     {/* Mini verified tag */}
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/[0.03] border border-slate-900/[0.02] text-[8.5px] font-black text-slate-500 tracking-wider uppercase leading-none">
-                      <div className={`w-1.5 h-1.5 rounded-full ${
-                        i === 0 ? "bg-orange-500 shadow-[0_0_6px_#EA580C]" : i === 1 ? "bg-teal-500 shadow-[0_0_6px_#0D9488]" : "bg-indigo-500 shadow-[0_0_6px_#6366F1]"
-                      } opacity-75`} />
+                      <div className={`w-1.5 h-1.5 rounded-full ${i === 0 ? "bg-orange-500 shadow-[0_0_6px_#EA580C]" : i === 1 ? "bg-teal-500 shadow-[0_0_6px_#0D9488]" : "bg-indigo-500 shadow-[0_0_6px_#6366F1]"
+                        } opacity-75`} />
                       {t.tag}
                     </span>
 
                     {/* Star rating shimmer */}
                     <div className="flex gap-0.5 text-amber-400 group-hover/card:text-amber-500 transition-colors duration-300">
                       {[...Array(t.rating)].map((_, idx) => (
-                        <Star 
-                          key={idx} 
-                          className="w-3.5 h-3.5 fill-current group-hover/card:scale-110 transition-transform duration-300" 
-                          style={{ transitionDelay: `${idx * 45}ms` }} 
+                        <Star
+                          key={idx}
+                          className="w-3.5 h-3.5 fill-current group-hover/card:scale-110 transition-transform duration-300"
+                          style={{ transitionDelay: `${idx * 45}ms` }}
                         />
                       ))}
                     </div>
@@ -154,17 +166,17 @@ export default function Testimonials() {
                 {/* Profile section with real doctor avatar */}
                 <div className="flex items-center gap-4 relative z-10 pt-5 border-t border-slate-100/50">
                   <div className="relative">
-                    <img 
-                      src={t.avatar} 
-                      alt={t.name} 
-                      className="w-11 h-11 rounded-full object-cover ring-4 ring-white shadow-sm group-hover/card:scale-105 transition-transform duration-300" 
+                    <img
+                      src={t.avatar}
+                      alt={t.name}
+                      className="w-11 h-11 rounded-full object-cover ring-4 ring-white shadow-sm group-hover/card:scale-105 transition-transform duration-300"
                     />
                     {/* Subtly animated status dot on avatar edge */}
                     <div className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-white flex items-center justify-center shadow-xs">
                       <div className={`w-1.5 h-1.5 rounded-full ${i === 0 ? "bg-orange-500" : i === 1 ? "bg-teal-500" : "bg-indigo-500"}`} />
                     </div>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-extrabold text-sm text-slate-800 leading-none mb-1.5 group-hover/card:text-primary transition-colors">
                       {t.name}
