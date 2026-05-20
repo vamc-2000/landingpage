@@ -6,6 +6,7 @@ import LoginModal from "./LoginModal";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const isAuthenticated = false;
 
   const menuItems = [
     { name: "For Job Seekers", href: "https://jobs.rbc24.com/", target: "_blank", rel: "noopener noreferrer" },
@@ -25,22 +26,45 @@ export default function Navbar() {
       shadow-sm
       transition-all duration-300
       ">
-        <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between py-1 lg:py-1">
-          <div className="flex-shrink-0 flex items-center">
-            <a
-              href="/"
-              className="relative w-[170px] lg:w-[230px] h-16 lg:h-20 -ml-2 block"
+        <div className="flex items-center justify-between w-full h-16 lg:h-20 px-4 sm:px-6 lg:px-8 gap-4">
+          <a
+            href={isAuthenticated ? "/jobs" : "/"}
+            className="flex items-center shrink-0"
+          >
+            <div
+              className="
+                relative
+                w-[125px]
+                h-[42px]
+
+                sm:w-[145px]
+                sm:h-[46px]
+
+                md:w-[220px]
+                md:h-[72px]
+
+                lg:w-[260px]
+                lg:h-[84px]
+
+                -ml-1
+                md:-ml-3
+              "
             >
               <Image
                 src="/images/RBC24 Horizontal Logo Transparent.png"
-                alt="RBC24 Logo"
+                alt="RBC24"
                 fill
-                className="object-contain object-left scale-[1.95] origin-left"
-                sizes="(max-width: 768px) 260px, 380px"
                 priority
+                className="object-contain object-left"
+                sizes="
+                  (max-width: 640px) 125px,
+                  (max-width: 768px) 145px,
+                  (max-width: 1024px) 220px,
+                  260px
+                "
               />
-            </a>
-          </div>
+            </div>
+          </a>
 
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
@@ -57,15 +81,15 @@ export default function Navbar() {
             <div className="flex items-center ml-4">
               <button
                 onClick={() => setIsLoginModalOpen(true)}
-                className="px-8 py-3 rounded-xl bg-slate-100 text-slate-800 text-sm font-bold border border-slate-200/60 hover:bg-slate-200 hover:scale-105 transition-smooth cursor-pointer"
+                className="px-8 py-3 rounded-xl bg-orange-400 text-white -800 text-sm font-bold border border-slate-200/60 hover:bg-orange-400 hover:scale-105 transition-smooth cursor-pointer"
               >
                 Login
               </button>
             </div>
           </div>
 
-          <div className="lg:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground p-2">
+          <div className="lg:hidden flex items-center relative z-50 shrink-0">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground p-2 hover:bg-slate-100/50 rounded-xl transition-colors cursor-pointer" aria-label="Toggle Menu">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
