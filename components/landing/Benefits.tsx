@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { 
-  Sparkles, 
-  ShieldCheck, 
-  Smartphone, 
-  Zap, 
-  Sliders, 
-  Users, 
-  Grid, 
+import {
+  Sparkles,
+  ShieldCheck,
+  Smartphone,
+  Zap,
+  Sliders,
+  Users,
+  Grid,
   Heart,
   Bell,
   ArrowRight
@@ -135,7 +135,7 @@ export default function Benefits() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white via-orange-50/15 to-white relative overflow-hidden">
+    <section className="py-32 bg-gradient-to-b from-white via-orange-50/15 to-white relative overflow-hidden">
       {/* Drifting Background Slow Motion Glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-orange-100/10 rounded-full blur-[80px] animate-ambient pointer-events-none" />
@@ -143,7 +143,7 @@ export default function Benefits() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Editorial Heading Area */}
         <div className={`text-center max-w-3xl mx-auto mb-20 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-black mb-6 uppercase tracking-widest">
@@ -167,8 +167,8 @@ export default function Benefits() {
           {/* Benefit Cards Grid Layout */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
             {benefitsData.map((benefit) => (
-              <div 
-                key={benefit.title} 
+              <div
+                key={benefit.title}
                 className="group/card flex flex-col justify-between p-7 rounded-[2rem] bg-white/95 border border-black/[0.03] shadow-[0_8px_25px_rgba(0,0,0,0.008)] hover:border-black/[0.06] hover:shadow-[0_15px_35px_rgba(0,0,0,0.015)] hover:-translate-y-0.5 hover:scale-[1.01] transition-all duration-300 cubic-bezier(0.22, 1, 0.36, 1) transform-gpu relative overflow-hidden"
                 onMouseMove={handleMouseMove}
               >
@@ -176,13 +176,13 @@ export default function Benefits() {
                 <div className={`absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent ${benefit.topGlowClass} to-transparent`} />
 
                 {/* Mouse Reactive Cursor Spotlight Glow */}
-                <div 
+                <div
                   className="absolute inset-0 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     background: `radial-gradient(140px circle at var(--mouse-x) var(--mouse-y), ${benefit.glowColor}, transparent 80%)`
                   }}
                 />
-                
+
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     {/* Premium Icon Container with soft gradient matching theme */}
@@ -211,7 +211,7 @@ export default function Benefits() {
                   <span className="text-[9px] font-black tracking-widest text-slate-400 uppercase leading-none">
                     {benefit.status}
                   </span>
-                  
+
                   {/* Micro Directional Arrow */}
                   <ArrowRight className={`w-3.5 h-3.5 ${benefit.textClass} opacity-40 group-hover/card:opacity-100 group-hover/card:translate-x-0.5 transition-all duration-300`} strokeWidth={2.5} />
 

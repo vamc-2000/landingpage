@@ -57,15 +57,20 @@ export default function Navbar() {
             <div className="flex items-center ml-4">
               <button
                 onClick={() => setIsLoginModalOpen(true)}
-                className="px-8 py-3 rounded-xl bg-primary text-white text-sm font-bold hover:bg-primary/90 hover:scale-105 transition-smooth shadow-[0_4px_12px_rgba(234,88,12,0.15)] hover:shadow-[0_6px_18px_rgba(234,88,12,0.25)] cursor-pointer"
+                className="px-8 py-3 rounded-xl bg-slate-100 text-slate-800 text-sm font-bold border border-slate-200/60 hover:bg-slate-200 hover:scale-105 transition-smooth cursor-pointer"
               >
                 Login
               </button>
             </div>
           </div>
 
-          <div className="lg:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground p-2">
+          <div className="lg:hidden flex items-center flex-shrink-0 relative z-50">
+            <button
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground p-3 hover:text-primary transition-smooth focus:outline-none relative z-50 cursor-pointer pointer-events-auto"
+              aria-label="Toggle menu"
+            >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -99,7 +104,7 @@ export default function Navbar() {
                     setIsOpen(false);
                     setIsLoginModalOpen(true);
                   }}
-                  className="w-full py-4 text-center font-bold bg-primary text-white rounded-xl hover:bg-primary/90 transition-smooth shadow-[0_4px_12px_rgba(234,88,12,0.15)]"
+                  className="w-full py-4 text-center font-semibold bg-slate-100 text-slate-800 rounded-xl border border-slate-200/60 hover:bg-slate-200 transition-smooth"
                 >
                   Login
                 </button>
