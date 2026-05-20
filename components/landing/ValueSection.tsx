@@ -1,15 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import { 
-  Check, 
-  Sparkles, 
-  MapPin, 
-  Search, 
-  Building, 
-  TrendingUp, 
-  Users, 
-  Calendar, 
-  Filter, 
+import {
+  Check,
+  Sparkles,
+  MapPin,
+  Search,
+  Building,
+  TrendingUp,
+  Users,
+  Calendar,
+  Filter,
   ArrowRight,
   ShieldCheck,
   Briefcase,
@@ -55,7 +55,7 @@ export default function ValueSection() {
   ];
 
   return (
-    <section id="value-proposition" className="py-16 bg-[#FCFCFB] relative overflow-hidden">
+    <section id="value-proposition" className="py-28 bg-[#FCFCFB] relative overflow-hidden">
       {/* Cinematic Ambient Glow Background Blobs with Slow Motion Drift */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute -top-[10%] left-[-5%] w-[600px] h-[600px] bg-orange-100/10 rounded-full blur-[90px] animate-drift-slow-1 pointer-events-none" />
@@ -63,7 +63,7 @@ export default function ValueSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className={`text-center max-w-3xl mx-auto mb-20 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 uppercase tracking-widest">
@@ -80,18 +80,18 @@ export default function ValueSection() {
 
         {/* Dual Cards Grid Showcase */}
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
-          
+
           {/* ========================================================= */}
           {/* LEFT PANEL — JOB SEEKERS EXPERIENCE (Warm White + Orange)  */}
           {/* ========================================================= */}
-          <div 
+          <div
             className={`lg:col-span-5 flex flex-col justify-between p-8 lg:p-12 rounded-[2.5rem] bg-white border border-black/[0.04] shadow-[0_12px_40px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(234,88,12,0.025)] transition-all duration-300 relative overflow-hidden group/panel glow-card reveal-on-scroll delay-1 hover:-translate-y-0.5 transform-gpu ${isRevealed ? "revealed" : ""}`}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setHoveredCard("seeker")}
             onMouseLeave={() => setHoveredCard(null)}
           >
             {/* Ambient Radial Spotlight Glow */}
-            <div 
+            <div
               className="absolute inset-0 opacity-0 group-hover/panel:opacity-100 transition-opacity duration-300 pointer-events-none"
               style={{
                 background: `radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(234, 88, 12, 0.04), transparent 45%)`
@@ -112,10 +112,10 @@ export default function ValueSection() {
 
               {/* UI Mockup Inside Card */}
               <div className="relative w-full overflow-visible my-8 rounded-3xl border border-black/5 bg-[#FFFDFB]/80 p-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.01)] backdrop-blur-md">
-                
+
                 {/* Main Browser Mockup Preview */}
                 <div className="relative rounded-2xl border border-black/[0.06] bg-white shadow-2xl transition-transform duration-300 hover:scale-[1.005] group-hover/panel:shadow-3xl transform-gpu overflow-hidden">
-                  
+
                   {/* Browser Header Bar */}
                   <div className="flex items-center justify-between px-4 py-3 bg-slate-50 border-b border-black/[0.04]">
                     <div className="flex items-center gap-1.5 shrink-0">
@@ -132,7 +132,7 @@ export default function ValueSection() {
 
                   {/* Browser Inner Workspace */}
                   <div className="p-4 bg-[#FAF9F6] flex flex-col gap-4 min-h-[380px] select-none">
-                    
+
                     {/* Simulated Job Search Bar */}
                     <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-xl border border-black/5 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
                       <div className="flex items-center gap-2 bg-slate-50 border border-black/[0.04] rounded-lg px-2.5 py-1.5 w-full">
@@ -146,7 +146,7 @@ export default function ValueSection() {
 
                     {/* Simulation Grid Layout */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
-                      
+
                       {/* Left Sidebar Filter Section */}
                       <div className="hidden md:flex flex-col gap-3.5 bg-white p-3.5 rounded-xl border border-black/5 shadow-sm h-fit">
                         <span className="text-[8px] font-black uppercase text-slate-400 tracking-wider flex items-center gap-1">
@@ -166,7 +166,7 @@ export default function ValueSection() {
 
                       {/* Right Job Cards Feed */}
                       <div className="col-span-1 md:col-span-2 space-y-3">
-                        
+
                         {/* Job Card 1 */}
                         <div className="bg-white p-3.5 rounded-xl border border-black/5 shadow-sm flex flex-col gap-2.5 transition-all duration-220 hover:border-primary/20 hover:shadow-md">
                           <div className="flex justify-between items-start">
@@ -216,50 +216,50 @@ export default function ValueSection() {
                   </div>
                 </div>
 
-                 {/* Floating Stat Widgets Ecosystem */}
-                 {/* 1. 32 New Matches (Top Right) — widget-float-1 (4s) */}
-                 <div className="hidden sm:flex absolute -top-3 -right-3 sm:-right-4 bg-gradient-to-br from-primary to-orange-600 text-white px-3 py-2 rounded-2xl shadow-xl items-center gap-2 animate-widget-float-1 border border-white/10 z-20">
-                   <Sparkles className="w-3.5 h-3.5 text-orange-200 animate-pulse" />
-                   <div>
-                     <span className="text-[8.5px] font-black uppercase tracking-wider leading-none block">32 New Matches</span>
-                     <span className="text-[7px] text-orange-100/90 font-medium">Updated 5m ago</span>
-                   </div>
-                 </div>
- 
-                 {/* 2. Live Jobs (Top Left) — widget-float-2 (5.5s) */}
-                 <div className="hidden sm:flex absolute top-16 -left-3 bg-white px-3.5 py-2 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-2 z-20">
-                   <div className="w-6 h-6 rounded-lg bg-orange-500/10 flex items-center justify-center text-primary shrink-0 shadow-inner">
-                     <Briefcase className="w-3.5 h-3.5" />
-                   </div>
-                   <div>
-                     <span className="text-[9px] font-extrabold text-slate-800 block leading-none">50K+ Live Jobs</span>
-                     <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">Active Placements</span>
-                   </div>
-                 </div>
- 
-                 {/* 3. AI Recommendations (Bottom Left) — widget-float-3 (6.5s) */}
-                 <div className="hidden sm:flex absolute bottom-16 -left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-3 z-20">
-                   <div className="w-6.5 h-6.5 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 shadow-inner">
-                     <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-                   </div>
-                   <div>
-                     <span className="text-[9px] font-extrabold text-slate-800 block leading-none">AI Recommendations</span>
-                     <span className="text-[7.5px] text-emerald-600 font-bold uppercase tracking-wider flex items-center gap-0.5">
-                       Match Engine Active
-                     </span>
-                   </div>
-                 </div>
- 
-                 {/* 4. 500+ Hospitals (Bottom Right) — widget-float-2 (5.5s) */}
-                 <div className="hidden sm:flex absolute bottom-8 -right-3 sm:-right-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-2 z-20">
-                   <div className="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 shadow-inner">
-                     <ShieldCheck className="w-3.5 h-3.5 animate-bounce" />
-                   </div>
-                   <div>
-                     <span className="text-[9px] font-extrabold text-slate-800 block leading-none">500+ Hospitals</span>
-                     <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">Verified Partners</span>
-                   </div>
-                 </div>
+                {/* Floating Stat Widgets Ecosystem */}
+                {/* 1. 32 New Matches (Top Right) — widget-float-1 (4s) */}
+                <div className="absolute -top-3 -right-3 sm:-right-4 bg-gradient-to-br from-primary to-orange-600 text-white px-3 py-2 rounded-2xl shadow-xl flex items-center gap-2 animate-widget-float-1 border border-white/10 z-20">
+                  <Sparkles className="w-3.5 h-3.5 text-orange-200 animate-pulse" />
+                  <div>
+                    <span className="text-[8.5px] font-black uppercase tracking-wider leading-none block">32 New Matches</span>
+                    <span className="text-[7px] text-orange-100/90 font-medium">Updated 5m ago</span>
+                  </div>
+                </div>
+
+                {/* 2. Live Jobs (Top Left) — widget-float-2 (5.5s) */}
+                <div className="absolute top-16 -left-3 bg-white px-3.5 py-2 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-2 z-20">
+                  <div className="w-6 h-6 rounded-lg bg-orange-500/10 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                    <Briefcase className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-extrabold text-slate-800 block leading-none">50K+ Live Jobs</span>
+                    <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">Active Placements</span>
+                  </div>
+                </div>
+
+                {/* 3. AI Recommendations (Bottom Left) — widget-float-3 (6.5s) */}
+                <div className="absolute bottom-16 -left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-3 z-20">
+                  <div className="w-6.5 h-6.5 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 shadow-inner">
+                    <Sparkles className="w-3.5 h-3.5 animate-pulse" />
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-extrabold text-slate-800 block leading-none">AI Recommendations</span>
+                    <span className="text-[7.5px] text-emerald-600 font-bold uppercase tracking-wider flex items-center gap-0.5">
+                      Match Engine Active
+                    </span>
+                  </div>
+                </div>
+
+                {/* 4. 500+ Hospitals (Bottom Right) — widget-float-2 (5.5s) */}
+                <div className="absolute bottom-8 -right-3 sm:-right-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-2 z-20">
+                  <div className="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 shadow-inner">
+                    <ShieldCheck className="w-3.5 h-3.5 animate-bounce" />
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-extrabold text-slate-800 block leading-none">500+ Hospitals</span>
+                    <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">Verified Partners</span>
+                  </div>
+                </div>
 
               </div>
             </div>
@@ -274,7 +274,7 @@ export default function ValueSection() {
                   </span>
                 ))}
               </div>
-              <a 
+              <a
                 href="https://jobs.rbc24.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -288,14 +288,14 @@ export default function ValueSection() {
           {/* ========================================================= */}
           {/* RIGHT PANEL — RECRUITERS EXPERIENCE (Cool White + Teal)   */}
           {/* ========================================================= */}
-          <div 
+          <div
             className={`lg:col-span-7 flex flex-col justify-between p-8 lg:p-12 rounded-[2.5rem] bg-white border border-black/[0.04] shadow-[0_12px_40px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(13,148,136,0.025)] transition-all duration-300 relative overflow-hidden group/panel glow-card reveal-on-scroll delay-2 hover:-translate-y-0.5 transform-gpu ${isRevealed ? "revealed" : ""}`}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setHoveredCard("recruiter")}
             onMouseLeave={() => setHoveredCard(null)}
           >
             {/* Ambient Radial Spotlight Glow */}
-            <div 
+            <div
               className="absolute inset-0 opacity-0 group-hover/panel:opacity-100 transition-opacity duration-300 pointer-events-none"
               style={{
                 background: `radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(13, 148, 136, 0.05), transparent 45%)`
@@ -316,10 +316,10 @@ export default function ValueSection() {
 
               {/* UI Mockup Inside Card */}
               <div className="relative w-full overflow-visible my-8 rounded-3xl border border-black/5 bg-[#FAFDFF]/80 p-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.01)] backdrop-blur-md">
-                
+
                 {/* Main Browser Mockup Preview */}
                 <div className="relative rounded-2xl border border-black/[0.06] bg-white shadow-2xl transition-transform duration-300 hover:scale-[1.005] group-hover/panel:shadow-3xl transform-gpu overflow-hidden">
-                  
+
                   {/* Browser Header Bar */}
                   <div className="flex items-center justify-between px-4 py-3 bg-slate-50 border-b border-black/[0.04]">
                     <div className="flex items-center gap-1.5 shrink-0">
@@ -336,7 +336,7 @@ export default function ValueSection() {
 
                   {/* Browser Inner Workspace */}
                   <div className="p-4 bg-[#FAFDFF] flex flex-col gap-4 min-h-[380px] select-none">
-                    
+
                     {/* Recruiter Quick Statistics Strip */}
                     <div className="grid grid-cols-3 gap-2.5">
                       <div className="bg-white p-2.5 rounded-xl border border-black/5 shadow-sm">
@@ -357,7 +357,7 @@ export default function ValueSection() {
 
                     {/* Simulation Grid Layout */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
-                      
+
                       {/* Left Navigation Menu */}
                       <div className="hidden md:flex flex-col gap-1.5 bg-white p-2.5 rounded-xl border border-black/5 shadow-sm h-fit">
                         {["Dashboard", "Candidates", "Schedules", "Analytics"].map((nav, nIdx) => (
@@ -378,7 +378,7 @@ export default function ValueSection() {
                               <span className="text-[8px] font-black text-emerald-600 uppercase tracking-wide">Live</span>
                             </div>
                           </div>
-                          
+
                           <div className="grid grid-cols-3 gap-2 mt-1">
                             <div className="bg-slate-50 p-2 rounded-lg border border-black/[0.01] text-center">
                               <span className="text-[7px] text-slate-400 font-extrabold block uppercase tracking-wider mb-0.5">Shortlisted</span>
@@ -416,51 +416,51 @@ export default function ValueSection() {
                   </div>
                 </div>
 
-                 {/* Floating Recruiter Overlays */}
-                 {/* 1. 10K+ Professionals (Top Right) — widget-float-1 (4s) */}
-                 <div className="hidden sm:flex absolute -top-3 -right-3 sm:-right-4 bg-gradient-to-br from-secondary to-teal-600 text-white px-3.5 py-2.5 rounded-2xl border border-white/10 shadow-xl items-center gap-2.5 animate-widget-float-1 z-20">
-                   <div className="w-5.5 h-5.5 bg-white/10 rounded-lg flex items-center justify-center">
-                     <Users className="w-3.5 h-3.5 text-white" />
-                   </div>
-                   <div>
-                     <span className="text-[8.5px] font-black uppercase tracking-wider leading-none block">10,000+ Pros</span>
-                     <span className="text-[7px] text-teal-100 font-medium">Verified Doctors & Nurses</span>
-                   </div>
-                 </div>
- 
-                 {/* 2. Smart Screening (Bottom Left) — widget-float-2 (5.5s) */}
-                 <div className="hidden sm:flex absolute bottom-16 -left-3 sm:-left-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-2 z-20">
-                   <div className="w-6 h-6 rounded-lg bg-orange-500/10 flex items-center justify-center text-primary shrink-0 shadow-inner">
-                     <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-                   </div>
-                   <div>
-                     <span className="text-[9px] font-extrabold text-slate-800 block leading-none">Smart Screening</span>
-                     <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">AI shortlisting active</span>
-                   </div>
-                 </div>
- 
-                 {/* 3. Interview Loop (Top Left) — widget-float-3 (6.5s) */}
-                 <div className="hidden sm:flex absolute top-16 -left-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-3 z-20">
-                   <div className="relative flex h-2 w-2 shrink-0">
-                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                     <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
-                   </div>
-                   <div>
-                     <span className="text-[9px] font-extrabold text-slate-800 block leading-none">Interview Loop</span>
-                     <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">8 Active panels today</span>
-                   </div>
-                 </div>
- 
-                 {/* 4. Verification Metrics (Bottom Right) — widget-float-1 (4s) */}
-                 <div className="hidden sm:flex absolute bottom-8 -right-3 sm:-right-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl items-center gap-2.5 animate-widget-float-1 z-20">
-                   <div className="w-6.5 h-6.5 rounded-lg bg-teal-500/10 flex items-center justify-center text-secondary shrink-0 shadow-inner">
-                     <ShieldCheck className="w-4 h-4 animate-bounce" />
-                   </div>
-                   <div>
-                     <span className="text-[9px] font-extrabold text-slate-800 block leading-none">99.8% Verified</span>
-                     <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">MCI/NMC Credentials</span>
-                   </div>
-                 </div>
+                {/* Floating Recruiter Overlays */}
+                {/* 1. 10K+ Professionals (Top Right) — widget-float-1 (4s) */}
+                <div className="absolute -top-3 -right-3 sm:-right-4 bg-gradient-to-br from-secondary to-teal-600 text-white px-3.5 py-2.5 rounded-2xl border border-white/10 shadow-xl flex items-center gap-2.5 animate-widget-float-1 z-20">
+                  <div className="w-5.5 h-5.5 bg-white/10 rounded-lg flex items-center justify-center">
+                    <Users className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <div>
+                    <span className="text-[8.5px] font-black uppercase tracking-wider leading-none block">10,000+ Pros</span>
+                    <span className="text-[7px] text-teal-100 font-medium">Verified Doctors & Nurses</span>
+                  </div>
+                </div>
+
+                {/* 2. Smart Screening (Bottom Left) — widget-float-2 (5.5s) */}
+                <div className="absolute bottom-16 -left-3 sm:-left-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-2 z-20">
+                  <div className="w-6 h-6 rounded-lg bg-orange-500/10 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                    <Sparkles className="w-3.5 h-3.5 animate-pulse" />
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-extrabold text-slate-800 block leading-none">Smart Screening</span>
+                    <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">AI shortlisting active</span>
+                  </div>
+                </div>
+
+                {/* 3. Interview Loop (Top Left) — widget-float-3 (6.5s) */}
+                <div className="absolute top-16 -left-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-3 z-20">
+                  <div className="relative flex h-2 w-2 shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-extrabold text-slate-800 block leading-none">Interview Loop</span>
+                    <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">8 Active panels today</span>
+                  </div>
+                </div>
+
+                {/* 4. Verification Metrics (Bottom Right) — widget-float-1 (4s) */}
+                <div className="absolute bottom-8 -right-3 sm:-right-4 bg-white px-3.5 py-2.5 rounded-2xl border border-black/5 shadow-xl flex items-center gap-2.5 animate-widget-float-1 z-20">
+                  <div className="w-6.5 h-6.5 rounded-lg bg-teal-500/10 flex items-center justify-center text-secondary shrink-0 shadow-inner">
+                    <ShieldCheck className="w-4 h-4 animate-bounce" />
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-extrabold text-slate-800 block leading-none">99.8% Verified</span>
+                    <span className="text-[7.5px] text-slate-400 font-bold uppercase tracking-wider">MCI/NMC Credentials</span>
+                  </div>
+                </div>
 
               </div>
             </div>
@@ -475,7 +475,7 @@ export default function ValueSection() {
                   </span>
                 ))}
               </div>
-              <a 
+              <a
                 href="https://recruiter.rbc24.com/"
                 target="_blank"
                 rel="noopener noreferrer"

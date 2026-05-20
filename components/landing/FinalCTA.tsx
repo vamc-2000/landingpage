@@ -2,7 +2,7 @@ import { Download } from "lucide-react";
 
 export default function FinalCTA() {
   return (
-    <section className="pb-24 pt-0 bg-white bg-ambient-glow">
+    <section className="py-24 bg-white bg-ambient-glow">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-primary rounded-[3rem] p-10 lg:p-16 text-center text-white relative overflow-hidden shadow-2xl shadow-primary/20">
           {/* Decorative elements */}
@@ -20,7 +20,7 @@ export default function FinalCTA() {
             <a
               href="https://jobs.rbc24.com/jobs"
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-10 py-4 rounded-2xl bg-white text-primary font-black text-lg hover:shadow-2xl transition-smooth text-center"
             >
               Find Jobs
