@@ -13,17 +13,26 @@ import Footer from "@/components/landing/Footer";
 
 export default function Home() {
   return (
-    <main className="selection:bg-primary/10 selection:text-primary">
+    <main className="selection:bg-primary/10 selection:text-primary relative bg-[#FAFAF9]">
       <Navbar />
       <Hero />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <ValueSection />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <MobileAppSection />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <HowItWorks />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <Specialties />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <Stats />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <Benefits />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <Testimonials />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <FAQ />
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" />
       <FinalCTA />
       <Footer />
     </main>

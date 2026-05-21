@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Star, Sparkles, Heart, ShieldCheck, Award } from "lucide-react";
 
 export default function Testimonials() {
@@ -82,7 +83,7 @@ export default function Testimonials() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`p-6 lg:p-8 rounded-[32px] bg-white/95 border border-white/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.025)] hover:border-black/[0.05] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu flex flex-col justify-between h-full relative overflow-hidden group/card reveal-on-scroll delay-${i + 1} ${isRevealed ? "revealed" : ""} ${i === 0 ? "lg:translate-y-4 lg:rotate-[-0.3deg]" : i === 1 ? "lg:-translate-y-3 lg:rotate-[0.3deg]" : "lg:translate-y-1 lg:rotate-[-0.2deg]"
+                className={`p-6 lg:p-8 rounded-[32px] bg-white/80 border border-white/20 backdrop-blur-sm shadow-[0_10px_35px_rgba(0,0,0,0.015)] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu flex flex-col justify-between h-full relative overflow-hidden group/card reveal-on-scroll delay-${i + 1} ${isRevealed ? "revealed" : ""} ${i === 0 ? "lg:translate-y-4 lg:rotate-[-0.3deg]" : i === 1 ? "lg:-translate-y-3 lg:rotate-[0.3deg]" : "lg:translate-y-1 lg:rotate-[-0.2deg]"
                   }`}
                 onMouseMove={handleMouseMove}
               >
@@ -98,10 +99,7 @@ export default function Testimonials() {
                   }}
                 />
 
-                {/* Oversized decorative Serif quotation mark */}
-                <span className="text-[11rem] font-serif font-black text-slate-900/[0.015] absolute -top-8 -left-2 select-none pointer-events-none">
-                  “
-                </span>
+
 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-8">
@@ -133,11 +131,15 @@ export default function Testimonials() {
                 {/* Profile section with real doctor avatar */}
                 <div className="flex items-center gap-4 relative z-10 pt-5 border-t border-slate-100/50">
                   <div className="relative">
-                    <img
-                      src={t.avatar}
-                      alt={t.name}
-                      className="w-11 h-11 rounded-full object-cover ring-4 ring-white shadow-sm group-hover/card:scale-105 transition-transform duration-300"
-                    />
+                    <div className="w-11 h-11 rounded-full overflow-hidden ring-4 ring-white shadow-sm group-hover/card:scale-105 transition-transform duration-300 relative">
+                      <Image
+                        src={t.avatar}
+                        alt={t.name}
+                        fill
+                        sizes="44px"
+                        className="object-cover"
+                      />
+                    </div>
                     {/* Subtly animated status dot on avatar edge */}
                     <div className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-white flex items-center justify-center shadow-xs">
                       <div className={`w-1.5 h-1.5 rounded-full ${i === 0 ? "bg-orange-500" : i === 1 ? "bg-teal-500" : "bg-indigo-500"}`} />
