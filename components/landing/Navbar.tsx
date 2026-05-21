@@ -31,7 +31,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between w-full h-20 md:h-22 lg:h-24 px-4 sm:px-6 lg:px-8 gap-4 pointer-events-auto">
           <Link
             href={isAuthenticated ? "/jobs" : "/"}
-            className="flex items-center cursor-pointer w-20 lg:w-24"
+            className="flex items-center cursor-pointer w-32 sm:w-36 md:w-40 lg:w-44"
             onClick={(e) => {
               e.stopPropagation();
             }}
@@ -39,9 +39,10 @@ export default function Navbar() {
             <Image
               src="/images/RBC24 Horizontal Logo Transparent.png"
               alt="RBC24"
-              className="object-contain "
-              width={250}
-              height={250}
+              className="object-contain w-full h-auto"
+              width={340}
+              height={100}
+              priority
             />
           </Link>
 
