@@ -180,7 +180,7 @@ export default function Specialties() {
       id="specialties"
       className="pb-16 pt-0 md:pb-20 bg-surface-cream overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[5%]">
         <div className="text-center mb-10">
           <h2 className="text-section mb-6">Browse by <span className="text-gradient">Specialties</span></h2>
           <p className="text-body max-w-3xl mx-auto">

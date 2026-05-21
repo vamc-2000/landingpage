@@ -99,10 +99,7 @@ export default function Testimonials() {
                   }}
                 />
 
-                {/* Oversized decorative Serif quotation mark */}
-                <span className="text-[11rem] font-serif font-black text-slate-900/[0.015] absolute -top-8 -left-2 select-none pointer-events-none">
-                  “
-                </span>
+
 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-8">

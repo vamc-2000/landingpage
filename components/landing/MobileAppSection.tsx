@@ -29,7 +29,7 @@ export default function MobileAppSection() {
   return (
     <section
       id="mobile-app"
-      className="py-20 md:py-28 bg-[#FAFAF9] relative overflow-hidden isolation-isolate"
+      className="pb-[5%] pt-0 bg-[#FAFAF9] relative overflow-hidden isolation-isolate"
     >
       {/* Cinematic Ambient Backdrop Lighting */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
