@@ -9,8 +9,7 @@ import {
   Users,
   Grid,
   Heart,
-  Bell,
-  ArrowRight
+  Bell
 } from "lucide-react";
 
 export default function Benefits() {
@@ -135,7 +134,7 @@ export default function Benefits() {
   };
 
   return (
-    <section className="py-32 bg-gradient-to-b from-white via-orange-50/15 to-white relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-white via-orange-50/15 to-white relative overflow-hidden">
       {/* Drifting Background Slow Motion Glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-orange-100/10 rounded-full blur-[80px] animate-ambient pointer-events-none" />
@@ -145,7 +144,7 @@ export default function Benefits() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Editorial Heading Area */}
-        <div className={`text-center max-w-3xl mx-auto mb-20 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
+        <div className={`text-center max-w-3xl mx-auto mb-10 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-black mb-6 uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
             Why RBC24
@@ -159,13 +158,13 @@ export default function Benefits() {
         </div>
 
         {/* Premium Glass Container */}
-        <div className={`relative rounded-[40px] border border-white/60 bg-white/90 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.015)] p-8 lg:p-16 overflow-hidden group reveal-on-scroll delay-1 ${isRevealed ? "revealed" : ""}`}>
+        <div className={`relative rounded-[40px] border border-white/60 bg-white/90 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.015)] p-6 lg:p-10 overflow-hidden group reveal-on-scroll delay-1 ${isRevealed ? "revealed" : ""}`}>
           {/* Subtle Internal Glow Overlay */}
           <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/[0.01] via-transparent to-amber-500/[0.01] pointer-events-none" />
           <div className="absolute -top-32 -left-32 w-80 h-80 bg-orange-500/[0.01] rounded-full blur-3xl pointer-events-none" />
 
           {/* Benefit Cards Grid Layout */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 relative z-10">
             {benefitsData.map((benefit) => (
               <div
                 key={benefit.title}
@@ -206,14 +205,11 @@ export default function Benefits() {
                   </p>
                 </div>
 
-                {/* Card Status & Accent Arrow */}
-                <div className="pt-4 border-t border-slate-100/60 flex items-center justify-between relative">
+                {/* Card Status & Bottom Border */}
+                <div className="pt-4 border-t border-slate-100/60 flex items-center relative">
                   <span className="text-[9px] font-black tracking-widest text-slate-400 uppercase leading-none">
                     {benefit.status}
                   </span>
-
-                  {/* Micro Directional Arrow */}
-                  <ArrowRight className={`w-3.5 h-3.5 ${benefit.textClass} opacity-40 group-hover/card:opacity-100 group-hover/card:translate-x-0.5 transition-all duration-300`} strokeWidth={2.5} />
 
                   {/* Bottom Glowing Accent Bar on Card Hover */}
                   <div className={`absolute bottom-[-28px] inset-x-8 h-[2px] bg-gradient-to-r from-transparent ${benefit.bottomBarClass} to-transparent scale-x-0 group-hover/card:scale-x-100 transition-transform duration-300 origin-center`} />

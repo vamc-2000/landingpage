@@ -50,7 +50,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-32 bg-gradient-to-b from-white via-orange-50/5 to-white relative overflow-hidden">
+    <section id="testimonials" className="py-16 md:py-20 bg-gradient-to-b from-white via-orange-50/5 to-white relative overflow-hidden">
 
       {/* Ambient background glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
@@ -61,7 +61,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
         {/* Editorial Section Header */}
-        <div className={`text-center max-w-3xl mx-auto mb-24 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
+        <div className={`text-center max-w-3xl mx-auto mb-10 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-black mb-6 uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
             TRUSTED BY INDIA’S HEALTHCARE COMMUNITY
@@ -77,45 +77,12 @@ export default function Testimonials() {
         {/* Testimonials Grid Container with Floating Trust Elements */}
         <div className="relative">
 
-          {/* Floating Trust Pill Widgets */}
-          {/* Widget 1 - Top Left */}
-          <div className="absolute top-[8%] left-[-5%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-1 pointer-events-none z-20">
-            <div className="w-7 h-7 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 shrink-0">
-              <Heart className="w-4 h-4 fill-orange-500/20" />
-            </div>
-            <span className="text-[10px] font-black text-slate-600 tracking-wider">10K+ MEDICAL PROFESSIONALS</span>
-          </div>
-
-          {/* Widget 2 - Top Right */}
-          <div className="absolute top-[2%] right-[-4%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-2 pointer-events-none z-20">
-            <div className="w-7 h-7 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-600 shrink-0">
-              <Award className="w-4 h-4 text-teal-600" />
-            </div>
-            <span className="text-[10px] font-black text-slate-600 tracking-wider">500+ PARTNER HOSPITALS</span>
-          </div>
-
-          {/* Widget 3 - Bottom Left */}
-          <div className="absolute bottom-[10%] left-[-4%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-3 pointer-events-none z-20">
-            <div className="w-7 h-7 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-500 shrink-0">
-              <ShieldCheck className="w-4 h-4 text-indigo-500" />
-            </div>
-            <span className="text-[10px] font-black text-slate-600 tracking-wider">VERIFIED RECRUITERS</span>
-          </div>
-
-          {/* Widget 4 - Bottom Right */}
-          <div className="absolute bottom-[5%] right-[-5%] hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/80 border border-white/60 shadow-[0_12px_35px_rgba(0,0,0,0.02)] backdrop-blur-md animate-widget-float-1 pointer-events-none z-20">
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981] relative shrink-0">
-              <div className="absolute inset-0 rounded-full bg-emerald-400 animate-pulse-indicator" />
-            </div>
-            <span className="text-[10px] font-black text-slate-600 tracking-wider">98.4% RETENTION SATISFACTION</span>
-          </div>
-
           {/* Testimonial Cards Grid */}
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-10 items-stretch relative z-10 py-10">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative z-10 py-6">
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`p-8 lg:p-10 rounded-[32px] bg-white/95 border border-white/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.025)] hover:border-black/[0.05] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu flex flex-col justify-between h-full relative overflow-hidden group/card reveal-on-scroll delay-${i + 1} ${isRevealed ? "revealed" : ""} ${i === 0 ? "lg:translate-y-8 lg:rotate-[-0.3deg]" : i === 1 ? "lg:-translate-y-6 lg:rotate-[0.3deg]" : "lg:translate-y-2 lg:rotate-[-0.2deg]"
+                className={`p-6 lg:p-8 rounded-[32px] bg-white/95 border border-white/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.025)] hover:border-black/[0.05] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu flex flex-col justify-between h-full relative overflow-hidden group/card reveal-on-scroll delay-${i + 1} ${isRevealed ? "revealed" : ""} ${i === 0 ? "lg:translate-y-4 lg:rotate-[-0.3deg]" : i === 1 ? "lg:-translate-y-3 lg:rotate-[0.3deg]" : "lg:translate-y-1 lg:rotate-[-0.2deg]"
                   }`}
                 onMouseMove={handleMouseMove}
               >
@@ -189,6 +156,41 @@ export default function Testimonials() {
 
               </div>
             ))}
+          </div>
+
+          {/* Trust Credibility Badges Row (positioned below the testimonial cards) */}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4 lg:gap-6 relative z-20 max-w-5xl mx-auto px-4">
+            {/* Badge 1 */}
+            <div className="flex items-center gap-2.5 px-4.5 py-2.5 rounded-2xl bg-white/70 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-black/[0.04] transition-all duration-300 pointer-events-auto">
+              <div className="w-7 h-7 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 shrink-0">
+                <Heart className="w-4 h-4 fill-orange-500/20" />
+              </div>
+              <span className="text-[9.5px] font-black text-slate-600 tracking-wider">10K+ MEDICAL PROFESSIONALS</span>
+            </div>
+
+            {/* Badge 2 */}
+            <div className="flex items-center gap-2.5 px-4.5 py-2.5 rounded-2xl bg-white/70 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-black/[0.04] transition-all duration-300 pointer-events-auto">
+              <div className="w-7 h-7 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-600 shrink-0">
+                <Award className="w-4 h-4 text-teal-600" />
+              </div>
+              <span className="text-[9.5px] font-black text-slate-600 tracking-wider">500+ PARTNER HOSPITALS</span>
+            </div>
+
+            {/* Badge 3 */}
+            <div className="flex items-center gap-2.5 px-4.5 py-2.5 rounded-2xl bg-white/70 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-black/[0.04] transition-all duration-300 pointer-events-auto">
+              <div className="w-7 h-7 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-500 shrink-0">
+                <ShieldCheck className="w-4 h-4 text-indigo-500" />
+              </div>
+              <span className="text-[9.5px] font-black text-slate-600 tracking-wider">VERIFIED RECRUITERS</span>
+            </div>
+
+            {/* Badge 4 */}
+            <div className="flex items-center gap-2.5 px-4.5 py-2.5 rounded-2xl bg-white/70 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-black/[0.04] transition-all duration-300 pointer-events-auto">
+              <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981] relative shrink-0">
+                <div className="absolute inset-0 rounded-full bg-emerald-400 animate-pulse-indicator" />
+              </div>
+              <span className="text-[9.5px] font-black text-slate-600 tracking-wider">98.4% RETENTION SATISFACTION</span>
+            </div>
           </div>
 
         </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
 
 const FacebookIcon = ({ className }: { className?: string }) => (
@@ -82,8 +83,8 @@ export default function Footer() {
               Support
             </h4>
             <ul className="space-y-3.5 text-sm">
-              <li><a href="#" className="text-slate-300 hover:text-primary transition-colors duration-200">Privacy Policy</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-primary transition-colors duration-200">Terms of Service</a></li>
+              <li><Link href="/privacy-policy" className="text-slate-300 hover:text-primary transition-colors duration-200">Privacy Policy</Link></li>
+              <li><Link href="/terms-and-conditions" className="text-slate-300 hover:text-primary transition-colors duration-200">Terms & Conditions</Link></li>
               <li><a href="#" className="text-slate-300 hover:text-primary transition-colors duration-200">Help Center</a></li>
               <li><a href="#" className="text-slate-300 hover:text-primary transition-colors duration-200">Contact</a></li>
             </ul>
@@ -99,22 +100,28 @@ export default function Footer() {
                 <Mail className="w-4.5 h-4.5 text-primary flex-shrink-0" />
                 <span className="text-slate-300">cv.rbc24@gmail.com</span>
               </li>
-              <li className="flex gap-3 items-center">
-                <MapPin className="w-4.5 h-4.5 text-primary flex-shrink-0" />
-                <span className="text-slate-300">HSR Layout, Bengaluru, India</span>
+              <li className="flex gap-3 items-start">
+                <MapPin className="w-4.5 h-4.5 text-primary flex-shrink-0 mt-1" />
+                <span className="text-slate-300 leading-relaxed text-sm">
+                  <strong>RBC24</strong><br />
+                  1-1-199, Budvel Village,<br />
+                  Rajendranagar,<br />
+                  Hyderabad – 500030,<br />
+                  Telangana, India
+                </span>
               </li>
             </ul>
           </div>
 
           {/* 4. Logo & Matter */}
           <div className="flex flex-col items-start text-left lg:col-span-1">
-            <a href="/" className="relative h-16 w-44 block mb-4">
+            <a href="/" className="relative h-20 w-20 block mb-6 rounded-full overflow-hidden border border-slate-800 bg-white hover:scale-105 transition-transform duration-200">
               <Image
                 src="/logo.jpeg"
                 alt="RBC24 Logo"
                 fill
-                className="object-contain object-left rounded-lg"
-                sizes="176px"
+                className="object-cover"
+                sizes="64px"
                 priority
               />
             </a>

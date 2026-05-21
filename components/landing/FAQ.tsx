@@ -46,7 +46,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-32 bg-gradient-to-b from-white via-orange-50/5 to-white relative overflow-hidden">
+    <section id="faq" className="py-16 md:py-20 bg-gradient-to-b from-white via-orange-50/5 to-white relative overflow-hidden">
 
       {/* Drifting Background Slow Motion Glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
@@ -57,7 +57,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
         {/* Editorial Section Header */}
-        <div className={`text-center max-w-3xl mx-auto mb-20 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
+        <div className={`text-center max-w-3xl mx-auto mb-10 reveal-on-scroll ${isRevealed ? "revealed" : ""}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-black mb-6 uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
             HELP CENTER
@@ -71,7 +71,7 @@ export default function FAQ() {
         </div>
 
         {/* Premium FAQ Stack Container */}
-        <div className={`relative rounded-[36px] border border-white/40 bg-white/90 backdrop-blur-md shadow-[0_15px_45px_rgba(0,0,0,0.015)] p-6 lg:p-12 overflow-hidden reveal-on-scroll delay-1 ${isRevealed ? "revealed" : ""}`}>
+        <div className={`relative rounded-[36px] border border-white/40 bg-white/90 backdrop-blur-md shadow-[0_15px_45px_rgba(0,0,0,0.015)] p-6 lg:p-8 overflow-hidden reveal-on-scroll delay-1 ${isRevealed ? "revealed" : ""}`}>
 
           {/* Subtle Internal Glow Overlay */}
           <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/[0.005] via-transparent to-teal-500/[0.005] pointer-events-none" />
@@ -80,7 +80,7 @@ export default function FAQ() {
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className={`group/card p-7 lg:p-8 rounded-[2rem] border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] relative overflow-hidden flex flex-col justify-between ${openIndex === idx
+                className={`group/card p-5 lg:p-6 rounded-[2rem] border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] relative overflow-hidden flex flex-col justify-between ${openIndex === idx
                     ? "bg-gradient-to-br from-orange-500/[0.02] via-white to-amber-500/[0.01] border-primary/20 shadow-[0_12px_35px_rgba(234,88,12,0.025)]"
                     : "bg-white/95 border-black/[0.03] shadow-[0_8px_25px_rgba(0,0,0,0.008)] hover:border-black/[0.06] hover:shadow-[0_15px_35px_rgba(0,0,0,0.015)] hover:-translate-y-0.5"
                   }`}
@@ -147,7 +147,7 @@ export default function FAQ() {
         </div>
 
         {/* Smart Trust Stat Strip */}
-        <div className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10 reveal-on-scroll delay-2 ${isRevealed ? "revealed" : ""}`}>
+        <div className={`mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 relative z-10 reveal-on-scroll delay-2 ${isRevealed ? "revealed" : ""}`}>
           {[
             { label: "10K+ HEALTHCARE MEMBERS", Icon: Heart, theme: "orange" },
             { label: "500+ PARTNER HOSPITALS", Icon: Award, theme: "teal" },

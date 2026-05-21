@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import LoginModal from "./LoginModal";
@@ -6,6 +7,7 @@ import LoginModal from "./LoginModal";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const isAuthenticated = false;
 
   const menuItems = [
     { name: "For Job Seekers", href: "https://jobs.rbc24.com/", target: "_blank", rel: "noopener noreferrer" },
@@ -24,27 +26,28 @@ export default function Navbar() {
       border-b border-slate-200/60
       shadow-sm
       transition-all duration-300
+      pointer-events-none
       ">
-        <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between py-1 lg:py-1">
-          <div className="flex-shrink-0 flex items-center">
-            <a
-              href="/"
-              className="relative w-[170px] lg:w-[230px] h-16 lg:h-20 -ml-2 block"
-            >
-              <Image
-                src="/images/RBC24 Horizontal Logo Transparent.png"
-                alt="RBC24 Logo"
-                fill
-                className="object-contain object-left scale-[1.95] origin-left"
-                sizes="(max-width: 768px) 260px, 380px"
-                priority
-              />
-            </a>
-          </div>
+        <div className="flex items-center justify-between w-full h-20 md:h-22 lg:h-24 px-4 sm:px-6 lg:px-8 gap-4 pointer-events-auto">
+          <Link
+            href={isAuthenticated ? "/jobs" : "/"}
+            className="flex items-center cursor-pointer w-20 lg:w-24"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            <Image
+              src="/images/RBC24 Horizontal Logo Transparent.png"
+              alt="RBC24"
+              className="object-contain "
+              width={250}
+              height={250}
+            />
+          </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 target={item.target}
@@ -52,24 +55,26 @@ export default function Navbar() {
                 className="text-sm font-bold text-foreground/70 hover:text-primary transition-smooth"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="flex items-center ml-4">
               <button
                 onClick={() => setIsLoginModalOpen(true)}
-                className="px-8 py-3 rounded-xl bg-slate-100 text-slate-800 text-sm font-bold border border-slate-200/60 hover:bg-slate-200 hover:scale-105 transition-smooth cursor-pointer"
+                className="px-8 py-3 rounded-xl bg-orange-400 text-white -800 text-sm font-bold border border-slate-200/60 hover:bg-orange-400 hover:scale-105 transition-smooth cursor-pointer"
               >
                 Login
               </button>
             </div>
           </div>
 
-          <div className="lg:hidden flex items-center flex-shrink-0 relative z-50">
+          <div className="lg:hidden flex items-center relative z-50 shrink-0">
             <button
-              type="button"
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground p-3 hover:text-primary transition-smooth focus:outline-none relative z-50 cursor-pointer pointer-events-auto"
-              aria-label="Toggle menu"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsOpen(!isOpen);
+              }}
+              className="text-foreground p-2 hover:bg-slate-100/50 rounded-xl transition-colors cursor-pointer"
+              aria-label="Toggle Menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -84,10 +89,10 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden bg-white border-b border-border animate-fade-up">
+          <div className="lg:hidden bg-white border-b border-border animate-fade-up pointer-events-auto">
             <div className="px-6 pt-4 pb-6 space-y-2">
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   target={item.target}
@@ -96,7 +101,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="pt-4 flex flex-col">
                 <button
