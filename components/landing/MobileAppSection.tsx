@@ -100,7 +100,7 @@ export default function MobileAppSection() {
             </div>
 
             {/* Clean App Store & Google Play Download Row */}
-            <div className="flex flex-wrap gap-3.5 w-full">
+            <div className="hidden lg:flex flex-wrap gap-3.5 w-full">
               <a
                 href="https://play.google.com/store/apps/details?id=com.rbc24.rbc24"
                 target="_blank"
@@ -540,6 +540,37 @@ export default function MobileAppSection() {
               ))}
             </div>
 
+          </div>
+
+          {/* Clean App Store & Google Play Download Row - Mobile Only */}
+          <div className="col-span-full lg:hidden flex flex-wrap gap-3.5 justify-center w-full mt-4">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rbc24.rbc24"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-5 py-3 rounded-2xl bg-slate-900 border border-slate-800/10 text-white hover:bg-black transition-all duration-300 shadow-[0_12px_30px_rgba(15,23,42,0.1)] hover:shadow-[0_20px_40px_rgba(15,23,42,0.18)] hover:-translate-y-0.5 no-underline shrink-0"
+            >
+              <svg viewBox="0 0 512 512" className="w-5.5 h-5.5 fill-white shrink-0">
+                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+              </svg>
+              <div className="flex flex-col leading-none text-left">
+                <span className="text-[8px] uppercase tracking-wider font-extrabold text-slate-400 block mb-0.5">Get it on</span>
+                <span className="text-xs font-black tracking-tight text-white leading-none">Google Play</span>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              className="group flex items-center gap-3 px-5 py-3 rounded-2xl bg-white border border-black/5 text-slate-800 hover:bg-slate-50 transition-all duration-300 shadow-[0_12px_30px_rgba(0,0,0,0.015)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 no-underline shrink-0"
+            >
+              <svg viewBox="0 0 384 512" className="w-5.5 h-5.5 fill-slate-800 shrink-0">
+                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+              </svg>
+              <div className="flex flex-col leading-none text-left">
+                <span className="text-[8px] uppercase tracking-wider font-extrabold text-slate-400 block mb-0.5">Download on the</span>
+                <span className="text-xs font-black tracking-tight text-slate-800 leading-none">App Store</span>
+              </div>
+            </a>
           </div>
 
         </div>

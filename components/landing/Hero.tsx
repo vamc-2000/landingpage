@@ -1,7 +1,28 @@
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Building2 } from "lucide-react";
 
 export default function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const heroImages = [
+    {
+      src: "/images/seeker.png",
+      alt: "RBC24 Healthcare Seeker Platform - Connecting Doctors, Nurses & Clinicians across India"
+    },
+    {
+      src: "/images/recruiter.png",
+      alt: "RBC24 Premium Healthcare Recruiter Platform - Direct Hospital Hiring"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative pt-20 pb-8 md:pt-24 md:pb-10 lg:pt-32 lg:pb-14 overflow-hidden bg-[#FAFAF9]">
       {/* Foreground & Background Atmosphere */}
@@ -64,23 +85,26 @@ export default function Hero() {
             </div>
 
             {/* Trust Section - Tightly Integrated */}
-            <div className="mt-8 pt-6 border-t border-slate-200/60 flex items-center justify-center lg:justify-start gap-3 w-full max-w-md opacity-80 hero-trust">
+            <div className="mt-8 pt-6 border-t border-slate-200/60 flex items-center justify-center lg:justify-start gap-3 w-full max-w-md opacity-90 hero-trust">
               <div className="flex -space-x-2.5">
                 {[
-                  { x: "0%", y: "0%" },
-                  { x: "100%", y: "0%" },
-                  { x: "0%", y: "100%" },
-                  { x: "100%", y: "100%" }
-                ].map((pos, idx) => (
+                  "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=120&h=120",
+                  "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=120&h=120",
+                  "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=120&h=120",
+                  "https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=120&h=120"
+                ].map((src, idx) => (
                   <div
                     key={idx}
-                    className="w-9 h-9 rounded-full border-2 border-white shadow-sm bg-no-repeat"
-                    style={{
-                      backgroundImage: "url('/images/healthcare-avatars.png')",
-                      backgroundSize: "200% 200%",
-                      backgroundPosition: `${pos.x} ${pos.y}`
-                    }}
-                  />
+                    className="relative w-9 h-9 rounded-full border-2 border-white/90 shadow-md overflow-hidden hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer z-10 hover:z-20"
+                  >
+                    <Image
+                      src={src}
+                      alt={`Verified Clinician ${idx + 1}`}
+                      fill
+                      sizes="36px"
+                      className="object-cover"
+                    />
+                  </div>
                 ))}
               </div>
               <p className="text-[13px] font-bold text-slate-500">Trusted by <span className="text-slate-800">500+</span> Institutions</p>
@@ -90,16 +114,55 @@ export default function Hero() {
           {/* Right Side: Image Dominance - Wider */}
           <div className="lg:w-[75%] relative w-full max-w-2xl mx-auto lg:max-w-none mt-8 lg:mt-0 lg:-mr-12">
 
-            {/* Main Image Container - Tighter Crop, Larger Aspect Ratio, Gentle Float */}
-            <div className="relative aspect-[4/3] lg:aspect-[16/10] w-full h-full rounded-[3rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 z-20 [animation:float_8s_ease-in-out_infinite]">
-              <Image
-                src="/images/premium-healthcare-team.png"
-                alt="RBC24 Premium Healthcare Team"
-                fill
-                sizes="(max-width: 768px) 100vw, 60vw"
-                priority
-                quality={100}
-                className="object-cover object-center w-full h-full"
+            {/* Main Image Container - Tighter Crop, Larger Aspect Ratio, Gentle Float with Custom Slide Transitions */}
+            <div className="group/hero relative aspect-[4/3] lg:aspect-[16/10] w-full h-full rounded-[3rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 z-20 [animation:float_8s_ease-in-out_infinite] hover:scale-[1.01] hover:shadow-[0_25px_60px_-15px_rgba(234,88,12,0.15)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] bg-slate-100">
+              {heroImages.map((img, idx) => (
+                <div
+                  key={idx}
+                  className={`absolute inset-0 w-full h-full transition-all duration-[1200ms] ease-in-out ${
+                    idx === currentSlide
+                      ? "opacity-100 scale-100 z-10"
+                      : "opacity-0 scale-[1.04] z-0 pointer-events-none"
+                  }`}
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 60vw"
+                    priority={idx === 0}
+                    quality={100}
+                    className="object-cover object-center w-full h-full"
+                  />
+                  
+                  {/* Cinematic Vignette Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent pointer-events-none z-10" />
+
+                  {/* Premium Subtle Ambient Glow Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 mix-blend-overlay pointer-events-none z-10" />
+                </div>
+              ))}
+
+              {/* Slider Indicator Dots in Glassmorphic bar */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-30 bg-slate-900/40 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-lg">
+                {heroImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentSlide(idx)}
+                    className={`h-2 rounded-full transition-all duration-500 ${
+                      idx === currentSlide
+                        ? "w-6 bg-primary"
+                        : "w-2 bg-white/60 hover:bg-white"
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Subtle Image Grain Overlay */}
+              <div
+                className="absolute inset-0 opacity-[0.012] mix-blend-overlay pointer-events-none z-20"
+                style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
               />
             </div>
 

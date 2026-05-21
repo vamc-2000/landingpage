@@ -66,8 +66,8 @@ export default function Specialties() {
       try {
         const response = await fetch('/api/specialties');
         if (!response.ok) {
-          const text = await response.text();
-          throw new Error(`Failed with status ${response.status}: ${text}`);
+          // Gracefully fallback to default data on failure without throwing console errors
+          return;
         }
         const html = await response.text();
         
@@ -168,7 +168,7 @@ export default function Specialties() {
           }
         }
       } catch (error) {
-        console.error('Failed to fetch specialties dynamically:', error);
+        // Silently catch network errors to prevent console pollution
       }
     };
 
